@@ -1,0 +1,928 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+html,
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--color-faf7eb);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header .nav-desctop ul .nav-menu-Корзина a, header .nav-desctop ul .nav-menu-Заказы a, header .nav-desctop ul .nav-menu-Избранное a {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+  display: flex;
+  justify-content: 0;
+  align-items: center;
+  gap: 8px;
+  flex-direction: column;
+  transition: 0.3s all;
+}
+header .nav-desctop ul .nav-menu-Корзина a:hover, header .nav-desctop ul .nav-menu-Заказы a:hover, header .nav-desctop ul .nav-menu-Избранное a:hover {
+  color: var(--color-FF6633);
+}
+header .nav-desctop ul .nav-menu-Корзина a:hover img, header .nav-desctop ul .nav-menu-Заказы a:hover img, header .nav-desctop ul .nav-menu-Избранное a:hover img {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%) hue-rotate(-10deg) brightness(100%) contrast(100%);
+}
+
+header .nav-mobile ul .nav-menu-Корзина a, header .nav-mobile ul .nav-menu-Заказы a, header .nav-mobile ul .nav-menu-Избранное a, header .nav-mobile ul .nav-menu-Каталог a {
+  display: flex;
+  justify-content: 0;
+  align-items: center;
+  gap: 5px;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  cursor: pointer;
+  border-radius: 4px;
+  color: var(--color-8f8f8f);
+  transition: 0.5s all;
+}
+header .nav-mobile ul .nav-menu-Корзина a:hover, header .nav-mobile ul .nav-menu-Заказы a:hover, header .nav-mobile ul .nav-menu-Избранное a:hover, header .nav-mobile ul .nav-menu-Каталог a:hover {
+  color: var(--color-FF6633);
+}
+header .nav-mobile ul .nav-menu-Корзина a:hover img, header .nav-mobile ul .nav-menu-Заказы a:hover img, header .nav-mobile ul .nav-menu-Избранное a:hover img, header .nav-mobile ul .nav-menu-Каталог a:hover img {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%) hue-rotate(-10deg) brightness(100%) contrast(100%);
+}
+
+header {
+  background-color: var(--color-FFFFFF);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 16px 0;
+}
+header .nav-desctop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 1055px) {
+  header .nav-desctop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+}
+header .nav-desctop .nav-logo a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+}
+@media (max-width: 1000px) {
+  header .nav-desctop .nav-logo a .nav-logo-2 {
+    display: none;
+  }
+}
+header .nav-desctop ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+header .nav-desctop ul .nav-menu-Каталог a {
+  padding: 8px 20px 8px 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: var(--color-70c05b);
+  display: flex;
+  justify-content: 0;
+  align-items: center;
+  gap: 20px;
+  color: var(--color-FFFFFF);
+  transition: 0.5s all;
+}
+@media (max-width: 800px) {
+  header .nav-desctop ul .nav-menu-Каталог a {
+    padding: 10px;
+  }
+}
+header .nav-desctop ul .nav-menu-Каталог a .hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+header .nav-desctop ul .nav-menu-Каталог a .hamburger .bar {
+  border-radius: 5px;
+  width: 20px;
+  height: 2.5px;
+  background-color: var(--color-FFFFFF);
+}
+header .nav-desctop ul .nav-menu-Каталог a:hover {
+  background-color: var(--color-FF6633);
+}
+@media (max-width: 800px) {
+  header .nav-desctop ul .nav-menu-Каталог span {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  header .nav-desctop ul .nav-menu-Каталог {
+    display: none;
+  }
+}
+header .nav-desctop ul .nav-menu-Search {
+  border-radius: 4px;
+  max-width: 374px;
+  padding: 8px 15px;
+  width: 100%;
+  display: flex;
+  justify-content: 0;
+  align-items: center;
+  gap: 0;
+  border: 1px solid var(--color-70c05b);
+}
+@media (max-width: 620px) {
+  header .nav-desctop ul .nav-menu-Search {
+    max-width: 674px;
+  }
+}
+header .nav-desctop ul .nav-menu-Search input {
+  color: var(--color-8f8f8f);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+header .nav-desctop ul .nav-menu-Search input::-webkit-search-cancel-button {
+  display: none;
+}
+header .nav-desctop ul .nav-menu-Search img {
+  cursor: pointer;
+}
+header .nav-desctop ul .nav-menu-Search img:hover {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%) hue-rotate(-10deg) brightness(100%) contrast(100%);
+}
+@media (max-width: 620px) {
+  header .nav-desctop ul .nav-menu-Избранное {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  header .nav-desctop ul .nav-menu-Заказы {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  header .nav-desctop ul .nav-menu-Корзина {
+    display: none;
+  }
+}
+header .nav-desctop ul .nav-menu-avatar {
+  display: flex;
+  justify-content: 0;
+  align-items: center;
+  gap: 10px;
+}
+header .nav-desctop ul .nav-menu-avatar span {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-232323);
+  transition: 0.3s all;
+}
+header .nav-desctop ul .nav-menu-avatar span:hover {
+  color: var(--color-FF6633);
+}
+@media (max-width: 1000px) {
+  header .nav-desctop ul .nav-menu-avatar span {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  header .nav-desctop ul .nav-menu-avatar {
+    display: none;
+  }
+}
+header .nav-desctop ul .nav-menu-chevron-down:hover img {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%) hue-rotate(-10deg) brightness(100%) contrast(100%);
+}
+@media (max-width: 620px) {
+  header .nav-desctop ul .nav-menu-chevron-down {
+    display: none;
+  }
+}
+header .nav-mobile {
+  padding: 13.5px 10px 0 10px;
+  display: none;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--color-FFFFFF);
+}
+@media (max-width: 620px) {
+  header .nav-mobile {
+    display: flex;
+  }
+}
+header .nav-mobile ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+header .nav-mobile ul .nav-menu-Каталог a .hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+header .nav-mobile ul .nav-menu-Каталог a .hamburger .bar {
+  transition: 0.5s all;
+  border-radius: 5px;
+  width: 25px;
+  height: 2.5px;
+  background-color: var(--color-8f8f8f);
+}
+header .nav-mobile ul .nav-menu-Каталог a:hover .bar {
+  background-color: var(--color-FF6633);
+}
+footer {
+  margin-bottom: 50px;
+  padding: 24px 0 58px 0;
+  background: url("../images/footer/footer-bacround.png");
+  background-size: cover;
+}
+footer .footer-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+@media (max-width: 560px) {
+  footer .footer-page {
+    flex-direction: column;
+  }
+}
+footer .footer-page ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 1360px) {
+  footer .footer-page ul {
+    gap: 20px;
+    flex-direction: column;
+  }
+}
+footer .footer-page ul .footer-menu {
+  display: flex;
+  justify-content: 0;
+  align-items: 0;
+  gap: 40px;
+}
+@media (max-width: 930px) {
+  footer .footer-page ul .footer-menu {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 370px) {
+  footer .footer-page ul .footer-menu {
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+footer .footer-page ul .footer-menu li a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+}
+footer .footer-page ul .footer-menu li a:hover {
+  color: var(--color-FF6633);
+}
+footer .footer-page ul .footer-social-medias {
+  display: flex;
+  justify-content: 0;
+  align-items: 0;
+  gap: 16px;
+}
+footer .footer-page ul .footer-social-medias li a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+  transition: 0.3s all;
+}
+footer .footer-page ul .footer-social-medias li a:hover {
+  color: var(--color-FF6633);
+}
+footer .footer-page ul .footer-social-medias li a:hover img {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%) hue-rotate(-10deg) brightness(100%) contrast(100%);
+}
+
+:root {
+  --color-FFFFFF: #ffffff;
+  --color-70c05b: #70c05b;
+  --color-faf7eb: #faf7eb;
+  --color-FF6633: #ff6633;
+  --color-8f8f8f: #8f8f8f;
+  --color-414141: #414141;
+  --color-232323: #232323;
+  --color-606060: #606060;
+  --color-0000001A: #0000001a;
+  --color-F3F2F1: #f3f2f1;
+  --color-BFBFBF: #bfbfbf;
+  --color-fcd5ba: #fcd5ba;
+  --color-CA936080: #ca936080;
+  --color-e5ffde: #e5ffde;
+}
+
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-texts {
+  padding: 8px;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-texts .цена {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-texts .цена h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-texts .цена h4 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-606060);
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-texts .удобство {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-texts .удобство span {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-BFBFBF);
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-texts h5 {
+  padding-top: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+  height: 80px;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-texts img {
+  padding: 8px 0 8px 0;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-texts button {
+  border-radius: 4px;
+  padding: 8px 0 8px 0;
+  width: 100%;
+  border: 1px solid var(--color-70c05b);
+  background-color: var(--color-FFFFFF);
+  color: var(--color-70c05b);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  transition: 0.3s ease;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-texts button:hover {
+  background-color: var(--color-FF6633);
+  border: 1px solid var(--color-FF6633);
+  color: var(--color-FFFFFF);
+}
+
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-4, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-3, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-2, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-1 {
+  height: 160px;
+  position: relative;
+  background-size: cover;
+  width: 100%;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-4 .like, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-3 .like, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-2 .like, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-1 .like {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 8px 5px 8px;
+  border-radius: 4px;
+  background-color: var(--color-F3F2F1);
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-4 .like .like-image input, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-3 .like .like-image input, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-2 .like .like-image input, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-1 .like .like-image input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  color: #ff0000;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-4 .like .like-image, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-3 .like .like-image, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-2 .like .like-image, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-1 .like .like-image {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 100ms;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-4 .like .checkmark, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-3 .like .checkmark, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-2 .like .checkmark, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-1 .like .checkmark {
+  top: 0;
+  left: 0;
+  height: 2em;
+  width: 2em;
+  transition: 100ms;
+  animation: dislike_effect 400ms ease;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-4 .like .like-image input:checked ~ .checkmark path, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-3 .like .like-image input:checked ~ .checkmark path, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-2 .like .like-image input:checked ~ .checkmark path, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-1 .like .like-image input:checked ~ .checkmark path {
+  fill: #fff;
+  stroke-width: 0;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-4 .like .like-image input:checked ~ .checkmark, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-3 .like .like-image input:checked ~ .checkmark, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-2 .like .like-image input:checked ~ .checkmark, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-1 .like .like-image input:checked ~ .checkmark {
+  animation: like_effect 400ms ease;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-4 .like .like-image:hover, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-3 .like .like-image:hover, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-2 .like .like-image:hover, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-1 .like .like-image:hover {
+  transform: scale(1.1);
+}
+@keyframes like_effect {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes dislike_effect {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-4 .foiz, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-3 .foiz, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-2 .foiz, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-1 .foiz {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: var(--color-FFFFFF);
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: var(--color-FF6633);
+}
+
+main .section-hero {
+  margin-top: 80px;
+  background: url("../../images/index/hero-bacround.png");
+  background-size: cover;
+  background-color: var(--color-FFFFFF);
+}
+@media (max-width: 620px) {
+  main .section-hero {
+    margin-top: 72px;
+  }
+}
+@media (max-width: 712px) {
+  main .section-hero {
+    padding: 30px 0;
+  }
+  main .section-hero img {
+    display: none;
+  }
+}
+main .section-hero .section-hero-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+main .section-hero .section-hero-page h1 {
+  text-align: center;
+  width: 751px;
+  font-weight: 700;
+  font-size: clamp(18px, 3vw, 48px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+}
+main .section-Акции {
+  padding: 80px 0 120px 0;
+}
+main .section-Акции .section-Акции-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+main .section-Акции .section-Акции-top h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+}
+main .section-Акции .section-Акции-top a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  display: flex;
+  color: var(--color-606060);
+}
+main .section-Акции .section-Акции-top a:hover {
+  color: var(--color-FF6633);
+}
+main .section-Акции .section-Акции-top a:hover img {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%) hue-rotate(-10deg) brightness(100%) contrast(100%);
+}
+main .section-Акции .section-Акции-cards {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card {
+  box-shadow: 1px 2px 4px 0px var(--color-0000001A);
+  width: 100%;
+  border-radius: 4px;
+  background-color: var(--color-FFFFFF);
+  overflow: hidden;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-1 {
+  background: url("../../images/index/image.png") no-repeat;
+  transform-origin: center;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-1:hover {
+  transform: scale(1.05);
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-2 {
+  background: url("../../images/index/image (1).png") no-repeat;
+  transform-origin: center;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-2:hover {
+  transform: scale(1.05);
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-3 {
+  background: url("../../images/index/image (2).png") no-repeat;
+  transform-origin: center;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-3:hover {
+  transform: scale(1.05);
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-4 {
+  background: url("../../images/index/image (3).png") no-repeat;
+  transform-origin: center;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-4:hover {
+  transform: scale(1.05);
+}
+main .section-reklama h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+  margin-bottom: 20px;
+}
+main .section-reklama .section-reklama-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 1110px) {
+  main .section-reklama .section-reklama-cards {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+main .section-reklama .section-reklama-cards .section-reklama-card-1 {
+  max-width: 584px;
+  border-radius: 4px;
+  background-color: var(--color-fcd5ba);
+  box-shadow: 0px 8px 16px 0px var(--color-CA936080);
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 360px) {
+  main .section-reklama .section-reklama-cards .section-reklama-card-1 img {
+    width: 100%;
+  }
+}
+@media (max-width: 1110px) {
+  main .section-reklama .section-reklama-cards .section-reklama-card-1 {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 560px) {
+  main .section-reklama .section-reklama-cards .section-reklama-card-1 {
+    flex-direction: column;
+  }
+}
+main .section-reklama .section-reklama-cards .section-reklama-card-1 .section-reklama-card-texts {
+  padding: 30px 0 40px 44px;
+}
+main .section-reklama .section-reklama-cards .section-reklama-card-1 .section-reklama-card-texts h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+}
+main .section-reklama .section-reklama-cards .section-reklama-card-1 .section-reklama-card-texts p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+}
+@media (max-width: 560px) {
+  main .section-reklama .section-reklama-cards .section-reklama-card-1 .section-reklama-card-texts {
+    padding: 30px 44px 40px 44px;
+  }
+}
+main .section-reklama .section-reklama-cards .section-reklama-card-2 {
+  background: url("../../images/index/plus.svg");
+  max-width: 584px;
+  border-radius: 4px;
+  background-color: var(--color-e5ffde);
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1110px) {
+  main .section-reklama .section-reklama-cards .section-reklama-card-2 {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 560px) {
+  main .section-reklama .section-reklama-cards .section-reklama-card-2 {
+    flex-direction: column;
+  }
+}
+@media (max-width: 360px) {
+  main .section-reklama .section-reklama-cards .section-reklama-card-2 {
+    width: 100%;
+  }
+}
+main .section-reklama .section-reklama-cards .section-reklama-card-2 .section-reklama-card-texts {
+  padding: 30px 0 40px 44px;
+}
+main .section-reklama .section-reklama-cards .section-reklama-card-2 .section-reklama-card-texts h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+}
+main .section-reklama .section-reklama-cards .section-reklama-card-2 .section-reklama-card-texts p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+}
+@media (max-width: 560px) {
+  main .section-reklama .section-reklama-cards .section-reklama-card-2 .section-reklama-card-texts {
+    padding: 30px 44px 40px 44px;
+  }
+}
+main .section-iframe {
+  margin-top: 120px;
+}
+main .section-iframe h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+}
+main .section-iframe .ap-tab {
+  margin-top: 40px;
+}
+@media (max-width: 520px) {
+  main .section-iframe .ap-tab {
+    overflow-y: hidden;
+  }
+}
+main .section-iframe .ap-tab .ap-tab-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 450px;
+  margin: 0 40px;
+  border-radius: 4px;
+  gap: 24px;
+}
+main .section-iframe .ap-tab .ap-tab-list .ap-tab-link {
+  border-radius: 4px;
+  padding: 15px 20px;
+  height: 60px;
+  background-color: var(--color-F3F2F1);
+  color: var(--color-606060);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  transition: 0.3s ease;
+}
+main .section-iframe .ap-tab .ap-tab-list .ap-tab-link:hover {
+  background-color: var(--color-70c05b);
+  color: var(--color-FFFFFF);
+}
+@media (max-width: 520px) {
+  main .section-iframe .ap-tab .ap-tab-list .ap-tab-link {
+    padding: 30px 20px;
+  }
+}
+main .section-iframe .ap-tab-container .ap-tab-content iframe {
+  margin-top: 40px;
+  border-radius: 4px;
+  width: 100%;
+  height: 354px;
+}
+main .section-Статьи {
+  margin-top: 120px;
+}
+main .section-Статьи .section-Статьи-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+main .section-Статьи .section-Статьи-top h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+}
+main .section-Статьи .section-Статьи-top a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  display: flex;
+  color: var(--color-606060);
+}
+main .section-Статьи .section-Статьи-top a:hover {
+  color: var(--color-FF6633);
+}
+main .section-Статьи .section-Статьи-top a:hover img {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%) hue-rotate(-10deg) brightness(100%) contrast(100%);
+}
+main .section-Статьи .section-Статьи-cards {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+@media (max-width: 1199px) {
+  main .section-Статьи .section-Статьи-cards {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+main .section-Статьи .section-Статьи-cards .section-Статьи-card {
+  background-color: var(--color-FFFFFF);
+  border-radius: 4px;
+  max-width: 376px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+main .section-Статьи .section-Статьи-cards .section-Статьи-card:hover {
+  box-shadow: 4px 8px 16px 0px var(--color-FF6633);
+}
+main .section-Статьи .section-Статьи-cards .section-Статьи-card img {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+main .section-Статьи .section-Статьи-cards .section-Статьи-card span {
+  padding: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-8f8f8f);
+}
+main .section-Статьи .section-Статьи-cards .section-Статьи-card h4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 2 qatordan keyin "..." qo‘yish */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5; /* Matnning balandligini oshirish */
+  margin: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+}
+main .section-Статьи .section-Статьи-cards .section-Статьи-card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* 2 qatordan keyin "..." qo‘yish */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5; /* Matnning balandligini oshirish */
+  margin: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+}
+main .section-Статьи .section-Статьи-cards .section-Статьи-card button {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  border: none;
+  margin: 10px;
+  padding: 15px 25px;
+  border-radius: 4px;
+  background-color: var(--color-e5ffde);
+  color: var(--color-70c05b);
+}
+main .section-Статьи .section-Статьи-cards .section-Статьи-card:hover button {
+  background-color: var(--color-70c05b);
+  color: var(--color-FFFFFF);
+}
