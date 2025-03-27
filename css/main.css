@@ -134,16 +134,54 @@ header .nav-desctop ul .nav-menu-Каталог a {
     padding: 10px;
   }
 }
-header .nav-desctop ul .nav-menu-Каталог a .hamburger {
+header .nav-desctop ul .nav-menu-Каталог a .hamburger .icon-menu {
+  --gap: 5px;
+  --height-bar: 3px;
+  --pos-y-bar-one: 0;
+  --pos-y-bar-three: 0;
+  --scale-bar: 1;
+  --rotate-bar-one: 0;
+  --rotate-bar-three: 0;
+  width: 25px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: var(--gap);
+  cursor: pointer;
+  position: relative;
 }
 header .nav-desctop ul .nav-menu-Каталог a .hamburger .bar {
-  border-radius: 5px;
-  width: 20px;
-  height: 2.5px;
+  position: relative;
+  height: var(--height-bar);
+  width: 100%;
+  border-radius: 0.9rem;
   background-color: var(--color-FFFFFF);
+}
+header .nav-desctop ul .nav-menu-Каталог a .hamburger .bar--1 {
+  top: var(--pos-y-bar-one);
+  transform: rotate(var(--rotate-bar-one));
+  transition: top 200ms 100ms, transform 100ms;
+}
+header .nav-desctop ul .nav-menu-Каталог a .hamburger .bar--2 {
+  transform: scaleX(var(--scale-bar));
+  transition: transform 150ms 100ms;
+}
+header .nav-desctop ul .nav-menu-Каталог a .hamburger .bar--3 {
+  bottom: var(--pos-y-bar-three);
+  transform: rotate(var(--rotate-bar-three));
+  transition: bottom 200ms 100ms, transform 100ms;
+}
+header .nav-desctop ul .nav-menu-Каталог a .hamburger .check-icon:checked + .icon-menu > .bar--1 {
+  transition: top 200ms, transform 200ms 100ms;
+}
+header .nav-desctop ul .nav-menu-Каталог a .hamburger .check-icon:checked + .icon-menu > .bar--3 {
+  transition: bottom 200ms, transform 200ms 100ms;
+}
+header .nav-desctop ul .nav-menu-Каталог a .hamburger .check-icon:checked + .icon-menu {
+  --pos-y-bar-one: calc(var(--gap) + var(--height-bar));
+  --pos-y-bar-three: calc(var(--gap) + var(--height-bar));
+  --scale-bar: 0;
+  --rotate-bar-one: 45deg;
+  --rotate-bar-three: -45deg;
 }
 header .nav-desctop ul .nav-menu-Каталог a:hover {
   background-color: var(--color-FF6633);
@@ -463,6 +501,7 @@ main .section-Акции .section-Акции-cards .section-Акции-card .sec
   width: 100%;
 }
 main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-4 .like, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-3 .like, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-2 .like, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-1 .like {
+  display: none;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -479,7 +518,6 @@ main .section-Акции .section-Акции-cards .section-Акции-card .sec
   color: #ff0000;
 }
 main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-4 .like .like-image, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-3 .like .like-image, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-2 .like .like-image, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-1 .like .like-image {
-  display: block;
   position: relative;
   cursor: pointer;
   font-size: 15px;
@@ -529,6 +567,7 @@ main .section-Акции .section-Акции-cards .section-Акции-card .sec
   }
 }
 main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-4 .foiz, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-3 .foiz, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-2 .foiz, main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-1 .foiz {
+  display: none;
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -613,6 +652,7 @@ main .section-Акции .section-Акции-cards .section-Акции-card {
   width: 100%;
   border-radius: 4px;
   background-color: var(--color-FFFFFF);
+  transition: 0.5s ease-in-out;
   overflow: hidden;
 }
 main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-1 {
@@ -650,6 +690,12 @@ main .section-Акции .section-Акции-cards .section-Акции-card .sec
 }
 main .section-Акции .section-Акции-cards .section-Акции-card .section-Акции-card-image-4:hover {
   transform: scale(1.05);
+}
+main .section-Акции .section-Акции-cards .section-Акции-card:hover .foiz {
+  display: flex;
+}
+main .section-Акции .section-Акции-cards .section-Акции-card:hover .like {
+  display: flex;
 }
 main .section-reklama h2 {
   font-weight: 700;

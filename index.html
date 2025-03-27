@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="description"
       content="Severyanochka - eng yaxshi narxlarda oziq-ovqat mahsulotlari! Bepul yetkazib berish 1000 ₽ dan boshlab! Aksiya va chegirmalar!" />
@@ -19,7 +20,9 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="robots" content="index, follow" />
     <title>Severyanochka - Oziq-ovqat do'koni</title>
+    <!-- Main Css -->
     <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- OvlCarousel Link -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -28,6 +31,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
   </head>
   <body>
+    <!-- Header -->
     <header>
       <div class="container">
         <nav class="nav-desctop">
@@ -39,13 +43,21 @@
           </div>
           <ul>
             <li class="nav-menu-Каталог">
-              <a href="./pages/Каталог.html">
-                <div class="hamburger">
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
+              <a>
+                <div id="hamburger" class="hamburger">
+                  <input
+                    hidden=""
+                    class="check-icon"
+                    id="check-icon"
+                    name="check-icon"
+                    type="checkbox" />
+                  <label class="icon-menu" for="check-icon">
+                    <div class="bar bar--1"></div>
+                    <div class="bar bar--2"></div>
+                    <div class="bar bar--3"></div>
+                  </label>
                 </div>
-                <span>Каталог</span>
+                <span href="./pages/Каталог.html">Каталог</span>
               </a>
             </li>
             <form class="nav-menu-Search">
@@ -117,6 +129,7 @@
       </div>
     </header>
     <main>
+      <!-- Section Hero -->
       <section class="section-hero">
         <div class="container">
           <div class="section-hero-page">
@@ -125,6 +138,7 @@
           </div>
         </div>
       </section>
+      <!-- Section Акции -->
       <section class="section-Акции">
         <div class="container">
           <div class="section-Акции-top">
@@ -270,6 +284,7 @@
           </div>
         </div>
       </section>
+      <!-- Section Акции -->
       <section class="section-Акции">
         <div class="container">
           <div class="section-Акции-top">
@@ -399,6 +414,7 @@
           </div>
         </div>
       </section>
+      <!-- Section Акции -->
       <section class="section-Акции">
         <div class="container">
           <div class="section-Акции-top">
@@ -528,6 +544,7 @@
           </div>
         </div>
       </section>
+      <!-- Section Reklama -->
       <section class="section-reklama">
         <div class="container">
           <h2>Специальные предложения</h2>
@@ -549,6 +566,7 @@
           </div>
         </div>
       </section>
+      <!-- Section Iframe -->
       <section class="section-iframe">
         <div class="container">
           <h2>Наши магазины</h2>
@@ -604,6 +622,7 @@
           </div>
         </div>
       </section>
+      <!-- Section Статьи -->
       <section class="section-Статьи">
         <div class="container">
           <div class="section-Статьи-top">
@@ -647,9 +666,10 @@
           </div>
         </div>
       </section>
+      <!--  -->
       <section></section>
     </main>
-
+    <!-- Footer -->
     <footer>
       <div class="container">
         <div class="footer-page">
@@ -711,7 +731,9 @@
     <!-- jQuery va Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Api Tab Js -->
     <script src="https://cdn.jsdelivr.net/gh/abdulazizcreator/ap-tab/main.js"></script>
+    <!-- Main JS -->
     <script src="./js/main.js"></script>
   </body>
 </html>
