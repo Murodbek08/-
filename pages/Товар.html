@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог</title>
+    <!-- Main Css -->
+    <link rel="stylesheet" href="../css/main.min.css" />
+    <!-- OvlCarousel Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav class="nav__desctop">
+          <div class="nav__desctop__logo">
+            <a class="nav__desctop__logo__link" href="../index.html">
+              <img
+                class="nav__desctop__logo__link__1"
+                src="../images/header/nav-logo-1.svg"
+                alt="Nav Logo !" />
+              <img
+                class="nav__desctop__logo__link__2"
+                src="../images/header/nav-logo-2.svg"
+                alt="Nav Logo !" />
+            </a>
+          </div>
+          <ul class="nav__menu">
+            <li class="nav__menu__Каталог">
+              <a>
+                <div class="hamburger">
+                  <input
+                    hidden=""
+                    class="check-icon"
+                    id="check-icon "
+                    name="check-icon"
+                    type="checkbox" />
+                  <label class="icon-menu nav-toggle" for="check-icon ">
+                    <div class="bar bar--1"></div>
+                    <div class="bar bar--2"></div>
+                    <div class="bar bar--3"></div>
+                  </label>
+                </div>
+                <a href="./Каталог.html">Каталог</a>
+              </a>
+            </li>
+            <form class="nav__menu__Search">
+              <input type="search" placeholder="Найти товар" />
+              <img src="../images/header/search.svg" alt="Search !" />
+            </form>
+            <li class="nav__menu__Избранное">
+              <a href="./Избранное.html">
+                <img src="../images/header/heart.svg" alt="Heart !" />
+                <span>Избранное</span>
+              </a>
+            </li>
+            <li class="nav__menu__Заказы">
+              <a href="./Заказы.html">
+                <img src="../images/header/box.svg" alt="Box !" />
+                <span>Заказы</span>
+              </a>
+            </li>
+            <li class="nav__menu__Корзина">
+              <a href="./Корзина.html">
+                <img src="../images/header/korzinka.svg" alt="Korzinka !" />
+                <span>Корзина</span>
+              </a>
+            </li>
+            <li class="nav__menu__avatar">
+              <img src="../images/header/avatar.svg" alt="Avatar !" />
+              <span>Алексей</span>
+            </li>
+            <li class="nav__menu__chevron__down">
+              <img src="../images/header/chevron-down.svg" alt="Chevron !" />
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="container">
+        <div class="nav__menu__Каталог__menu__pages nav-menu">
+          <ul>
+            <div>
+              <li>
+                <a href="#">Молоко, сыр, яйцо</a>
+              </li>
+              <li>
+                <a href="#">Хлеб</a>
+              </li>
+              <li>
+                <a href="#">Фрукты и овощи</a>
+              </li>
+              <li>
+                <a href="#">Замороженные продукты</a>
+              </li>
+            </div>
+            <div>
+              <li>
+                <a href="#">Напитки</a>
+              </li>
+              <li>
+                <a href="#">Кондитерские изделия</a>
+              </li>
+              <li>
+                <a href="#">Чай, кофе</a>
+              </li>
+            </div>
+            <div>
+              <li>
+                <a href="#">Бакалея</a>
+              </li>
+              <li>
+                <a href="#">Здоровое питание</a>
+              </li>
+              <li>
+                <a href="#">Зоотовары</a>
+              </li>
+            </div>
+            <div>
+              <li>
+                <a href="#">Непродовольственные товары</a>
+              </li>
+              <li>
+                <a href="#">Детское питание</a>
+              </li>
+              <li>
+                <a href="#">Мясо, птица, колбаса</a>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+      <nav class="nav__mobile">
+        <ul class="nav__mobile__menu">
+          <li class="nav__mobile__menu__Каталог  nav-toggle">
+            <a>
+              <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <span>Каталог</span>
+            </a>
+          </li>
+          <li class="nav__mobile__menu__Избранное">
+            <a href="./Избранное.html">
+              <img src="../images/header/heart.svg" alt="Heart !" />
+              <span>Избранное</span>
+            </a>
+          </li>
+          <li class="nav__mobile__menu__Заказы">
+            <a href="./Заказы.html">
+              <img src="../images/header/box.svg" alt="Box !" />
+              <span>Заказы</span>
+            </a>
+          </li>
+          <li class="nav__mobile__menu__Корзина">
+            <a href="./Корзина.html">
+              <img src="../images/header/korzinka.svg" alt="Korzinka !" />
+              <span>Корзина</span>
+            </a>
+          </li>
+          <li class="nav-menu-avatar">
+            <img src="../images/header/avatar.svg" alt="Avatar !" />
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main -->
+    <main>
+      <section class="section__product__detail">
+        <div class="container">
+          <div class="breadcrumb">
+            <div class="breadcrumb__home">
+              <a href="../index.html">
+                Главная
+                <img src="../images/index/chevron-right.svg" alt="Chevron image !" />
+              </a>
+            </div>
+            <div class="breadcrumb__catalog">
+              <a href="./Каталог.html">
+                Каталог
+                <img src="../images/index/chevron-right.svg" alt="Chevron image !" />
+              </a>
+            </div>
+            <div class="breadcrumb__category">
+              <a href="#">
+                Молоко, сыр, яйцо
+                <img src="../images/index/chevron-right.svg" alt="Chevron image !" />
+              </a>
+            </div>
+            <div class="breadcrumb__product">
+              <a href="#">Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г</a>
+            </div>
+          </div>
+          <h3>Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г</h3>
+          <div class="product-meta">
+            <div class="product-meta__code">
+              <p>арт. 371431</p>
+            </div>
+            <div class="product-meta__reviews">
+              <img src="../images/tovar/rating.svg" alt="Rating Logo !" />
+              <p>3 отзыва</p>
+            </div>
+            <div class="product-meta__share">
+              <img src="../images/tovar/share.svg" alt="Share Logo !" />
+              <p>Поделиться</p>
+            </div>
+            <div class="product-meta__favorite ">
+              <img src="../images/tovar/love.svg" alt="Heart Logo !" />
+              <p>В избранное</p>
+            </div>
+          </div>
+          <div class="product-detail">
+            <div class="product-image">
+              <div class="product-image__small">
+                <img src="../images/tovar/Item.png" alt="Item image !" />
+                <img src="../images/tovar/Item.png" alt="Item image !" />
+                <img src="../images/tovar/Item.png" alt="Item image !" />
+                <img src="../images/tovar/Item.png" alt="Item image !" />
+                <img src="../images/tovar/Item.png" alt="Item image !" />
+              </div>
+              <div class="product-image__big">
+                <img src="../images/tovar/Item_big.png" alt="Item big image !" />
+                <div class="foiz"><h4>-50%</h4></div>
+              </div>
+            </div>
+            <div class="product-korzinka">
+              <div class="product-korzinka__narh">
+                <div class="product-korzinka__narh__price">
+                  <h5>192,69 ₽</h5>
+                  <p>Обычная цена</p>
+                </div>
+                <div class="product-korzinka__narh__discount">
+                  <h5>108,99 ₽</h5>
+                  <div>
+                    <p>С картой Северяночки</p>
+                    <img src="../images/tovar/info.svg" alt="Info logo !" />
+                  </div>
+                </div>
+              </div>
+              <div class="product-button">
+                <button>
+                  <img src="../images/tovar/shopping-cart.svg" alt="Savat logo !" />
+                  <span>В корзину</span>
+                </button>
+              </div>
+              <div class="product-aksiya">
+                <img src="../images/tovar/smile.svg" alt="Smile logo !" />
+                <p>Вы получаете 10 бонусов</p>
+              </div>
+              <div class="product-alert">
+                <img src="../images/tovar/bell-off.svg" alt="Beel logo !" />
+                <p>Уведомить о снижении цены</p>
+              </div>
+              <div class="product-specs-1">
+                <p>Бренд</p>
+                <span>ПРОСТОКВАШИНО</span>
+              </div>
+              <div class="product-specs-2">
+                <p>Страна производителя</p>
+                <span>Россия</span>
+              </div>
+              <div class="product-specs-3">
+                <p>Упаковка</p>
+                <span>180 г</span>
+              </div>
+            </div>
+            <div class="similar-products">
+              <p>Похожие</p>
+              <div class="similar-products__card">
+                <img src="../images/tovar/image-1.png" alt="Image !" />
+                <h4>157,50 ₽</h4>
+              </div>
+              <div class="similar-products__card">
+                <img src="../images/tovar/image-2.png" alt="Image !" />
+                <h4>331,50 ₽</h4>
+              </div>
+              <div class="similar-products__card">
+                <img src="../images/tovar/image-3.png" alt="Image !" />
+                <h4>157,50 ₽</h4>
+              </div>
+              <div class="similar-products__card">
+                <img src="../images/tovar/image-4.png" alt="Image !" />
+                <h4>157,50 ₽</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-page">
+          <div class="footer-logo">
+            <a href="../index.html">
+              <img src="../images/footer/footer-logo.svg" alt="Footer logo !" />
+            </a>
+          </div>
+          <ul>
+            <div class="footer-menu">
+              <li style="width: 100px;">
+                <a href="./О_компании.html">О компании</a>
+              </li>
+              <li>
+                <a href="./Контакты.html">Контакты</a>
+              </li>
+              <li>
+                <a href="./Вакансии.html">Вакансии</a>
+              </li>
+              <li>
+                <a href="#">Статьи</a>
+              </li>
+              <li style="max-width: 340px;">
+                <a href="#">Политика обработки персональных данных</a>
+              </li>
+            </div>
+            <div class="footer-social-medias">
+              <li>
+                <a href="#">
+                  <img src="../images/footer/instagram.svg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../images/footer/vkontakte.svg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../images/footer/facebook.svg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../images/footer/ok.svg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../images/footer/phone.svg" alt="" />
+                  <span style="width: 120px;">8 800 777 33 33</span>
+                </a>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery va Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Api Tab Js -->
+    <script src="https://cdn.jsdelivr.net/gh/abdulazizcreator/ap-tab/main.js"></script>
+    <!-- Main JS -->
+    <script src="../js/main.js"></script>
+  </body>
+</html>

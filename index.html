@@ -3,22 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="description"
-      content="Severyanochka - eng yaxshi narxlarda oziq-ovqat mahsulotlari! Bepul yetkazib berish 1000 ₽ dan boshlab! Aksiya va chegirmalar!" />
-    <meta
-      name="keywords"
-      content="oziq-ovqat, supermarket, chegirmalar, aksiya, yetkazib berish, Severyanochka" />
-    <meta name="author" content="Severyanochka" />
-    <meta property="og:title" content="Severyanochka - Oziq-ovqat do'koni" />
-    <meta
-      property="og:description"
-      content="Bepul yetkazib berish 1000 ₽ dan boshlab! Aksiya va chegirmalar!" />
-    <meta property="og:image" content="https://example.com/your-image.jpg" />
-    <meta property="og:url" content="https://example.com" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="robots" content="index, follow" />
     <title>Severyanochka - Oziq-ovqat do'koni</title>
     <!-- Main Css -->
     <link rel="stylesheet" href="./css/main.min.css" />
@@ -34,123 +18,182 @@
     <!-- Header -->
     <header>
       <div class="container">
-        <nav class="nav-desctop">
-          <div class="nav-logo">
-            <a href="./index.html">
-              <img class="nav-logo-1" src="./images/header/nav-logo-1.svg" alt="Nav Logo !" />
-              <img class="nav-logo-2" src="./images/header/nav-logo-2.svg" alt="Nav Logo !" />
+        <nav class="nav__desctop">
+          <div class="nav__desctop__logo">
+            <a class="nav__desctop__logo__link" href="./index.html">
+              <img
+                class="nav__desctop__logo__link__1"
+                src="./images/header/nav-logo-1.svg"
+                alt="Nav Logo !" />
+              <img
+                class="nav__desctop__logo__link__2"
+                src="./images/header/nav-logo-2.svg"
+                alt="Nav Logo !" />
             </a>
           </div>
-          <ul>
-            <li class="nav-menu-Каталог">
-              <a>
-                <div id="hamburger" class="hamburger">
+          <ul class="nav__menu">
+            <li class="nav__menu__Каталог">
+              <a href="./pages/Каталог.html">
+                <div class="hamburger">
                   <input
                     hidden=""
                     class="check-icon"
-                    id="check-icon"
+                    id="check-icon "
                     name="check-icon"
                     type="checkbox" />
-                  <label class="icon-menu" for="check-icon">
+                  <label class="icon-menu nav-toggle" for="check-icon ">
                     <div class="bar bar--1"></div>
                     <div class="bar bar--2"></div>
                     <div class="bar bar--3"></div>
                   </label>
                 </div>
-                <span href="./pages/Каталог.html">Каталог</span>
+                <span>Каталог</span>
               </a>
             </li>
-            <form class="nav-menu-Search">
+            <form class="nav__menu__Search">
               <input type="search" placeholder="Найти товар" />
               <img src="./images/header/search.svg" alt="Search !" />
             </form>
-            <li class="nav-menu-Избранное">
+            <li class="nav__menu__Избранное">
               <a href="./pages/Избранное.html">
                 <img src="./images/header/heart.svg" alt="Heart !" />
                 <span>Избранное</span>
               </a>
             </li>
-            <li class="nav-menu-Заказы">
+            <li class="nav__menu__Заказы">
               <a href="./pages/Заказы.html">
                 <img src="./images/header/box.svg" alt="Box !" />
                 <span>Заказы</span>
               </a>
             </li>
-            <li class="nav-menu-Корзина">
+            <li class="nav__menu__Корзина">
               <a href="./pages/Корзина.html">
                 <img src="./images/header/korzinka.svg" alt="Korzinka !" />
                 <span>Корзина</span>
               </a>
             </li>
-            <li class="nav-menu-avatar">
+            <li class="nav__menu__avatar">
               <img src="./images/header/avatar.svg" alt="Avatar !" />
               <span>Алексей</span>
             </li>
-            <li class="nav-menu-chevron-down">
+            <li class="nav__menu__chevron__down">
               <img src="./images/header/chevron-down.svg" alt="Chevron !" />
             </li>
           </ul>
         </nav>
-        <nav class="nav-mobile">
-          <ul>
-            <li class="nav-menu-Каталог">
-              <a href="./pages/Каталог.html">
-                <div class="hamburger">
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                </div>
-                <span>Каталог</span>
-              </a>
-            </li>
-            <li class="nav-menu-Избранное">
-              <a href="./pages/Избранное.html">
-                <img src="./images/header/heart.svg" alt="Heart !" />
-                <span>Избранное</span>
-              </a>
-            </li>
-            <li class="nav-menu-Заказы">
-              <a href="./pages/Заказы.html">
-                <img src="./images/header/box.svg" alt="Box !" />
-                <span>Заказы</span>
-              </a>
-            </li>
-            <li class="nav-menu-Корзина">
-              <a href="./pages/Корзина.html">
-                <img src="./images/header/korzinka.svg" alt="Korzinka !" />
-                <span>Корзина</span>
-              </a>
-            </li>
-            <li class="nav-menu-avatar">
-              <img src="./images/header/avatar.svg" alt="Avatar !" />
-            </li>
-          </ul>
-        </nav>
       </div>
+      <div class="container">
+        <div class="nav__menu__Каталог__menu__pages nav-menu">
+          <ul>
+            <div>
+              <li>
+                <a href="#">Молоко, сыр, яйцо</a>
+              </li>
+              <li>
+                <a href="#">Хлеб</a>
+              </li>
+              <li>
+                <a href="#">Фрукты и овощи</a>
+              </li>
+              <li>
+                <a href="#">Замороженные продукты</a>
+              </li>
+            </div>
+            <div>
+              <li>
+                <a href="#">Напитки</a>
+              </li>
+              <li>
+                <a href="#">Кондитерские изделия</a>
+              </li>
+              <li>
+                <a href="#">Чай, кофе</a>
+              </li>
+            </div>
+            <div>
+              <li>
+                <a href="#">Бакалея</a>
+              </li>
+              <li>
+                <a href="#">Здоровое питание</a>
+              </li>
+              <li>
+                <a href="#">Зоотовары</a>
+              </li>
+            </div>
+            <div>
+              <li>
+                <a href="#">Непродовольственные товары</a>
+              </li>
+              <li>
+                <a href="#">Детское питание</a>
+              </li>
+              <li>
+                <a href="#">Мясо, птица, колбаса</a>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <nav class="nav__mobile">
+        <ul class="nav__mobile__menu">
+          <li class="nav__mobile__menu__Каталог ">
+            <a href="./pages/Каталог.html">`
+              <div class="hamburger ">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <span>Каталог</span>
+            </a>
+          </li>
+          <li class="nav__mobile__menu__Избранное">
+            <a href="./pages/Избранное.html">
+              <img src="../images/header/heart.svg" alt="Heart !" />
+              <span>Избранное</span>
+            </a>
+          </li>
+          <li class="nav__mobile__menu__Заказы">
+            <a href="./pages/Заказы.html">
+              <img src="../images/header/box.svg" alt="Box !" />
+              <span>Заказы</span>
+            </a>
+          </li>
+          <li class="nav__mobile__menu__Корзина">
+            <a href="./pages/Корзина.html">
+              <img src="../images/header/korzinka.svg" alt="Korzinka !" />
+              <span>Корзина</span>
+            </a>
+          </li>
+          <li class="nav-menu-avatar">
+            <img src="./images/header/avatar.svg" alt="Avatar !" />
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
       <!-- Section Hero -->
-      <section class="section-hero">
+      <section class="section__hero">
         <div class="container">
-          <div class="section-hero-page">
+          <div class="section__hero__page">
             <img src="./images/index/products.png" alt="Products image !" />
             <h1>Доставка бесплатно от 1000 ₽</h1>
           </div>
         </div>
       </section>
       <!-- Section Акции -->
-      <section class="section-Акции">
+      <section class="section__Акции">
         <div class="container">
-          <div class="section-Акции-top">
+          <div class="section__Акции__top">
             <h2>Акции</h2>
             <a href="./pages/Товар.html">
               <span>Все акции</span>
               <img src="./images/index/chevron-right.svg" alt="chevron-right" />
             </a>
           </div>
-          <div class="section-Акции-cards owl-carousel">
-            <div class="section-Акции-card item">
-              <div class="section-Акции-card-image-1">
+          <div class="section__Акции__cards owl-carousel">
+            <div class="section__Акции__cards__card item">
+              <div class="section__Акции__cards__card__image-1">
                 <span class="like">
                   <label class="like-image">
                     <input checked="checked" type="checkbox" />
@@ -182,8 +225,8 @@
                 <button>В корзину</button>
               </div>
             </div>
-            <div class="section-Акции-card item">
-              <div class="section-Акции-card-image-2">
+            <div class="section__Акции__cards__card item">
+              <div class="section__Акции__cards__card__image-2">
                 <span class="like">
                   <label class="like-image">
                     <input checked="checked" type="checkbox" />
@@ -215,8 +258,8 @@
                 <button>В корзину</button>
               </div>
             </div>
-            <div class="section-Акции-card item">
-              <div class="section-Акции-card-image-3">
+            <div class="section__Акции__cards__card item">
+              <div class="section__Акции__cards__card__image-3">
                 <span class="like">
                   <label class="like-image">
                     <input checked="checked" type="checkbox" />
@@ -248,8 +291,8 @@
                 <button>В корзину</button>
               </div>
             </div>
-            <div class="section-Акции-card item">
-              <div class="section-Акции-card-image-4">
+            <div class="section__Акции__cards__card item">
+              <div class="section__Акции__cards__card__image-4">
                 <span class="like">
                   <label class="like-image">
                     <input checked="checked" type="checkbox" />
@@ -285,18 +328,18 @@
         </div>
       </section>
       <!-- Section Акции -->
-      <section class="section-Акции">
+      <section class="section__Акции">
         <div class="container">
-          <div class="section-Акции-top">
-            <h2>Новинки</h2>
+          <div class="section__Акции__top">
+            <h2>Акции</h2>
             <a href="./pages/Товар.html">
-              <span>Покупали раньше</span>
+              <span>Все акции</span>
               <img src="./images/index/chevron-right.svg" alt="chevron-right" />
             </a>
           </div>
-          <div class="section-Акции-cards owl-carousel">
-            <div class="section-Акции-card item">
-              <div class="section-Акции-card-image-1">
+          <div class="section__Акции__cards owl-carousel">
+            <div class="section__Акции__cards__card item">
+              <div class="section__Акции__cards__card__image-1">
                 <span class="like">
                   <label class="like-image">
                     <input checked="checked" type="checkbox" />
@@ -317,15 +360,15 @@
               <div class="section-Акции-card-texts">
                 <div class="цена">
                   <h3>44,50 ₽</h3>
+                  <h4>50,50 ₽</h4>
                 </div>
-
                 <h5>Г/Ц Блинчики с мясом вес, Россия</h5>
                 <img src="./images/index/rating.svg" alt="Rating !" />
                 <button>В корзину</button>
               </div>
             </div>
-            <div class="section-Акции-card item">
-              <div class="section-Акции-card-image-2">
+            <div class="section__Акции__cards__card item">
+              <div class="section__Акции__cards__card__image-2">
                 <span class="like">
                   <label class="like-image">
                     <input checked="checked" type="checkbox" />
@@ -346,6 +389,7 @@
               <div class="section-Акции-card-texts">
                 <div class="цена">
                   <h3>44,50 ₽</h3>
+                  <h4>50,50 ₽</h4>
                 </div>
 
                 <h5>Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...</h5>
@@ -353,8 +397,8 @@
                 <button>В корзину</button>
               </div>
             </div>
-            <div class="section-Акции-card item">
-              <div class="section-Акции-card-image-3">
+            <div class="section__Акции__cards__card item">
+              <div class="section__Акции__cards__card__image-3">
                 <span class="like">
                   <label class="like-image">
                     <input checked="checked" type="checkbox" />
@@ -375,6 +419,7 @@
               <div class="section-Акции-card-texts">
                 <div class="цена">
                   <h3>44,50 ₽</h3>
+                  <h4>50,50 ₽</h4>
                 </div>
 
                 <h5>Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...</h5>
@@ -382,8 +427,8 @@
                 <button>В корзину</button>
               </div>
             </div>
-            <div class="section-Акции-card item">
-              <div class="section-Акции-card-image-4">
+            <div class="section__Акции__cards__card item">
+              <div class="section__Акции__cards__card__image-4">
                 <span class="like">
                   <label class="like-image">
                     <input checked="checked" type="checkbox" />
@@ -404,6 +449,7 @@
               <div class="section-Акции-card-texts">
                 <div class="цена">
                   <h3>44,50 ₽</h3>
+                  <h4>50,50 ₽</h4>
                 </div>
 
                 <h5>Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...</h5>
@@ -415,18 +461,18 @@
         </div>
       </section>
       <!-- Section Акции -->
-      <section class="section-Акции">
+      <section class="section__Акции">
         <div class="container">
-          <div class="section-Акции-top">
-            <h2>Покупали раньше</h2>
+          <div class="section__Акции__top">
+            <h2>Акции</h2>
             <a href="./pages/Товар.html">
-              <span>Покупали раньше</span>
+              <span>Все акции</span>
               <img src="./images/index/chevron-right.svg" alt="chevron-right" />
             </a>
           </div>
-          <div class="section-Акции-cards owl-carousel">
-            <div class="section-Акции-card item">
-              <div class="section-Акции-card-image-1">
+          <div class="section__Акции__cards owl-carousel">
+            <div class="section__Акции__cards__card item">
+              <div class="section__Акции__cards__card__image-1">
                 <span class="like">
                   <label class="like-image">
                     <input checked="checked" type="checkbox" />
@@ -447,6 +493,7 @@
               <div class="section-Акции-card-texts">
                 <div class="цена">
                   <h3>44,50 ₽</h3>
+                  <h4>50,50 ₽</h4>
                 </div>
 
                 <h5>Г/Ц Блинчики с мясом вес, Россия</h5>
@@ -454,8 +501,8 @@
                 <button>В корзину</button>
               </div>
             </div>
-            <div class="section-Акции-card item">
-              <div class="section-Акции-card-image-2">
+            <div class="section__Акции__cards__card item">
+              <div class="section__Акции__cards__card__image-2">
                 <span class="like">
                   <label class="like-image">
                     <input checked="checked" type="checkbox" />
@@ -476,6 +523,7 @@
               <div class="section-Акции-card-texts">
                 <div class="цена">
                   <h3>44,50 ₽</h3>
+                  <h4>50,50 ₽</h4>
                 </div>
 
                 <h5>Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...</h5>
@@ -483,8 +531,8 @@
                 <button>В корзину</button>
               </div>
             </div>
-            <div class="section-Акции-card item">
-              <div class="section-Акции-card-image-3">
+            <div class="section__Акции__cards__card item">
+              <div class="section__Акции__cards__card__image-3">
                 <span class="like">
                   <label class="like-image">
                     <input checked="checked" type="checkbox" />
@@ -505,6 +553,7 @@
               <div class="section-Акции-card-texts">
                 <div class="цена">
                   <h3>44,50 ₽</h3>
+                  <h4>50,50 ₽</h4>
                 </div>
 
                 <h5>Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...</h5>
@@ -512,8 +561,8 @@
                 <button>В корзину</button>
               </div>
             </div>
-            <div class="section-Акции-card item">
-              <div class="section-Акции-card-image-4">
+            <div class="section__Акции__cards__card item">
+              <div class="section__Акции__cards__card__image-4">
                 <span class="like">
                   <label class="like-image">
                     <input checked="checked" type="checkbox" />
@@ -534,6 +583,7 @@
               <div class="section-Акции-card-texts">
                 <div class="цена">
                   <h3>44,50 ₽</h3>
+                  <h4>50,50 ₽</h4>
                 </div>
 
                 <h5>Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...</h5>
@@ -666,8 +716,6 @@
           </div>
         </div>
       </section>
-      <!--  -->
-      <section></section>
     </main>
     <!-- Footer -->
     <footer>

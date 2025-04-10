@@ -1,0 +1,252 @@
+@use "../utils/mixins" as mix;
+@use "../layout/flex" as flx;
+@use "../components/buttons" as btns;
+@use "../utils/fonts" as font;
+
+:root {
+  --color-FFFFFF: #ffffff;
+  --color-70c05b: #70c05b;
+  --color-faf7eb: #faf7eb;
+  --color-FF6633: #ff6633;
+  --color-8f8f8f: #8f8f8f;
+  --color-414141: #414141;
+  --color-232323: #232323;
+  --color-606060: #606060;
+  --color-0000001A: #0000001a;
+  --color-F3F2F1: #f3f2f1;
+  --color-BFBFBF: #bfbfbf;
+  --color-fcd5ba: #fcd5ba;
+  --color-CA936080: #ca936080;
+  --color-e5ffde: #e5ffde;
+}
+.section__product__detail {
+  margin-top: 120px;
+  .breadcrumb {
+    @include flx.flex(0, center, 16px);
+    &__home,
+    &__catalog,
+    &__category,
+    &__product {
+      a {
+        @include flx.flex(0, center, 0);
+        @include font.font(400, 12px, 150%, 0%);
+        color: var(--color-414141);
+        img {
+          width: 24px;
+        }
+        &:hover img {
+          filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%)
+            hue-rotate(-10deg);
+        }
+        &:hover {
+          color: var(--color-FF6633);
+        }
+      }
+    }
+  }
+  h3 {
+    margin-top: 24px;
+    @include font.font(700, 24px, 150%, 0%);
+    color: var(--color-414141);
+  }
+  .product-meta {
+    padding-top: 23px;
+    @include flx.flex(0, center, 24px);
+    &__code {
+      @include font.font(400, 12px, 150%, 0%);
+      color: var(--color-414141);
+      cursor: pointer;
+    }
+    &__reviews {
+      @include flx.flex(0, center, 8px);
+      p {
+        @include font.font(400, 14px, 150%, 0%);
+        color: var(--color-414141);
+        text-decoration: underline;
+      }
+      cursor: pointer;
+    }
+    &__share {
+      @include flx.flex(0, center, 8px);
+      p {
+        @include font.font(400, 14px, 150%, 0%);
+        color: var(--color-606060);
+      }
+      cursor: pointer;
+    }
+    &__favorite {
+      @include flx.flex(0, center, 8px);
+      p {
+        @include font.font(400, 12px, 150%, 0%);
+        color: var(--color-606060);
+      }
+      cursor: pointer;
+    }
+  }
+  .product-detail {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    @media (max-width: 1230px) {
+      grid-template-columns: repeat(2, auto);
+    }
+    .product-image {
+      padding-top: 16px;
+      @include flx.flex(0, center, 16px);
+      &__small {
+        @include flx.flex(0, center, 8px);
+        flex-direction: column;
+      }
+      &__big {
+        @include mix.position(relative, no, no, no, no);
+        display: inline-block;
+        img {
+          display: block;
+          width: 100%;
+        }
+        .foiz {
+          @include mix.position(absolute, 15px, 15px, no, no);
+          @include font.font(400, 16px, 150%, 0%);
+          @include btns.btn(4px 8px, 4px, none);
+          background: var(--color-FF6633);
+          color: var(--color-FFFFFF);
+          z-index: 2;
+        }
+      }
+    }
+    .product-korzinka {
+      width: 100%;
+      max-width: 376px;
+      &__narh {
+        width: 100%;
+        @include flx.flex(space-between, center, 0);
+        &__price {
+          h5 {
+            padding-top: 10px;
+            @include font.font(400, 24px, 150%, 0%);
+            color: var(--color-606060);
+          }
+          p {
+            padding-top: 8px;
+            @include font.font(400, 12px, 150%, 0%);
+            color: var(--color-BFBFBF);
+          }
+        }
+        &__discount {
+          h5 {
+            @include font.font(700, 36px, 150%, 0%);
+            color: var(--color-414141);
+          }
+          div {
+            @include flx.flex(0, center, 8px);
+            p {
+              @include font.font(400, 12px, 150%, 0%);
+              color: var(--color-BFBFBF);
+            }
+          }
+        }
+      }
+      .product-button {
+        button {
+          margin-top: 16px;
+          @include flx.flex(0, center, 0);
+          width: 100%;
+          img {
+            padding-left: 16px;
+          }
+          span {
+            width: 100%;
+            max-width: 304px;
+            text-align: center;
+            @include font.font(400, 24px, 150%, 0%);
+            color: var(--color-FFFFFF);
+            transition: 0.5s all;
+          }
+          @include btns.btn(16px 16px 16px 0, 4px, none);
+          background-color: var(--color-70c05b);
+          transition: 0.5s all;
+          &:hover {
+            background-color: var(--color-FF6633);
+            span {
+              color: var(--color-FFFFFF);
+            }
+          }
+        }
+      }
+      .product-aksiya {
+        padding-top: 16px;
+        @include flx.flex(center, center, 8px);
+        p {
+          @include font.font(400, 12px, 150%, 0%);
+          color: var(--color-70c05b);
+        }
+      }
+      .product-alert {
+        padding-top: 8px;
+        @include flx.flex(center, center, 8px);
+        p {
+          @include font.font(400, 12px, 150%, 0%);
+          color: var(--color-606060);
+        }
+      }
+      .product-specs-1 {
+        margin-top: 24px;
+        padding: 4px;
+        background-color: var(--color-F3F2F1);
+        @include flx.flex(space-between, center, 8px);
+        p {
+          @include font.font(400, 12px, 150%, 0%);
+          color: var(--color-414141);
+        }
+        span {
+          @include font.font(700, 12px, 150%, 0%);
+          color: var(--color-414141);
+        }
+      }
+      .product-specs-2 {
+        padding: 4px;
+        background-color: var(--color-fcd5ba);
+        @include flx.flex(space-between, center, 8px);
+        p {
+          @include font.font(400, 12px, 150%, 0%);
+          color: var(--color-414141);
+        }
+        span {
+          @include font.font(700, 12px, 150%, 0%);
+          color: var(--color-414141);
+        }
+      }
+      .product-specs-3 {
+        padding: 4px;
+        background-color: var(--color-F3F2F1);
+        @include flx.flex(space-between, center, 8px);
+        p {
+          @include font.font(400, 12px, 150%, 0%);
+          color: var(--color-414141);
+        }
+        span {
+          @include font.font(700, 12px, 150%, 0%);
+          color: var(--color-414141);
+        }
+      }
+    }
+    .similar-products {
+      @include flx.flex(0, center, 17px);
+      flex-direction: column;
+      p {
+        @include font.font(400, 15px, 150%, 0%);
+        color: var(--color-606060);
+      }
+      &__card {
+        padding: 10px;
+        background-color: var(--color-FFFFFF);
+        border-radius: 4px;
+        h4 {
+          @include font.font(700, 18px, 150%, 0%);
+          color: var(--color-414141);
+        }
+      }
+    }
+  }
+}

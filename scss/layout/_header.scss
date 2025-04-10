@@ -1,7 +1,8 @@
 @use "../utils/mixins" as mix;
 @use "../layout/flex" as flx;
-@use "../components/buttons" as comb;
+@use "../components/buttons" as btns;
 @use "../utils/fonts" as font;
+
 
 %nav--menu-links {
   a {
@@ -19,56 +20,46 @@
       brightness(100%) contrast(100%);
   }
 }
-%nav--menu-mobile-links {
-  a {
-    @include flx.flex(0, center, 5px);
-    flex-direction: column;
-    @include font.font(400, 15px, 150%, 0%);
-    cursor: pointer;
-    border-radius: 4px;
-    color: var(--color-8f8f8f);
-    transition: 0.5s all;
-    &:hover {
-      color: var(--color-FF6633);
-    }
-  }
-  a:hover img {
-    filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%) hue-rotate(-10deg)
-      brightness(100%) contrast(100%);
-  }
-}
 header {
-  background-color: var(--color-FFFFFF);
-  position: fixed;
-  top: 0;
   width: 100%;
   z-index: 100;
   padding: 16px 0;
-  .nav-desctop {
+  background-color: var(--color-FFFFFF);
+  box-shadow: 2px 4px 8px 0px var(--color-0000001A);
+
+  @include mix.position(fixed, 0, no, no, no);
+  .nav__desctop {
     width: 100%;
+    @include mix.position(relative, no, no, no, no);
     @include flx.flex(space-between, center, 40px);
     @media (max-width: 1055px) {
       @include flx.flex(space-between, center, 10px);
     }
-    .nav-logo {
-      a {
+    &__logo {
+      &__link {
         @include flx.flex(start, center, 12px);
         @media (max-width: 1000px) {
-          .nav-logo-2 {
+          &__2 {
             display: none;
           }
         }
       }
     }
-    ul {
+    .nav__menu {
       width: 100%;
       @include flx.flex(space-between, center, 16px);
-      .nav-menu-Каталог {
+      &__Каталог {
+        @include flx.flex(0, center, 20px);
+        @include btns.btn(8px 20px 8px 8px, 4px, none);
+        background-color: var(--color-70c05b);
+        transition: 0.5s all;
+        &:hover {
+          background-color: var(--color-FF6633);
+        }
         a {
-          padding: 8px 20px 8px 8px;
-          @media (max-width: 800px) {
-            padding: 10px;
-          }
+          @include flx.flex(0, center, 20px);
+          color: var(--color-FFFFFF);
+          @include font.font(400, 16px, 150%, 0%);
           .hamburger {
             .icon-menu {
               --gap: 5px;
@@ -127,42 +118,34 @@ header {
               --rotate-bar-three: -45deg;
             }
           }
-          @include font.font(400, 16px, 150%, 0%);
-          cursor: pointer;
-          border-radius: 4px;
-          background-color: var(--color-70c05b);
-          @include flx.flex(0, center, 20px);
-          color: var(--color-FFFFFF);
-          transition: 0.5s all;
-          &:hover {
-            background-color: var(--color-FF6633);
-          }
         }
         @media (max-width: 800px) {
           span {
             display: none;
           }
         }
-        @media (max-width: 620px) {
+        @media (max-width: 660px) {
           display: none;
         }
+        @media (max-width: 800px) {
+          @include btns.btn(8px 8px 8px 8px, 4px, none);
+        }
       }
-      .nav-menu-Search {
-        border-radius: 4px;
-        max-width: 374px;
-        padding: 8px 15px;
-        width: 100%;
+
+      &__Search {
+        @include btns.btn(8px 15px, 4px, 1px solid var(--color-70c05b));
         @include flx.flex(0, center, 0);
-        border: 1px solid var(--color-70c05b);
+        max-width: 374px;
+        width: 100%;
         @media (max-width: 620px) {
           max-width: 674px;
         }
         input {
-          color: var(--color-8f8f8f);
           @include font.font(400, 16px, 150%, 0%);
-          width: 100%;
-          border: none;
+          color: var(--color-8f8f8f);
           outline: none;
+          border: none;
+          width: 100%;
           &::-webkit-search-cancel-button {
             display: none;
           }
@@ -175,31 +158,31 @@ header {
           }
         }
       }
-      .nav-menu-Избранное {
+      &__Избранное {
         @extend %nav--menu-links;
         @media (max-width: 620px) {
           display: none;
         }
       }
-      .nav-menu-Заказы {
+      &__Заказы {
         @extend %nav--menu-links;
         @media (max-width: 620px) {
           display: none;
         }
       }
-      .nav-menu-Корзина {
+      &__Корзина {
         @extend %nav--menu-links;
         @media (max-width: 620px) {
           display: none;
         }
       }
-      .nav-menu-avatar {
+      &__avatar {
         @include flx.flex(0, center, 10px);
         span {
-          margin-left: 10px;
           @include font.font(400, 16px, 150%, 0%);
           color: var(--color-232323);
           transition: 0.3s all;
+          margin-left: 10px;
           &:hover {
             color: var(--color-FF6633);
           }
@@ -213,7 +196,7 @@ header {
           display: none;
         }
       }
-      .nav-menu-chevron-down {
+      &__chevron__down {
         &:hover img {
           filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%)
             hue-rotate(-10deg) brightness(100%) contrast(100%);
@@ -224,36 +207,100 @@ header {
       }
     }
   }
+  .nav__menu__Каталог__menu__pages {
+    display: none;
+    width: 100%;
+    ul {
+      padding: 20px 0;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      @media (max-width: 1040px) {
+        max-width: 100%;
+        width: 100vh;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+        gap: 20px;
+      }
+      @media (max-width: 648px) {
+        max-width: 100%;
+        width: 100vh;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+        gap: 20px;
+      }
+      @media (max-width: 498px) {
+        max-width: 100%;
+        width: 100vh;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+        gap: 20px;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        li {
+          a {
+            white-space: nowrap;
+            @include font.font(700, 16px, 150%, 0%);
+            color: var(--color-414141);
+            transition: 0.3s all;
+            &:hover {
+              color: var(--color-FF6633);
+            }
+          }
+        }
+      }
+    }
+  }
+  .active {
+    display: flex !important;
+  }
 
-  .nav-mobile {
+  %nav--menu-mobile-links {
+    a {
+      @include flx.flex(0, center, 5px);
+      flex-direction: column;
+      @include font.font(400, 15px, 150%, 0%);
+      cursor: pointer;
+      border-radius: 4px;
+      color: var(--color-8f8f8f);
+      transition: 0.5s all;
+      &:hover {
+        color: var(--color-FF6633);
+      }
+    }
+    a:hover img {
+      filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%) hue-rotate(-10deg)
+        brightness(100%) contrast(100%);
+    }
+  }
+  .nav__mobile {
+    @include mix.position(fixed, no, 0, 0, 0);
+    background-color: var(--color-FFFFFF);
     padding: 13.5px 10px 0 10px;
     display: none;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    right: 0;
     z-index: 100;
-    background-color: var(--color-FFFFFF);
-    @media (max-width: 620px) {
+    width: 100%;
+    @media (max-width: 660px) {
       display: flex;
     }
-    ul {
+    &__menu {
       width: 100%;
       @include flx.flex(space-between, center, 0);
-      .nav-menu-Каталог {
+      &__Каталог {
         @extend %nav--menu-mobile-links;
         a {
           .hamburger {
-            display: flex;
+            @include flx.flex(0, 0, 7px);
             flex-direction: column;
-            gap: 7px;
             .bar {
-              transition: 0.5s all;
-              border-radius: 5px;
-              width: 25px;
-              height: 2.5px;
+              @include btns.btn(0, 5px, 0);
               background-color: var(--color-8f8f8f);
+              transition: 0.5s all;
+              height: 2.5px;
+              width: 25px;
             }
           }
         }
@@ -261,13 +308,13 @@ header {
           background-color: var(--color-FF6633);
         }
       }
-      .nav-menu-Избранное {
+      &__Избранное {
         @extend %nav--menu-mobile-links;
       }
-      .nav-menu-Заказы {
+      &__Заказы {
         @extend %nav--menu-mobile-links;
       }
-      .nav-menu-Корзина {
+      &__Корзина {
         @extend %nav--menu-mobile-links;
       }
     }
