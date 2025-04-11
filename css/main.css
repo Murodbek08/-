@@ -1367,9 +1367,9 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   height: 90px;
   background-size: cover;
 }
-@media (max-width: 470px) {
-  .section__product__detail .product-detail .product-image__small {
-    height: 100%;
+@media (max-width: 460px) {
+  .section__product__detail .product-detail .product-image__small img {
+    height: 60px;
   }
 }
 .section__product__detail .product-detail .product-image__big {
@@ -1384,6 +1384,11 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
 @media (max-width: 604px) {
   .section__product__detail .product-detail .product-image__big img {
     width: 100%;
+  }
+}
+@media (max-width: 460px) {
+  .section__product__detail .product-detail .product-image__big img {
+    height: 350px;
   }
 }
 .section__product__detail .product-detail .product-image__big .foiz {
