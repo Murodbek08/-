@@ -3,7 +3,6 @@
 @use "../components/buttons" as btns;
 @use "../utils/fonts" as font;
 
-
 %nav--menu-links {
   a {
     @include font.font(400, 12px, 150%, 0%);
@@ -237,18 +236,14 @@ header {
         gap: 20px;
       }
       div {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        li {
-          a {
-            white-space: nowrap;
-            @include font.font(700, 16px, 150%, 0%);
-            color: var(--color-414141);
-            transition: 0.3s all;
-            &:hover {
-              color: var(--color-FF6633);
-            }
+        padding-top: 24px;
+        a {
+          white-space: nowrap;
+          @include font.font(700, 16px, 150%, 0%);
+          color: var(--color-414141);
+          transition: 0.3s all;
+          &:hover {
+            color: var(--color-FF6633);
           }
         }
       }
