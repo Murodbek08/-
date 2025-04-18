@@ -559,3 +559,72 @@ const products = [
     ],
   },
 ];
+
+const reklamaProducts = [
+  {
+    name: "Оформите карту «Северяночка»",
+    paragrapx: "И получайте бонусы при покупке в магазинах и на сайте",
+    img: "../images/index/karta.png",
+  },
+  {
+    name: "Покупайте акционные товары",
+    paragrapx: "И получайте вдвое больше бонусов",
+    img: "../images/index/savat.png",
+  },
+];
+
+const statiProducts = [
+  {
+    img: "../images/index/image-6.png",
+    date: "05.03.2021",
+    name: "Режим использования масок и перчаток на территории магазинов",
+    paragrapx:
+      'Подробная информация о режимах использования масок и перчаток на территории магазинов "ЛЕНТА". Информация обновляется каждый будний день.',
+  },
+  {
+    img: "../images/index/image-7.png",
+    date: "05.03.2021",
+    name: "Весеннее настроение для каждой",
+    paragrapx:
+      "8 Марта – это не просто Международный женский день, это ещё день тюльпанов, приятных сюрпризов и праздничных тёплых пожеланий.",
+  },
+  {
+    img: "../images/index/image-8.png",
+    date: "22.02.2020",
+    name: "ЗОЖ или ФАСТФУД. А вы на чьей стороне? Голосуем!",
+    paragrapx:
+      "Голосуйте за любимые категории, выбирайте категорию-победителя в мобильном приложении и получайте кешбэк 10% баллами в апреле!",
+  },
+];
+// const categories = [
+//   { id: 1, name: "Fruit", image: "https://picsum.photos/200/300/?category0" },
+//   { id: 2, name: "Bakery", image: "https://picsum.photos/200/300/?category2" },
+//   {
+//     id: 3,
+//     name: "Vegetable",
+//     image: "https://picsum.photos/200/300/?category3",
+//   },
+//   { id: 4, name: "Dairy", image: "https://picsum.photos/200/300/?category5" },
+//   { id: 5, name: "Meat", image: "https://picsum.photos/200/300/?category6" },
+//   {
+//     id: 6,
+//     name: "Dessert",
+//     image: "https://picsum.photos/200/300/?category7",
+//   },
+//   {
+//     id: 7,
+//     name: "Fast food",
+//     image: "https://picsum.photos/200/300/?category12",
+//   },
+//   {
+//     id: 8,
+//     name: "Breakfast",
+//     image: "https://picsum.photos/200/300/?category23",
+//   },
+//   { id: 9, name: "Lunch", image: "https://picsum.photos/200/300/?category27" },
+//   {
+//     id: 10,
+//     name: "Dinner",
+//     image: "https://picsum.photos/200/300/?category31",
+//   },
+// ];

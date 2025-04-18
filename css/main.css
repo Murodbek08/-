@@ -784,17 +784,17 @@ main .section-reklama .section-reklama-cards .section-reklama-card-1 {
     flex-direction: column;
   }
 }
-main .section-reklama .section-reklama-cards .section-reklama-card-1 .section-reklama-card-texts {
+main .section-reklama .section-reklama-cards .section-reklama-card-1 div {
   padding: 30px 0 40px 44px;
 }
-main .section-reklama .section-reklama-cards .section-reklama-card-1 .section-reklama-card-texts h3 {
+main .section-reklama .section-reklama-cards .section-reklama-card-1 div h3 {
   font-weight: 700;
   font-size: 24px;
   line-height: 150%;
   letter-spacing: 0%;
   color: var(--color-414141);
 }
-main .section-reklama .section-reklama-cards .section-reklama-card-1 .section-reklama-card-texts p {
+main .section-reklama .section-reklama-cards .section-reklama-card-1 div p {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -802,7 +802,7 @@ main .section-reklama .section-reklama-cards .section-reklama-card-1 .section-re
   color: var(--color-414141);
 }
 @media (max-width: 560px) {
-  main .section-reklama .section-reklama-cards .section-reklama-card-1 .section-reklama-card-texts {
+  main .section-reklama .section-reklama-cards .section-reklama-card-1 div {
     padding: 30px 44px 40px 44px;
   }
 }
@@ -810,6 +810,7 @@ main .section-reklama .section-reklama-cards .section-reklama-card-2 {
   background: url("../../images/index/plus.svg");
   max-width: 584px;
   border-radius: 4px;
+  box-shadow: 0px 8px 16px 0px rgba(128, 255, 0, 0.512);
   background-color: var(--color-e5ffde);
   display: flex;
   align-items: center;
@@ -829,17 +830,17 @@ main .section-reklama .section-reklama-cards .section-reklama-card-2 {
     width: 100%;
   }
 }
-main .section-reklama .section-reklama-cards .section-reklama-card-2 .section-reklama-card-texts {
+main .section-reklama .section-reklama-cards .section-reklama-card-2 div {
   padding: 30px 0 40px 44px;
 }
-main .section-reklama .section-reklama-cards .section-reklama-card-2 .section-reklama-card-texts h3 {
+main .section-reklama .section-reklama-cards .section-reklama-card-2 div h3 {
   font-weight: 700;
   font-size: 24px;
   line-height: 150%;
   letter-spacing: 0%;
   color: var(--color-414141);
 }
-main .section-reklama .section-reklama-cards .section-reklama-card-2 .section-reklama-card-texts p {
+main .section-reklama .section-reklama-cards .section-reklama-card-2 div p {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -847,7 +848,7 @@ main .section-reklama .section-reklama-cards .section-reklama-card-2 .section-re
   color: var(--color-414141);
 }
 @media (max-width: 560px) {
-  main .section-reklama .section-reklama-cards .section-reklama-card-2 .section-reklama-card-texts {
+  main .section-reklama .section-reklama-cards .section-reklama-card-2 div {
     padding: 30px 44px 40px 44px;
   }
 }
@@ -973,6 +974,7 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   color: var(--color-8f8f8f);
 }
 main .section-Статьи .section-Статьи-cards .section-Статьи-card h4 {
+  height: 60px;
   display: -webkit-box;
   -webkit-line-clamp: 2; /* 2 qatordan keyin "..." qo‘yish */
   -webkit-box-orient: vertical;

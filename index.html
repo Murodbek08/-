@@ -7,6 +7,7 @@
     <!-- Main Css -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
+
   <body>
     <!-- Header -->
     <header>
@@ -143,36 +144,32 @@
       <section class="aksiya">
         <div class="container">
           <div class="aksiya__top">
-            <h2>Акции</h2>
+            <h2>Новинки</h2>
             <a href="./pages/Товар.html">
-              <span>Все акции</span>
+              <span>Все новинки</span>
               <img src="./images/index/chevron-right.svg" alt="chevron-right" />
             </a>
           </div>
-          <div class="aksiya__cards"></div>
+          <div class="aksiya__cards novinki__cards"></div>
         </div>
       </section>
-
+      <section class="aksiya">
+        <div class="container">
+          <div class="aksiya__top">
+            <h2>Покупали</h2>
+            <a href="./pages/Товар.html">
+              <span>Все</span>
+              <img src="./images/index/chevron-right.svg" alt="chevron-right" />
+            </a>
+          </div>
+          <div class="aksiya__cards pokupali__cards"></div>
+        </div>
+      </section>
       <!-- Section Reklama -->
       <section class="section-reklama">
         <div class="container">
           <h2>Специальные предложения</h2>
-          <div class="section-reklama-cards">
-            <div class="section-reklama-card-1">
-              <div class="section-reklama-card-texts">
-                <h3>Оформите карту «Северяночка»</h3>
-                <p>И получайте бонусы при покупке в магазинах и на сайте</p>
-              </div>
-              <img src="./images/index/karta.png" alt="Karta !" />
-            </div>
-            <div class="section-reklama-card-2">
-              <div class="section-reklama-card-texts">
-                <h3>Оформите карту «Северяночка»</h3>
-                <p>И получайте бонусы при покупке в магазинах и на сайте</p>
-              </div>
-              <img src="./images/index//savat.png" alt="Karta !" />
-            </div>
-          </div>
+          <div class="section-reklama-cards"></div>
         </div>
       </section>
       <!-- Section Iframe -->
@@ -241,38 +238,7 @@
               <img src="./images/index/chevron-right.svg" alt="chevron-right" />
             </a>
           </div>
-          <div class="section-Статьи-cards">
-            <div class="section-Статьи-card">
-              <img src="./images/index/image-6.png" alt="" />
-              <span>05.03.2021</span>
-              <h4>Режим использования масок и перчаток на территории магазинов</h4>
-              <p>
-                Подробная информация о режимах использования масок и перчаток на территории
-                магазинов "ЛЕНТА". Информация обновляется каждый будний день.
-              </p>
-              <button>Подробнее</button>
-            </div>
-            <div class="section-Статьи-card">
-              <img src="./images/index/image-7.png" alt="" />
-              <span>05.03.2021</span>
-              <h4>Весеннее настроение для каждой</h4>
-              <p>
-                8 Марта – это не просто Международный женский день, это ещё день тюльпанов, приятных
-                сюрпризов и праздничных тёплых пожеланий.
-              </p>
-              <button>Подробнее</button>
-            </div>
-            <div class="section-Статьи-card">
-              <img src="./images/index/image-8.png" alt="" />
-              <span>05.03.2021</span>
-              <h4>ЗОЖ или ФАСТФУД. А вы на чьей стороне? Голосуем!</h4>
-              <p>
-                Голосуйте за любимые категории, выбирайте категорию-победителя в мобильном
-                приложении и получайте кешбэк 10% баллами в апреле!
-              </p>
-              <button>Подробнее</button>
-            </div>
-          </div>
+          <div class="section-Статьи-cards"></div>
         </div>
       </section>
     </main>
@@ -338,10 +304,9 @@
     <script src="./js/products-data.js"></script>
     <script src="./js/katalog-data.js"></script>
     <script src="./js/katalog.js"></script>
-    <script src="./js/aksiya.js"></script>
-    <!-- Api Tab Js-->
+    <script src="./js/katalog.js"></script>
     <script src="./js/api-tab.js"></script>
-    <!-- Main JS / -->
+    <script src="./js/index.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

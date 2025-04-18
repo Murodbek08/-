@@ -1,3 +1,20 @@
+let navMenuUl = document.querySelector(".nav-menu-ul");
+
+function navMenuKatalog(el) {
+  let katalogDiv = document.createElement("div");
+  let katalogA = document.createElement("a");
+
+  katalogA.href = "#";
+  katalogA.innerText = el.text;
+
+  katalogDiv.append(katalogA);
+
+  return katalogDiv;
+}
+
+katalogData.map((el) => navMenuUl.append(navMenuKatalog(el)));
+
+// Katalog in js code
 let heroKatalogCards = document.querySelector(".hero-katalog-cards");
 
 function catalogCard(el) {
@@ -17,19 +34,3 @@ function catalogCard(el) {
 }
 
 productDataKatalog.map((el) => heroKatalogCards.append(catalogCard(el)));
-
-let navMenuUl = document.querySelector(".nav-menu-ul");
-
-function navMenuKatalog(el) {
-  let katalogDiv = document.createElement("div");
-  let katalogA = document.createElement("a");
-
-  katalogA.href = "#";
-  katalogA.innerText = el.text;
-
-  katalogDiv.append(katalogA);
-
-  return katalogDiv;
-}
-
-katalogData.map((el) => navMenuUl.append(navMenuKatalog(el)));
