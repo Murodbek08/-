@@ -209,6 +209,7 @@ header {
   .nav__menu__Каталог__menu__pages {
     display: none;
     width: 100%;
+    overflow-y: auto;
     ul {
       padding: 20px 0;
       width: 100%;
@@ -276,7 +277,7 @@ header {
     background-color: var(--color-FFFFFF);
     padding: 13.5px 10px 0 10px;
     display: none;
-    z-index: 100;
+    z-index: 9999999999999999999;
     width: 100%;
     @media (max-width: 660px) {
       display: flex;
@@ -284,6 +285,7 @@ header {
     &__menu {
       width: 100%;
       @include flx.flex(space-between, center, 0);
+      align-items: center;
       &__Каталог {
         @extend %nav--menu-mobile-links;
         a {
