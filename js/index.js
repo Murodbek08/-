@@ -6,7 +6,7 @@ function aksiyaCard(el, type) {
 
   let aksiyaCardImage = document.createElement("a");
   aksiyaCardImage.className = "aksiya__card__image-1";
-  aksiyaCardImage.href = "../pages/Каталог.html";
+  aksiyaCardImage.href = "../pages/Товар.html";
 
   let spanLike = document.createElement("span");
   spanLike.className = "like";
@@ -118,6 +118,10 @@ novinkiProducts.map((el) => novinkiCards.append(aksiyaCard(el, "novinki")));
 let pokupaliCards = document.querySelector(".pokupali__cards");
 let pokupaliProducts = products.filter((el) => el.discount > 0).slice(-16);
 pokupaliProducts.map((el) => pokupaliCards.append(aksiyaCard(el, "pokupali")));
+
+// let katalogCards = document.querySelector(".katalog__cards");
+// let katalogProducts = products.filter((el) => el.discount > 0).slice(-16);
+// katalogProducts.map((el) => katalogCards.append(aksiyaCard(el, "katalog")));
 
 // Reklama card in js ################################################################
 

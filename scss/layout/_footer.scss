@@ -4,10 +4,12 @@
 @use "../utils/fonts" as font;
 
 footer {
-  margin-bottom: 50px;
-  padding: 24px 0 58px 0;
+  padding: 24px 0 108px 0;
   background: url("../images/footer/footer-bacround.png");
   background-size: cover;
+  background-color: var(--color-faf7eb);
+  background-size: cover;
+
   .footer-page {
     @include flx.flex(space-between, center, 40px);
     width: 100%;

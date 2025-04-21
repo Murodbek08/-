@@ -19,6 +19,13 @@ body {
   font-family: "Rubik", sans-serif;
   background-color: var(--color-faf7eb);
 }
+
+body {
+  background: url("../../images/index/fast-food-restaurant-background-with-chalkboard-texture-free-94_LE_upscale_balanced_x4.jpg")
+    no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+}
 ul {
   list-style-type: none;
 }

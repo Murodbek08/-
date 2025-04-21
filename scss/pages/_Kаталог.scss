@@ -4,12 +4,12 @@
 @use "../utils/fonts" as font;
 
 .section-hero-katalog {
-  margin-top: 130px;
+  padding-top: 130px;
   .hero-katalog-menu {
     @include flx.flex(0, center, 25px);
     a {
       @include font.font(400, 16px, 150%, 0%);
-      color: var(--color-414141);
+      color: var(--color-faf7eb);
       @include flx.flex(0, center, 8px);
       flex-direction: column;
       transition: 0.3s all;
@@ -21,7 +21,7 @@
   h2 {
     margin-top: 24px;
     @include font.font(700, 40px, 150%, 0%);
-    color: var(--color-414141);
+    color: var(--color-faf7eb);
   }
   .hero-katalog-cards {
     margin: 40px 0 60px 0;

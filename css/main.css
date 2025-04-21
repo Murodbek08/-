@@ -22,6 +22,12 @@ body {
   background-color: var(--color-faf7eb);
 }
 
+body {
+  background: url("../../images/index/fast-food-restaurant-background-with-chalkboard-texture-free-94_LE_upscale_balanced_x4.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+}
+
 ul {
   list-style-type: none;
 }
@@ -395,9 +401,10 @@ header .nav__mobile__menu__Каталог a:hover .bar {
   background-color: var(--color-FF6633);
 }
 footer {
-  margin-bottom: 50px;
-  padding: 24px 0 58px 0;
+  padding: 24px 0 108px 0;
   background: url("../images/footer/footer-bacround.png");
+  background-size: cover;
+  background-color: var(--color-faf7eb);
   background-size: cover;
 }
 footer .footer-page {
@@ -694,7 +701,7 @@ main .aksiya__top h2 {
   font-size: 36px;
   line-height: 150%;
   letter-spacing: 0%;
-  color: var(--color-414141);
+  color: var(--color-faf7eb);
 }
 main .aksiya__top a {
   display: flex;
@@ -702,7 +709,7 @@ main .aksiya__top a {
   align-items: center;
   gap: 15px;
   display: flex;
-  color: var(--color-606060);
+  color: var(--color-faf7eb);
 }
 main .aksiya__top a:hover {
   color: var(--color-FF6633);
@@ -748,7 +755,7 @@ main .section-reklama h2 {
   font-size: 36px;
   line-height: 150%;
   letter-spacing: 0%;
-  color: var(--color-414141);
+  color: var(--color-faf7eb);
   margin-bottom: 20px;
 }
 main .section-reklama .section-reklama-cards {
@@ -862,7 +869,7 @@ main .section-iframe h2 {
   font-size: 36px;
   line-height: 150%;
   letter-spacing: 0%;
-  color: var(--color-414141);
+  color: var(--color-faf7eb);
 }
 main .section-iframe .ap-tab {
   margin-top: 40px;
@@ -923,7 +930,7 @@ main .section-Статьи .section-Статьи-top h2 {
   font-size: 36px;
   line-height: 150%;
   letter-spacing: 0%;
-  color: var(--color-414141);
+  color: var(--color-faf7eb);
 }
 main .section-Статьи .section-Статьи-top a {
   display: flex;
@@ -931,7 +938,7 @@ main .section-Статьи .section-Статьи-top a {
   align-items: center;
   gap: 15px;
   display: flex;
-  color: var(--color-606060);
+  color: var(--color-faf7eb);
 }
 main .section-Статьи .section-Статьи-top a:hover {
   color: var(--color-FF6633);
@@ -1022,7 +1029,7 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
 }
 
 .section-hero-katalog {
-  margin-top: 130px;
+  padding-top: 130px;
 }
 .section-hero-katalog .hero-katalog-menu {
   display: flex;
@@ -1035,7 +1042,7 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0%;
-  color: var(--color-414141);
+  color: var(--color-faf7eb);
   display: flex;
   justify-content: 0;
   align-items: center;
@@ -1052,7 +1059,7 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   font-size: 40px;
   line-height: 150%;
   letter-spacing: 0%;
-  color: var(--color-414141);
+  color: var(--color-faf7eb);
 }
 .section-hero-katalog .hero-katalog-cards {
   margin: 40px 0 60px 0;
@@ -1178,7 +1185,7 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
 }
 
 .section__product__detail {
-  margin-top: 120px;
+  padding-top: 120px;
 }
 .section__product__detail .breadcrumb {
   display: flex;
@@ -1200,7 +1207,7 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   font-size: 12px;
   line-height: 150%;
   letter-spacing: 0%;
-  color: var(--color-414141);
+  color: var(--color-faf7eb);
 }
 .section__product__detail .breadcrumb__home a img, .section__product__detail .breadcrumb__catalog a img, .section__product__detail .breadcrumb__category a img, .section__product__detail .breadcrumb__product a img {
   width: 24px;
@@ -1213,14 +1220,17 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
 }
 .section__product__detail h3 {
   margin-top: 24px;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 24px;
   line-height: 150%;
   letter-spacing: 0%;
-  color: var(--color-414141);
+  color: var(--color-faf7eb);
 }
 .section__product__detail .product-meta {
-  padding-top: 23px;
+  border-radius: 15px 15px 0 0;
+  background-color: var(--color-faf7eb);
+  padding: 23px 20px 0 20px;
   display: flex;
   justify-content: 0;
   align-items: center;
@@ -1283,6 +1293,9 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   color: var(--color-606060);
 }
 .section__product__detail .product-detail {
+  background-color: var(--color-faf7eb);
+  border-radius: 0 0 15px 15px;
+  padding: 0 20px 20px 20px;
   width: 100%;
   display: flex;
   gap: 20px;
