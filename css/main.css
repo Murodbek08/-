@@ -303,9 +303,11 @@ header .nav__menu__Каталог__menu__pages ul {
   header .nav__menu__Каталог__menu__pages ul {
     max-width: 100%;
     width: 100vh;
+    height: calc(100vh - 400px);
     grid-template-columns: repeat(2, 1fr);
     margin: 0 auto;
     gap: 20px;
+    overflow-y: auto;
   }
 }
 @media (max-width: 498px) {

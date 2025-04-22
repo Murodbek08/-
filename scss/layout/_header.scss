@@ -225,9 +225,11 @@ header {
       @media (max-width: 648px) {
         max-width: 100%;
         width: 100vh;
+        height: calc(100vh - 400px);
         grid-template-columns: repeat(2, 1fr);
         margin: 0 auto;
         gap: 20px;
+        overflow-y: auto;
       }
       @media (max-width: 498px) {
         max-width: 100%;

@@ -1,20 +1,4 @@
-let navMenuUl = document.querySelector(".nav-menu-ul");
-
-function navMenuKatalog(el) {
-  let katalogDiv = document.createElement("div");
-  let katalogA = document.createElement("a");
-
-  katalogA.href = "#";
-  katalogA.innerText = el.text;
-
-  katalogDiv.append(katalogA);
-
-  return katalogDiv;
-}
-
-katalogData.map((el) => navMenuUl.append(navMenuKatalog(el)));
-
-// Katalog in js code
+//  ###################### Katalog Java Skript Card Kodlari ###############################
 let heroKatalogCards = document.querySelector(".hero-katalog-cards");
 
 function catalogCard(el) {
