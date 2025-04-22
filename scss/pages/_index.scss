@@ -4,142 +4,6 @@
 @use "../components/buttons" as comb;
 @use "../utils/fonts" as font;
 
-%section-Акции-card-texts {
-  padding: 8px;
-  .цена {
-    @include flx.flex(space-between, center, 0px);
-    h3 {
-      @include font.font(700, 18px, 150%, 0%);
-      color: var(--color-414141);
-    }
-    h4 {
-      @include font.font(400, 16px, 150%, 0%);
-      color: var(--color-606060);
-    }
-  }
-  .удобство {
-    @include flx.flex(space-between, center, 0px);
-    span {
-      margin-top: 8px;
-      @include font.font(400, 12px, 150%, 0%);
-      color: var(--color-BFBFBF);
-    }
-  }
-  h5 {
-    padding-top: 8px;
-    @include font.font(400, 16px, 150%, 0%);
-    color: var(--color-414141);
-  }
-  .text-description-p {
-    padding-top: 8px;
-    @include font.font(400, 16px, 150%, 0%);
-    color: var(--color-414141);
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  img {
-    padding: 8px 0 8px 0;
-  }
-  button {
-    border-radius: 4px;
-    padding: 8px 0 8px 0;
-    width: 100%;
-    border: 1px solid var(--color-70c05b);
-    background-color: var(--color-FFFFFF);
-    color: var(--color-70c05b);
-    @include font.font(400, 16px, 150%, 0%);
-    transition: 0.3s ease;
-    &:hover {
-      background-color: var(--color-FF6633);
-      border: 1px solid var(--color-FF6633);
-      color: var(--color-FFFFFF);
-    }
-  }
-}
-%section-Акции-card-image {
-  height: 160px;
-  position: relative;
-  background-size: cover;
-  width: 100%;
-  .like {
-    display: none;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 7px 10px 7px 10px;
-    border-radius: 4px;
-    background-color: #f3f2f182;
-    .like-image input {
-      display: none;
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
-      width: 0;
-      color: #ff0000;
-    }
-    .like-image {
-      position: relative;
-      cursor: pointer;
-      font-size: 15px;
-      user-select: none;
-      transition: 100ms;
-    }
-    .checkmark {
-      top: 0;
-      left: 0;
-      height: 2em;
-      width: 2em;
-      transition: 100ms;
-      animation: dislike_effect 400ms ease;
-    }
-    .like-image input:checked ~ .checkmark path {
-      fill: #ff0000;
-      stroke-width: 0;
-    }
-    .like-image input:checked ~ .checkmark {
-      animation: like_effect 400ms ease;
-    }
-    .like-image:hover {
-      transform: scale(1.1);
-    }
-    @keyframes like_effect {
-      0% {
-        transform: scale(0);
-      }
-      50% {
-        transform: scale(1.2);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-    @keyframes dislike_effect {
-      0% {
-        transform: scale(0);
-      }
-      50% {
-        transform: scale(1.2);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-  }
-  .foiz {
-    display: none;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: var(--color-FFFFFF);
-    padding: 4px 8px;
-    border-radius: 4px;
-    background-color: var(--color-FF6633);
-  }
-}
-
 main {
   .section__hero {
     background: url("../../images/index/hero-bacround.png");
@@ -193,17 +57,95 @@ main {
       display: flex;
       gap: 20px;
       margin-top: 40px;
-      overflow-x: hidden;
+      overflow-x: auto;
       .aksiya__card {
-        min-width: 272px;
+        width: 272px;
         box-shadow: 1px 2px 4px 0px var(--color-0000001A);
         border-radius: 4px;
         background-color: var(--color-FFFFFF);
         transition: 0.5s ease-in-out;
         overflow: hidden;
         &__image-1 {
-          // height: 160px;
-          @extend %section-Акции-card-image;
+          height: 160px;
+          overflow: hidden;
+          position: relative;
+          background-size: cover;
+          width: 100%;
+          .like {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 7px 10px 7px 10px;
+            border-radius: 4px;
+            background-color: #f3f2f182;
+            .like-image input {
+              display: none;
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+              height: 0;
+              width: 0;
+              color: #ff0000;
+            }
+            .like-image {
+              position: relative;
+              cursor: pointer;
+              font-size: 15px;
+              user-select: none;
+              transition: 100ms;
+            }
+            .checkmark {
+              top: 0;
+              left: 0;
+              height: 2em;
+              width: 2em;
+              transition: 100ms;
+              animation: dislike_effect 400ms ease;
+            }
+            .like-image input:checked ~ .checkmark path {
+              fill: #ff0000;
+              stroke-width: 0;
+            }
+            .like-image input:checked ~ .checkmark {
+              animation: like_effect 400ms ease;
+            }
+            .like-image:hover {
+              transform: scale(1.1);
+            }
+            @keyframes like_effect {
+              0% {
+                transform: scale(0);
+              }
+              50% {
+                transform: scale(1.2);
+              }
+              100% {
+                transform: scale(1);
+              }
+            }
+            @keyframes dislike_effect {
+              0% {
+                transform: scale(0);
+              }
+              50% {
+                transform: scale(1.2);
+              }
+              100% {
+                transform: scale(1);
+              }
+            }
+          }
+          .foiz {
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: var(--color-FFFFFF);
+            padding: 4px 8px;
+            border-radius: 4px;
+            background-color: var(--color-FF6633);
+          }
           transform-origin: center;
           display: inline-block;
           transition: 0.3s ease;
@@ -211,19 +153,74 @@ main {
           &:hover {
             transform: scale(1.05);
           }
+
           img {
             width: 100%;
             height: 100%;
           }
         }
         .section-Акции-card-texts {
-          @extend %section-Акции-card-texts;
+          padding: 8px;
+          .цена {
+            @include flx.flex(space-between, center, 0px);
+            h3 {
+              @include font.font(700, 18px, 150%, 0%);
+              color: var(--color-414141);
+            }
+            h4 {
+              @include font.font(400, 16px, 150%, 0%);
+              color: var(--color-606060);
+            }
+          }
+          .удобство {
+            @include flx.flex(space-between, center, 0px);
+            span {
+              margin-top: 8px;
+              @include font.font(400, 12px, 150%, 0%);
+              color: var(--color-BFBFBF);
+            }
+          }
+          h5 {
+            padding-top: 8px;
+            @include font.font(400, 16px, 150%, 0%);
+            color: var(--color-414141);
+          }
+          .text-description-p {
+            padding-top: 8px;
+            @include font.font(400, 16px, 150%, 0%);
+            color: var(--color-414141);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+          img {
+            padding: 8px 0 8px 0;
+          }
+          button {
+            border-radius: 4px;
+            padding: 8px 0 8px 0;
+            width: 100%;
+            border: 1px solid var(--color-70c05b);
+            background-color: var(--color-FFFFFF);
+            color: var(--color-70c05b);
+            @include font.font(400, 16px, 150%, 0%);
+            transition: 0.3s ease;
+            &:hover {
+              background-color: var(--color-FF6633);
+              border: 1px solid var(--color-FF6633);
+              color: var(--color-FFFFFF);
+            }
+          }
         }
         &:hover .foiz {
           display: flex;
         }
         &:hover .like {
           display: flex;
+        }
+        @media (max-width: 1015px) {
+          min-width: 272px;
         }
       }
     }

@@ -1,4 +1,4 @@
-//  card in JS ###################################################################
+// //  card in JS ###################################################################
 
 function aksiyaCard(el, type) {
   let aksiyaCard = document.createElement("div");
@@ -46,9 +46,14 @@ function aksiyaCard(el, type) {
   spanFoiz.className = "foiz";
   spanFoiz.innerText = "-50%";
 
+  // let imageDiv = document.createElement("div");
+  // imageDiv.className = "image-big-div";
+
   let imgBig = document.createElement("img");
   imgBig.src = el.images[0];
   imgBig.alt = "No img !";
+
+  // imageDiv.append(imgBig);
 
   aksiyaCardImage.append(spanLike, spanFoiz, imgBig);
 
@@ -112,11 +117,11 @@ let aksiyaProducts = products.filter((el) => el.discount > 0).slice(-4);
 aksiyaProducts.map((el) => aksiyaCards.append(aksiyaCard(el, "aksiya")));
 
 let novinkiCards = document.querySelector(".novinki__cards");
-let novinkiProducts = products.filter((el) => el.discount > 0).slice(-8);
+let novinkiProducts = products.filter((el) => el).slice(-4);
 novinkiProducts.map((el) => novinkiCards.append(aksiyaCard(el, "novinki")));
 
 let pokupaliCards = document.querySelector(".pokupali__cards");
-let pokupaliProducts = products.filter((el) => el.discount > 0).slice(-16);
+let pokupaliProducts = products.toSorted((a, b) => b.price - b.price).slice(0, 4);
 pokupaliProducts.map((el) => pokupaliCards.append(aksiyaCard(el, "pokupali")));
 
 // let katalogCards = document.querySelector(".katalog__cards");
@@ -182,3 +187,5 @@ function statiProductsCard(el) {
 let sectionStatiCards = document.querySelector(".section-Статьи-cards");
 
 statiProducts.map((el) => sectionStatiCards.append(statiProductsCard(el)));
+
+console.log(object);
