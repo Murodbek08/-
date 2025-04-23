@@ -44,7 +44,7 @@ function aksiyaCard(el, type) {
 
   let spanFoiz = document.createElement("span");
   spanFoiz.className = "foiz";
-  spanFoiz.innerText = "-50%";
+  spanFoiz.innerText = el.discount + " %";
 
   let imgBig = document.createElement("img");
   imgBig.src = el.images[0];
