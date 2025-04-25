@@ -3,8 +3,8 @@ let heroKatalogCards = document.querySelector(".hero-katalog-cards");
 let inputSearch = document.querySelector("#input-search");
 let searchCount = document.querySelector("#search-count");
 
-catalogCard = (el) => {
-  return `<div><img src=${el.image} alt="No img !"><h3>${el.text}</h3></div>`;
+catalogCard = ({ image, text }) => {
+  return `<div><img src=${image} alt="No img !"><h3>${text}</h3></div>`;
 };
 
 getProducts = (data = productDataKatalog) => {
