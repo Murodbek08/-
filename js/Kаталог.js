@@ -1,20 +1,21 @@
 //  ###################### Katalog Java Skript Card Kodlari ###############################
 let heroKatalogCards = document.querySelector(".hero-katalog-cards");
+let inputSearch = document.querySelector("#input-search");
+let searchCount = document.querySelector("#search-count");
 
-function catalogCard(el) {
-  let divCard = document.createElement("div");
-  let imgCard = document.createElement("img");
-  let nameH3 = document.createElement("h3");
+catalogCard = (el) => {
+  return `<div><img src=${el.image} alt="No img !"><h3>${el.text}</h3></div>`;
+};
 
-  imgCard.src = el.image;
-  imgCard.style.width = "100%";
-  imgCard.alt = "No img !";
-  nameH3.innerText = el.text;
+getProducts = (data = productDataKatalog) => {
+  heroKatalogCards.innerHTML = "";
+  data.map((el) => (heroKatalogCards.innerHTML += catalogCard(el)));
+  searchCount.textContent = data.length;
+};
+getProducts();
 
-  divCard.append(imgCard);
-  divCard.append(nameH3);
-
-  return divCard;
-}
-
-productDataKatalog.map((el) => heroKatalogCards.append(catalogCard(el)));
+inputSearch.addEventListener("input", function () {
+  let search = this.value.toLowerCase().trim();
+  let searchProducts = productDataKatalog.filter((el) => el.text.toLowerCase().includes(search));
+  getProducts(searchProducts);
+});

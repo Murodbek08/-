@@ -130,10 +130,13 @@ katalogData.map((el) => navMenuUl.append(navMenuKatalog(el)));
 document.addEventListener("DOMContentLoaded", () => {
   const toggles = document.querySelectorAll(".nav-toggle");
   const menu = document.querySelector(".nav-menu");
-
   toggles.forEach((toggle) => {
     toggle.addEventListener("click", () => {
       menu.classList.toggle("active");
     });
   });
 });
+
+//########################################## Loading ####################################
+const loading = document.querySelector("#loading");
+window.addEventListener("load", () => setTimeout(() => (loading.style.display = "none"), 1800));

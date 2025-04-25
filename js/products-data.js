@@ -641,67 +641,67 @@ const katalogData = [
 const productDataKatalog = [
   {
     id: 1,
-    text: "Молоко, сыр, яйцо",
+    text: "Sut, pishloq, tuxum",
     image: "../images/katalog/image-1.png",
   },
   {
     id: 2,
-    text: "Хлеб",
+    text: "Non",
     image: "../images/katalog/image-2.png",
   },
   {
     id: 3,
-    text: "Фрукты и овощи",
+    text: "Mevalar va sabzavotlar",
     image: "../images/katalog/image-3.png",
   },
   {
     id: 4,
-    text: "Фрукты и овощи",
+    text: "Mevalar va sabzavotlar",
     image: "../images/katalog/image-4.png",
   },
   {
     id: 5,
-    text: "Молоко, сыр, яйцо",
+    text: "Sut, pishloq, tuxum",
     image: "../images/katalog/image-5.png",
   },
   {
     id: 6,
-    text: "Напитки",
+    text: "Ichimliklar",
     image: "../images/katalog/image-6.png",
   },
   {
     id: 7,
-    text: "Кондитерские изделия",
+    text: "Qandolat mahsulotlari",
     image: "../images/katalog/image-7.png",
   },
   {
     id: 8,
-    text: "Чай, кофе",
+    text: "Choy, qahva",
     image: "../images/katalog/image-8.png",
   },
   {
     id: 9,
-    text: "Бакалея",
+    text: "Bakaleya",
     image: "../images/katalog/image-9.png",
   },
   {
     id: 10,
-    text: "Здоровое питание",
+    text: "Sog‘lom ovqatlanish",
     image: "../images/katalog/image-10.png",
   },
   {
     id: 11,
-    text: "Здоровое питание",
+    text: "Sog‘lom ovqatlanish",
     image: "../images/katalog/image-11.png",
   },
   {
     id: 12,
-    text: "Детское питание",
+    text: "Bolalar ovqati",
     image: "../images/katalog/image-12.png",
   },
   {
     id: 13,
-    text: "Мясо, птица, колбаса",
+    text: "Go‘sht, parranda, kolbasa",
     image: "../images/katalog/image-13.png",
   },
 ];

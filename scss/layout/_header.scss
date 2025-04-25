@@ -156,6 +156,18 @@ header {
               hue-rotate(-10deg) brightness(100%) contrast(100%);
           }
         }
+        span {
+          margin-left: 10px;
+          width: 35px;
+          height: 30px;
+          color: var(--color-FFFFFF);
+          @include font.font(400, 16px, 150%, 0%);
+          background-color: var(--color-70c05b);
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
       &__Избранное {
         @extend %nav--menu-links;
