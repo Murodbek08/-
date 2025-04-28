@@ -1,21 +1,38 @@
-//  ###################### Katalog Java Skript Card Kodlari ###############################
-let heroKatalogCards = document.querySelector(".hero-katalog-cards");
-let inputSearch = document.querySelector("#input-search");
-let searchCount = document.querySelector("#search-count");
+"use strict";
 
-catalogCard = ({ image, text }) => {
-  return `<div><img src=${image} alt="No img !"><h3>${text}</h3></div>`;
+//  ###################### Katalog Java Skript Card Kodlari ###############################
+const heroKatalogCards = document.querySelector(".hero-katalog-cards");
+const inputSearch = document.querySelector("#input-search");
+const searchCount = document.querySelector("#search-count");
+
+const catalogCard = ({ image, text }) => {
+  return `
+  <div>
+    <img src=${image} alt="">
+    <h3>${text}</h3>
+  </div>
+  `;
 };
 
-getProducts = (data = productDataKatalog) => {
+const getProducts = (data = productDataKatalog) => {
   heroKatalogCards.innerHTML = "";
-  data.map((el) => (heroKatalogCards.innerHTML += catalogCard(el)));
+
+  data.map((el) => {
+    return (heroKatalogCards.innerHTML += catalogCard(el));
+  });
+
   searchCount.textContent = data.length;
 };
+
 getProducts();
 
 inputSearch.addEventListener("input", function () {
-  let search = this.value.toLowerCase().trim();
-  let searchProducts = productDataKatalog.filter((el) => el.text.toLowerCase().includes(search));
+  const search = this.value.trim().toLowerCase();
+  console.log(search);
+
+  const searchProducts = productDataKatalog.filter((el) => {
+    return el.text.toLowerCase().includes(search);
+  });
+
   getProducts(searchProducts);
 });

@@ -139,4 +139,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //########################################## Loading ####################################
 const loading = document.querySelector("#loading");
-window.addEventListener("load", () => setTimeout(() => (loading.style.display = "none"), 1800));
+window.addEventListener("load", () => setTimeout(() => (loading.style.display = "none"), 1000));
