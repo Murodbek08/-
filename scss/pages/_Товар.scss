@@ -3,22 +3,8 @@
 @use "../components/buttons" as btns;
 @use "../utils/fonts" as font;
 
-:root {
-  --color-FFFFFF: #ffffff;
-  --color-70c05b: #70c05b;
-  --color-faf7eb: #faf7eb;
-  --color-FF6633: #ff6633;
-  --color-8f8f8f: #8f8f8f;
-  --color-414141: #414141;
-  --color-232323: #232323;
-  --color-606060: #606060;
-  --color-0000001A: #0000001a;
-  --color-F3F2F1: #f3f2f1;
-  --color-BFBFBF: #bfbfbf;
-  --color-fcd5ba: #fcd5ba;
-  --color-CA936080: #ca936080;
-  --color-e5ffde: #e5ffde;
-}
+
+
 .section__product__detail {
   padding-top: 120px;
   .breadcrumb {

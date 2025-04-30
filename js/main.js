@@ -130,9 +130,19 @@ katalogData.map((el) => navMenuUl.append(navMenuKatalog(el)));
 document.addEventListener("DOMContentLoaded", () => {
   const toggles = document.querySelectorAll(".nav-toggle");
   const menu = document.querySelector(".nav-menu");
+
+  const toggleStorage = localStorage.getItem("katalog-menu");
+  if (toggleStorage === "active") {
+    menu.classList.add("active");
+  }
   toggles.forEach((toggle) => {
     toggle.addEventListener("click", () => {
       menu.classList.toggle("active");
+      if (menu.classList.contains("active")) {
+        localStorage.setItem("katalog-menu", "active");
+      } else {
+        localStorage.setItem("katalog-menu", "no-active");
+      }
     });
   });
 });

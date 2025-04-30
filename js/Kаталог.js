@@ -36,3 +36,4 @@ inputSearch.addEventListener("input", function () {
 
   getProducts(searchProducts);
 });
+

@@ -527,6 +527,23 @@ footer .footer-page ul .footer-social-medias li a:hover img {
   filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%) hue-rotate(-10deg) brightness(100%) contrast(100%);
 }
 
+:root {
+  --color-FFFFFF: #ffffff;
+  --color-70c05b: #70c05b;
+  --color-faf7eb: #faf7eb;
+  --color-FF6633: #ff6633;
+  --color-8f8f8f: #8f8f8f;
+  --color-414141: #414141;
+  --color-232323: #232323;
+  --color-606060: #606060;
+  --color-0000001A: #0000001a;
+  --color-F3F2F1: #f3f2f1;
+  --color-BFBFBF: #bfbfbf;
+  --color-fcd5ba: #fcd5ba;
+  --color-CA936080: #ca936080;
+  --color-e5ffde: #e5ffde;
+}
+
 main .section__hero {
   background: url("../../images/index/hero-bacround.png");
   background-color: var(--color-FFFFFF);
@@ -1204,23 +1221,6 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
     height: 150px;
     grid-column: span 1 !important;
   }
-}
-
-:root {
-  --color-FFFFFF: #ffffff;
-  --color-70c05b: #70c05b;
-  --color-faf7eb: #faf7eb;
-  --color-FF6633: #ff6633;
-  --color-8f8f8f: #8f8f8f;
-  --color-414141: #414141;
-  --color-232323: #232323;
-  --color-606060: #606060;
-  --color-0000001A: #0000001a;
-  --color-F3F2F1: #f3f2f1;
-  --color-BFBFBF: #bfbfbf;
-  --color-fcd5ba: #fcd5ba;
-  --color-CA936080: #ca936080;
-  --color-e5ffde: #e5ffde;
 }
 
 .section__product__detail {

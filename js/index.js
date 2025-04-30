@@ -38,7 +38,6 @@ for (let i = 0; i < tabs.length; i++) {
 let aksiyaCards = document.querySelector(".aksiya__cards");
 let aksiyaProducts = products.filter((el) => el.discount > 0).slice(-4);
 aksiyaProducts.map((el) => aksiyaCards.append(aksiyaCard(el, "aksiya")));
-console.log(products);
 
 // ########################### Новинки cardlari uchun Java Akript codi  ######################################
 
