@@ -1,4 +1,5 @@
 @use "../utils/function" as func;
+@use "../base/typograph" as font;
 * {
   padding: 0;
   margin: 0;
@@ -16,7 +17,7 @@
 }
 html,
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: var(--color-faf7eb);
 }
 

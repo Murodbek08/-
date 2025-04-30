@@ -11,7 +11,7 @@ footer {
   background-size: cover;
 
   .footer-page {
-    @include flx.flex(space-between, center, 40px);
+    @include flx.flex(space-between, center, 30px);
     width: 100%;
     @media (max-width: 560px) {
       flex-direction: column;
