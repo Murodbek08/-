@@ -1,5 +1,22 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --color-FFFFFF: #ffffff;
+  --color-70c05b: #70c05b;
+  --color-faf7eb: #faf7eb;
+  --color-FF6633: #ff6633;
+  --color-8f8f8f: #8f8f8f;
+  --color-414141: #414141;
+  --color-232323: #232323;
+  --color-606060: #606060;
+  --color-0000001A: #0000001a;
+  --color-F3F2F1: #f3f2f1;
+  --color-BFBFBF: #bfbfbf;
+  --color-fcd5ba: #fcd5ba;
+  --color-CA936080: #ca936080;
+  --color-e5ffde: #e5ffde;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -35,6 +52,194 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.Вси_продукты .main__product_cards .aksiya__card, main .aksiya__cards .aksiya__card {
+  width: 272px;
+  box-shadow: 1px 2px 4px 0px var(--color-0000001A);
+  border-radius: 4px;
+  background-color: var(--color-FFFFFF);
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+}
+.Вси_продукты .main__product_cards .aksiya__card__image-1, main .aksiya__cards .aksiya__card__image-1 {
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  transform-origin: center;
+  display: inline-block;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like, main .aksiya__cards .aksiya__card__image-1 .like {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 7px 10px 7px 10px;
+  border-radius: 4px;
+  background-color: rgba(243, 242, 241, 0.5098039216);
+}
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image input, main .aksiya__cards .aksiya__card__image-1 .like .like-image input {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  color: #ff0000;
+}
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image, main .aksiya__cards .aksiya__card__image-1 .like .like-image {
+  position: relative;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 100ms;
+}
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .checkmark, main .aksiya__cards .aksiya__card__image-1 .like .checkmark {
+  top: 0;
+  left: 0;
+  height: 2em;
+  width: 2em;
+  transition: 100ms;
+  animation: dislike_effect 400ms ease;
+}
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark path, main .aksiya__cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark path {
+  fill: #ff0000;
+  stroke-width: 0;
+}
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark, main .aksiya__cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark {
+  animation: like_effect 400ms ease;
+}
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image:hover, main .aksiya__cards .aksiya__card__image-1 .like .like-image:hover {
+  transform: scale(1.1);
+}
+@keyframes like_effect {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes dislike_effect {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .foiz, main .aksiya__cards .aksiya__card__image-1 .foiz {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: var(--color-FFFFFF);
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: var(--color-FF6633);
+}
+.Вси_продукты .main__product_cards .aksiya__card__image-1:hover, main .aksiya__cards .aksiya__card__image-1:hover {
+  transform: scale(1.05);
+}
+.Вси_продукты .main__product_cards .aksiya__card__image-1 img, main .aksiya__cards .aksiya__card__image-1 img {
+  width: 100%;
+  height: 100%;
+}
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts, main .aksiya__cards .aksiya__card .section-Акции-card-texts {
+  padding: 8px;
+}
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .цена, main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .цена h3, main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+}
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .цена h4, main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена h4 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-606060);
+}
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .удобство, main .aksiya__cards .aksiya__card .section-Акции-card-texts .удобство {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .удобство span, main .aksiya__cards .aksiya__card .section-Акции-card-texts .удобство span {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-BFBFBF);
+}
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts h5, main .aksiya__cards .aksiya__card .section-Акции-card-texts h5 {
+  padding-top: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+}
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .text-description-p, main .aksiya__cards .aksiya__card .section-Акции-card-texts .text-description-p {
+  padding-top: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts img, main .aksiya__cards .aksiya__card .section-Акции-card-texts img {
+  padding: 8px 0 8px 0;
+}
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts button, main .aksiya__cards .aksiya__card .section-Акции-card-texts button {
+  border-radius: 4px;
+  padding: 8px 0 8px 0;
+  width: 100%;
+  border: 1px solid var(--color-70c05b);
+  background-color: var(--color-FFFFFF);
+  color: var(--color-70c05b);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  transition: 0.3s ease;
+}
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts button:hover, main .aksiya__cards .aksiya__card .section-Акции-card-texts button:hover {
+  background-color: var(--color-FF6633);
+  border: 1px solid var(--color-FF6633);
+  color: var(--color-FFFFFF);
+}
+.Вси_продукты .main__product_cards .aksiya__card:hover .foiz, main .aksiya__cards .aksiya__card:hover .foiz {
+  display: flex;
+}
+.Вси_продукты .main__product_cards .aksiya__card:hover .like, main .aksiya__cards .aksiya__card:hover .like {
+  display: flex;
 }
 
 .loading {
@@ -273,6 +478,22 @@ header .nav__desctop .nav__menu__Search span {
   header .nav__desctop .nav__menu__Заказы {
     display: none;
   }
+}
+header .nav__desctop .nav__menu__Корзина {
+  position: relative;
+}
+header .nav__desctop .nav__menu__Корзина #korzinka_card_count {
+  font-size: 18px;
+  position: absolute;
+  left: 40px;
+  top: -5px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: var(--color-FFFFFF);
+  background-color: var(--color-70c05b);
+}
+header .nav__desctop .nav__menu__Корзина #korzinka_card_count:hover {
+  color: var(--color-FFFFFF);
 }
 @media (max-width: 620px) {
   header .nav__desctop .nav__menu__Корзина {
@@ -528,23 +749,6 @@ footer .footer-page ul .footer-social-medias li a:hover img {
   filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%) hue-rotate(-10deg) brightness(100%) contrast(100%);
 }
 
-:root {
-  --color-FFFFFF: #ffffff;
-  --color-70c05b: #70c05b;
-  --color-faf7eb: #faf7eb;
-  --color-FF6633: #ff6633;
-  --color-8f8f8f: #8f8f8f;
-  --color-414141: #414141;
-  --color-232323: #232323;
-  --color-606060: #606060;
-  --color-0000001A: #0000001a;
-  --color-F3F2F1: #f3f2f1;
-  --color-BFBFBF: #bfbfbf;
-  --color-fcd5ba: #fcd5ba;
-  --color-CA936080: #ca936080;
-  --color-e5ffde: #e5ffde;
-}
-
 main .section__hero {
   background: url("../../images/index/hero-bacround.png");
   background-color: var(--color-FFFFFF);
@@ -615,196 +819,9 @@ main .aksiya__cards {
   margin-top: 40px;
   overflow-x: auto;
 }
-main .aksiya__cards .aksiya__card {
-  width: 272px;
-  box-shadow: 1px 2px 4px 0px var(--color-0000001A);
-  border-radius: 4px;
-  background-color: var(--color-FFFFFF);
-  transition: 0.5s ease-in-out;
-  overflow: hidden;
-}
-main .aksiya__cards .aksiya__card__image-1 {
-  height: 160px;
-  overflow: hidden;
-  position: relative;
-  background-size: cover;
-  width: 100%;
-  transform-origin: center;
-  display: inline-block;
-  transition: 0.3s ease;
-  overflow: hidden;
-}
-main .aksiya__cards .aksiya__card__image-1 .like {
-  display: none;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 7px 10px 7px 10px;
-  border-radius: 4px;
-  background-color: rgba(243, 242, 241, 0.5098039216);
-}
-main .aksiya__cards .aksiya__card__image-1 .like .like-image input {
-  display: none;
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-  color: #ff0000;
-}
-main .aksiya__cards .aksiya__card__image-1 .like .like-image {
-  position: relative;
-  cursor: pointer;
-  font-size: 15px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  transition: 100ms;
-}
-main .aksiya__cards .aksiya__card__image-1 .like .checkmark {
-  top: 0;
-  left: 0;
-  height: 2em;
-  width: 2em;
-  transition: 100ms;
-  animation: dislike_effect 400ms ease;
-}
-main .aksiya__cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark path {
-  fill: #ff0000;
-  stroke-width: 0;
-}
-main .aksiya__cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark {
-  animation: like_effect 400ms ease;
-}
-main .aksiya__cards .aksiya__card__image-1 .like .like-image:hover {
-  transform: scale(1.1);
-}
-@keyframes like_effect {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes dislike_effect {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-main .aksiya__cards .aksiya__card__image-1 .foiz {
-  display: none;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: var(--color-FFFFFF);
-  padding: 4px 8px;
-  border-radius: 4px;
-  background-color: var(--color-FF6633);
-}
-main .aksiya__cards .aksiya__card__image-1:hover {
-  transform: scale(1.05);
-}
-main .aksiya__cards .aksiya__card__image-1 img {
-  width: 100%;
-  height: 100%;
-}
-main .aksiya__cards .aksiya__card .section-Акции-card-texts {
-  padding: 8px;
-}
-main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0px;
-}
-main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена h3 {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 150%;
-  letter-spacing: 0%;
-  color: var(--color-414141);
-}
-main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена h4 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0%;
-  color: var(--color-606060);
-}
-main .aksiya__cards .aksiya__card .section-Акции-card-texts .удобство {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0px;
-}
-main .aksiya__cards .aksiya__card .section-Акции-card-texts .удобство span {
-  margin-top: 8px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 150%;
-  letter-spacing: 0%;
-  color: var(--color-BFBFBF);
-}
-main .aksiya__cards .aksiya__card .section-Акции-card-texts h5 {
-  padding-top: 8px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0%;
-  color: var(--color-414141);
-}
-main .aksiya__cards .aksiya__card .section-Акции-card-texts .text-description-p {
-  padding-top: 8px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0%;
-  color: var(--color-414141);
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-main .aksiya__cards .aksiya__card .section-Акции-card-texts img {
-  padding: 8px 0 8px 0;
-}
-main .aksiya__cards .aksiya__card .section-Акции-card-texts button {
-  border-radius: 4px;
-  padding: 8px 0 8px 0;
-  width: 100%;
-  border: 1px solid var(--color-70c05b);
-  background-color: var(--color-FFFFFF);
-  color: var(--color-70c05b);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0%;
-  transition: 0.3s ease;
-}
-main .aksiya__cards .aksiya__card .section-Акции-card-texts button:hover {
-  background-color: var(--color-FF6633);
-  border: 1px solid var(--color-FF6633);
-  color: var(--color-FFFFFF);
-}
-main .aksiya__cards .aksiya__card:hover .foiz {
-  display: flex;
-}
-main .aksiya__cards .aksiya__card:hover .like {
-  display: flex;
-}
 @media (max-width: 1015px) {
   main .aksiya__cards .aksiya__card {
-    min-width: 272px;
+    min-width: 272px !important;
   }
 }
 main .section-reklama h2 {
@@ -1222,6 +1239,170 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
     height: 150px;
     grid-column: span 1 !important;
   }
+}
+
+.korzinka-page {
+  margin-top: 80px;
+}
+.korzinka-page .korzinka-page__menu {
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.korzinka-page .korzinka-page__menu a {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0;
+  color: var(--color-FFFFFF);
+}
+.korzinka-page .korzinka-page__menu a:hover {
+  color: var(--color-FF6633);
+}
+.korzinka-page .korzinka-page__title {
+  position: relative;
+}
+.korzinka-page .korzinka-page__title #korzinka_card_count {
+  border-radius: 10px;
+  background-color: var(--color-70c05b);
+  color: var(--color-FFFFFF);
+  padding: 5px 10px;
+  position: absolute;
+  font-size: 20px;
+  top: 20px;
+  left: 260px;
+}
+.korzinka-page .korzinka-page__title h2 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: var(--color-FFFFFF);
+}
+.korzinka-page .korzinka-page__content__empty {
+  margin-top: 60px;
+  max-width: 400px;
+  display: flex;
+  gap: 48px;
+  padding: 10px;
+  background-color: var(--color-faf7eb);
+  border-radius: 10px;
+}
+.korzinka-page .korzinka-page__content__empty .korzinka-desc {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.korzinka-page .korzinka-page__content__empty .korzinka-desc span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border-width: 1px;
+  background-color: var(--color-70c05b);
+}
+.korzinka-page .korzinka-page__content__empty .korzinka-desc p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: var(--color-606060);
+}
+.korzinka-page .korzinka-page__content__empty .korzinka-desc-udalit p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: var(--color-FF6633);
+}
+.korzinka-page .korzinka-page__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.korzinka-page .korzinka-page__content .korzinka-page__content__cards {
+  max-width: 860px;
+  height: 500px;
+  overflow-y: auto;
+  margin-top: 24px;
+  margin-bottom: 116px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card {
+  max-width: 876px;
+  border-radius: 4px;
+  padding: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-FFFFFF);
+}
+.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name {
+  display: flex;
+  gap: 8px;
+}
+.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-img {
+  position: relative;
+  z-index: 1;
+}
+.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-img input {
+  background-color: var(--color-70c05b);
+  left: 10px;
+  position: absolute;
+  z-index: 2;
+}
+.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name h3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 10%;
+}
+.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name p {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 10%;
+  color: var(--color-414141);
+}
+.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name p span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 10%;
+  color: var(--color-606060);
+}
+.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-count {
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  padding: 8px;
+  background-color: var(--color-70c05b);
+}
+.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-count button {
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--color-70c05b);
+}
+.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-count span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 10%;
+  color: var(--color-FFFFFF);
+}
+.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-price {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 10%;
 }
 
 .section__product__detail {
@@ -1751,4 +1932,111 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   color: var(--color-FF6633);
   border-radius: 4px;
   border: none;
+}
+
+:root {
+  --color-FFFFFF: #ffffff;
+  --color-70c05b: #70c05b;
+  --color-faf7eb: #faf7eb;
+  --color-FF6633: #ff6633;
+  --color-8f8f8f: #8f8f8f;
+  --color-414141: #414141;
+  --color-232323: #232323;
+  --color-606060: #606060;
+  --color-0000001A: #0000001a;
+  --color-F3F2F1: #f3f2f1;
+  --color-BFBFBF: #bfbfbf;
+  --color-fcd5ba: #fcd5ba;
+  --color-CA936080: #ca936080;
+  --color-e5ffde: #e5ffde;
+}
+
+.Вси_продукты {
+  padding-top: 80px;
+  margin-top: 80px;
+}
+.Вси_продукты .main__title h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-faf7eb);
+}
+.Вси_продукты .main__product_cards {
+  width: 100%;
+  padding: 40px 0 40px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: space-between;
+}
+.Вси_продукты .main__product_cards .aksiya__card {
+  max-width: 272px !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+@media (max-width: 1000px) {
+  .Вси_продукты .main__product_cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .Вси_продукты .main__product_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 530px) {
+  .Вси_продукты .main__product_cards {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    width: 280px !important;
+  }
+}
+.Вси_продукты .main__product_cards .card__product {
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  background-color: var(--color-FFFFFF);
+  box-shadow: 0px 4px 16px var(--color-0000001A);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.Вси_продукты .main__product_cards .card__product:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 16px var(--color-0000001A);
+  transition: all 0.3s ease-in-out;
+}
+.Вси_продукты .main__product_cards .card__product:hover img {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%) hue-rotate(-10deg) brightness(100%) contrast(100%);
+}
+.Вси_продукты .nocards {
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Вси_продукты .nocards img {
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Вси_продукты .nocards h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-faf7eb);
+}
+.Вси_продукты .nocards p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-faf7eb);
 }

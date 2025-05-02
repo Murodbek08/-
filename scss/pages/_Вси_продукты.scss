@@ -1,0 +1,102 @@
+@use "../utils/mixins" as mix;
+@use "../utils/varibles" as var;
+@use "../layout/flex" as flx;
+@use "../components/buttons" as comb;
+@use "../utils/fonts" as font;
+@use "../base/reset" as *;
+:root {
+  --color-FFFFFF: #ffffff;
+  --color-70c05b: #70c05b;
+  --color-faf7eb: #faf7eb;
+  --color-FF6633: #ff6633;
+  --color-8f8f8f: #8f8f8f;
+  --color-414141: #414141;
+  --color-232323: #232323;
+  --color-606060: #606060;
+  --color-0000001A: #0000001a;
+  --color-F3F2F1: #f3f2f1;
+  --color-BFBFBF: #bfbfbf;
+  --color-fcd5ba: #fcd5ba;
+  --color-CA936080: #ca936080;
+  --color-e5ffde: #e5ffde;
+}
+
+.Вси_продукты {
+  padding-top: 80px;
+  margin-top: 80px;
+  .main__title {
+    h2 {
+      @include font.font(700, 36px, 150%, 0%);
+      color: var(--color-faf7eb);
+    }
+  }
+
+  .main__product_cards {
+    width: 100%;
+    padding: 40px 0 40px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: space-between;
+    @extend %root-card;
+    .aksiya__card {
+      max-width: 272px !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 700px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 530px) {
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      width: 100%;
+      grid-template-columns: repeat(1, 1fr);
+      width: 280px !important;
+    }
+    .card__product {
+      padding: 0;
+      margin: 0;
+      border-radius: 8px;
+      background-color: var(--color-FFFFFF);
+      box-shadow: 0px 4px 16px var(--color-0000001A);
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 16px var(--color-0000001A);
+        transition: all 0.3s ease-in-out;
+        img {
+          filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%)
+            hue-rotate(-10deg) brightness(100%) contrast(100%);
+        }
+      }
+    }
+  }
+  .nocards {
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 300px;
+      object-fit: cover;
+    }
+    h3 {
+      @include font.font(700, 24px, 150%, 0%);
+      color: var(--color-faf7eb);
+    }
+    p {
+      @include font.font(400, 16px, 150%, 0%);
+      color: var(--color-faf7eb);
+    }
+  }
+}

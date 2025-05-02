@@ -1,0 +1,149 @@
+@use "../utils/function" as func;
+@use "../base/typograph" as fontBig;
+@use "../utils/fonts" as font;
+@use "../utils/mixins" as mix;
+@use "../utils/varibles" as var;
+@use "../layout/flex" as flx;
+@use "../components/buttons" as comb;
+
+.korzinka-page {
+  margin-top: 80px;
+  .korzinka-page__menu {
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    a {
+      @include font.font(400, 20px, 120%, 0);
+      color: var(--color-FFFFFF);
+      &:hover {
+        color: var(--color-FF6633);
+      }
+    }
+  }
+  .korzinka-page__title {
+    position: relative;
+    #korzinka_card_count {
+      border-radius: 10px;
+      background-color: var(--color-70c05b);
+      color: var(--color-FFFFFF);
+      padding: 5px 10px;
+      position: absolute;
+      font-size: 20px;
+      top: 20px;
+      left: 260px;
+    }
+    h2 {
+      @include font.font(700, 64px, 150%, 0);
+      color: var(--color-FFFFFF);
+    }
+  }
+  .korzinka-page__content__empty {
+    margin-top: 60px;
+    max-width: 400px;
+    display: flex;
+    gap: 48px;
+    padding: 10px;
+    background-color: var(--color-faf7eb);
+    border-radius: 10px;
+    .korzinka-desc {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        border-width: 1px;
+        background-color: var(--color-70c05b);
+      }
+      p {
+        @include font.font(400, 18px, 150%, 0);
+        color: var(--color-606060);
+      }
+    }
+    .korzinka-desc-udalit {
+      p {
+        @include font.font(400, 18px, 150%, 0);
+        color: var(--color-FF6633);
+      }
+    }
+  }
+  .korzinka-page__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .korzinka-page__content__cards {
+      max-width: 860px;
+      height: 500px;
+      overflow-y: auto;
+      margin-top: 24px;
+      margin-bottom: 116px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      .korzinka-page__content__card {
+        max-width: 876px;
+        border-radius: 4px;
+        padding: 10px 10px 0 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--color-FFFFFF);
+        .korzinka-img-name {
+          display: flex;
+          gap: 8px;
+          .korzinka-img {
+            position: relative;
+            z-index: 1;
+            input {
+              background-color: var(--color-70c05b);
+              left: 10px;
+              position: absolute;
+              z-index: 2;
+            }
+          }
+          .korzinka-name {
+            h3 {
+              @include font.font(400, 16px, 150%, 10%);
+            }
+            p {
+              @include font.font(700, 12px, 150%, 10%);
+              color: var(--color-414141);
+              span {
+                @include font.font(400, 12px, 150%, 10%);
+                color: var(--color-606060);
+              }
+            }
+          }
+        }
+
+        .korzinka-count {
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          height: 40px;
+          padding: 8px;
+          background-color: var(--color-70c05b);
+          button {
+            cursor: pointer;
+            border-radius: 4px;
+            border: none;
+            background-color: var(--color-70c05b);
+          }
+          span {
+            @include font.font(400, 16px, 150%, 10%);
+            color: var(--color-FFFFFF);
+          }
+        }
+        .korzinka-price {
+          @include font.font(700, 18px, 150%, 10%);
+        }
+      }
+    }
+  }
+}

@@ -183,12 +183,27 @@ header {
       }
       &__Корзина {
         @extend %nav--menu-links;
+        position: relative;
+        #korzinka_card_count {
+          font-size: 18px;
+          position: absolute;
+          left: 40px;
+          top: -5px;
+          border-radius: 5px;
+          padding: 5px 10px;
+          color: var(--color-FFFFFF);
+          background-color: var(--color-70c05b);
+          &:hover {
+            color: var(--color-FFFFFF);
+          }
+        }
         @media (max-width: 620px) {
           display: none;
         }
       }
       &__avatar {
         @include flx.flex(0, center, 10px);
+
         span {
           @include font.font(400, 16px, 150%, 0%);
           color: var(--color-232323);

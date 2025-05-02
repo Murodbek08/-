@@ -1,6 +1,6 @@
 // ############################## Umumiy card FUNksiyasi Hamma pagelar uchun ############################################
 
-function aksiyaCard(el, type) {
+function aksiyaCard({ discount, price, images, name, description, id }, type) {
   let aksiyaCard = document.createElement("div");
   aksiyaCard.className = "aksiya__card";
 
@@ -16,6 +16,7 @@ function aksiyaCard(el, type) {
 
   let inputChecked = document.createElement("input");
   inputChecked.type = "checkbox";
+  inputChecked.addEventListener("click", () => addLike(`${id}`));
 
   let checkmark = document.createElement("div");
   checkmark.className = "checkmark";
@@ -44,10 +45,10 @@ function aksiyaCard(el, type) {
 
   let spanFoiz = document.createElement("span");
   spanFoiz.className = "foiz";
-  spanFoiz.innerText = el.discount + " %";
+  spanFoiz.innerText = discount + " %";
 
   let imgBig = document.createElement("img");
-  imgBig.src = el.images[0];
+  imgBig.src = images[0];
   imgBig.alt = "No img !";
 
   aksiyaCardImage.append(spanLike, spanFoiz, imgBig);
@@ -59,7 +60,7 @@ function aksiyaCard(el, type) {
   divNarh.className = "цена";
 
   let narhH3 = document.createElement("h3");
-  narhH3.innerText = el.price + " ₽";
+  narhH3.innerText = price + " ₽";
 
   divNarh.append(narhH3);
 
@@ -81,11 +82,11 @@ function aksiyaCard(el, type) {
   }
 
   let textH5 = document.createElement("h5");
-  textH5.innerText = el.name;
+  textH5.innerText = name;
 
   let textDesP = document.createElement("p");
   textDesP.className = "text-description-p";
-  textDesP.innerText = el.description;
+  textDesP.innerText = description;
 
   let imgRating = document.createElement("img");
   imgRating.src = "../images/index/rating.svg";
@@ -93,6 +94,7 @@ function aksiyaCard(el, type) {
 
   let cardButton = document.createElement("button");
   cardButton.innerText = "В корзину";
+  cardButton.addEventListener("click", () => addCard(`${id}`));
 
   sectionАкцииCardTexts.append(divUdobstvo);
   sectionАкцииCardTexts.append(divNarh);
@@ -149,4 +151,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //########################################## Loading ####################################
 const loading = document.querySelector("#loading");
-window.addEventListener("load", () => setTimeout(() => (loading.style.display = "none"), 1000));
+loading.style.display = "none";
+// window.addEventListener("load", () => setTimeout(() => (loading.style.display = "none"), 1000));
+
+// Korzinka
+let korzinkaCardCount = document.querySelectorAll("#korzinka_card_count");
+let korzinkaCard = [];
+function getCardCount() {
+  korzinkaCardCount.forEach((countCards) => {
+    countCards.textContent = korzinkaCard.length;
+  });
+}
+getCardCount();
+
+function addCard(id) {
+  let newProduct = products.find((product) => product.id == id);
+  korzinkaCard.push(newProduct);
+  console.log(korzinkaCard);
+  getCardCount(newProduct);
+}
+
+let likeCount = document.querySelector("#like-count");
+let likeCountData = [1, 2, 3, 4];
+likeCount.textContent = likeCountData.length;
+
+function addLike(id) {
+  product = products.find((el) => el.id == id);
+  console.log(product);
+}

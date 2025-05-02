@@ -1,4 +1,4 @@
-"use strict";
+
 
 //  ###################### Katalog Java Skript Card Kodlari ###############################
 const heroKatalogCards = document.querySelector(".hero-katalog-cards");
@@ -16,11 +16,9 @@ const catalogCard = ({ image, text }) => {
 
 const getProducts = (data = productDataKatalog) => {
   heroKatalogCards.innerHTML = "";
-
-  data.map((el) => {
-    return (heroKatalogCards.innerHTML += catalogCard(el));
-  });
-
+  if (data.length != 0) {
+    data.map((el) => (heroKatalogCards.innerHTML += catalogCard(el)));
+  }
   searchCount.textContent = data.length;
 };
 
@@ -36,4 +34,3 @@ inputSearch.addEventListener("input", function () {
 
   getProducts(searchProducts);
 });
-
