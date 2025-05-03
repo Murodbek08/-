@@ -1,5 +1,3 @@
-// import { aksiyaCard } from "./main.js";/\
-
 // ######################### Api Tab Java Skript dode iframe map uchin ishlatildi ##################################
 
 const tabs = document.querySelectorAll(".ap-tab-link");
@@ -31,27 +29,32 @@ for (let i = 0; i < tabs.length; i++) {
   });
 }
 
-// ###################################### Tugadi ############################################################
+// Kardlar funksiyasi
+//Index
+function getHomeCards() {
+  // ########################### Акции cardlari uchun Java Akript codi  ######################################
+  let aksiyaCards = document?.querySelector(".aksiya__cards");
+  aksiyaCards.innerHTML = "";
+  let aksiyaProducts = products.filter((el) => el.discount > 0).slice(-4);
+  aksiyaProducts.map((el) => aksiyaCards.append(aksiyaCard(el, "aksiya")));
 
-// ########################### Акции cardlari uchun Java Akript codi  ######################################
+  // ########################### Новинки cardlari uchun Java Akript codi  ######################################
 
-let aksiyaCards = document.querySelector(".aksiya__cards");
-let aksiyaProducts = products.filter((el) => el.discount > 0).slice(-4);
-aksiyaProducts.map((el) => aksiyaCards.append(aksiyaCard(el, "aksiya")));
+  let novinkiCards = document?.querySelector(".novinki__cards");
+  novinkiCards.innerHTML = "";
+  let novinkiProducts = products.filter((el) => el).slice(-4);
+  novinkiProducts.map((el) => novinkiCards.append(aksiyaCard(el, "novinki")));
 
-// ########################### Новинки cardlari uchun Java Akript codi  ######################################
+  // ########################### Покупали cardlari uchun Java Akript codi  ######################################
 
-let novinkiCards = document.querySelector(".novinki__cards");
-let novinkiProducts = products.filter((el) => el).slice(-4);
-novinkiProducts.map((el) => novinkiCards.append(aksiyaCard(el, "novinki")));
+  let pokupaliCards = document?.querySelector(".pokupali__cards");
+  pokupaliCards.innerHTML = "";
+  let pokupaliProducts = products.toSorted((a, b) => b.price - b.price).slice(0, 4);
+  pokupaliProducts.map((el) => pokupaliCards.append(aksiyaCard(el, "pokupali")));
 
-// ########################### Покупали cardlari uchun Java Akript codi  ######################################
-
-let pokupaliCards = document.querySelector(".pokupali__cards");
-let pokupaliProducts = products.toSorted((a, b) => b.price - b.price).slice(0, 4);
-pokupaliProducts.map((el) => pokupaliCards.append(aksiyaCard(el, "pokupali")));
-
-// ######################################### Cardlar kodi Tugadi  ############################################
+  // ######################################### Cardlar kodi Tugadi  ############################################
+}
+getHomeCards();
 
 // ###################### Специальные предложения Java Skript Funksiyasi  ####################################
 let sectionReklamaCards = document.querySelector(".section-reklama-cards");

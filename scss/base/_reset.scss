@@ -68,7 +68,7 @@ a {
           cursor: pointer;
           height: 0;
           width: 0;
-          color: #ff0000;
+          // color: #ff0000;
         }
         .like-image {
           position: relative;
@@ -88,6 +88,10 @@ a {
         .like-image input:checked ~ .checkmark path {
           fill: #ff0000;
           stroke-width: 0;
+        }
+        .active-like {
+          fill: red;
+          stroke: red;
         }
         .like-image input:checked ~ .checkmark {
           animation: like_effect 400ms ease;
@@ -116,6 +120,71 @@ a {
           100% {
             transform: scale(1);
           }
+        }
+      }
+      .like-image {
+        position: relative;
+        cursor: pointer;
+        font-size: 15px;
+        user-select: none;
+        transition: transform 100ms;
+      }
+      .like-image input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        top: 0;
+        left: 0;
+        height: 2em;
+        width: 2em;
+        transition: all 400ms ease;
+      }
+
+      .checkmark svg path {
+        stroke: #ff0000;
+        stroke-width: 20px;
+        fill: none;
+        transition: fill 300ms ease;
+      }
+
+      .like-image input:checked ~ .checkmark path {
+        fill: #ff0000;
+        stroke-width: 0;
+      }
+      .active-like {
+        fill: red;
+        stroke: red;
+      }
+
+      .like-image:hover {
+        transform: scale(1.1);
+      }
+
+      @keyframes like_effect {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes dislike_effect {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
         }
       }
       .foiz {

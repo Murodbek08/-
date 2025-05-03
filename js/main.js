@@ -1,6 +1,8 @@
 // ############################## Umumiy card FUNksiyasi Hamma pagelar uchun ############################################
 
 function aksiyaCard({ discount, price, images, name, description, id }, type) {
+  let chekcLikeRed = likeCountData.find((pr) => pr.id == id);
+
   let aksiyaCard = document.createElement("div");
   aksiyaCard.className = "aksiya__card";
 
@@ -17,7 +19,6 @@ function aksiyaCard({ discount, price, images, name, description, id }, type) {
   let inputChecked = document.createElement("input");
   inputChecked.type = "checkbox";
   inputChecked.addEventListener("click", () => addLike(`${id}`));
-
   let checkmark = document.createElement("div");
   checkmark.className = "checkmark";
 
@@ -37,6 +38,7 @@ function aksiyaCard({ discount, price, images, name, description, id }, type) {
   pathHeart.setAttribute("stroke-width", "20px");
   pathHeart.setAttribute("stroke", "#ff0000");
   pathHeart.setAttribute("fill", "none");
+  pathHeart.classList = `${chekcLikeRed ? "active-like" : ""}`;
 
   svgHeart.append(rectHeart, pathHeart);
   checkmark.append(svgHeart);
@@ -109,10 +111,16 @@ function aksiyaCard({ discount, price, images, name, description, id }, type) {
   return aksiyaCard;
 }
 
+// Hamma page card c funsiyasi  chaqirilgan like va add card uchun
+function generalFunction() {
+  getHomeCards();
+  mainProductCard();
+  tovarFunction();
+}
+
 // ############################## Katalog menu funksiya kodlar ############################################
 
 let navMenuUl = document.querySelector(".nav-menu-ul");
-
 function navMenuKatalog(el) {
   let katalogDiv = document.createElement("div");
   let katalogA = document.createElement("a");
@@ -124,7 +132,6 @@ function navMenuKatalog(el) {
 
   return katalogDiv;
 }
-
 katalogData.map((el) => navMenuUl.append(navMenuKatalog(el)));
 
 // ############################## Katalog menu hamburger ############################################
@@ -150,32 +157,65 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //########################################## Loading ####################################
-const loading = document.querySelector("#loading");
-loading.style.display = "none";
-// window.addEventListener("load", () => setTimeout(() => (loading.style.display = "none"), 1000));
 
 // Korzinka
 let korzinkaCardCount = document.querySelectorAll("#korzinka_card_count");
-let korzinkaCard = [];
+let JsonCardCount = localStorage.getItem("korzinkaCardData");
+let korzinkaCardData = JSON.parse(JsonCardCount) || [];
 function getCardCount() {
   korzinkaCardCount.forEach((countCards) => {
-    countCards.textContent = korzinkaCard.length;
+    countCards.textContent = korzinkaCardData.length;
   });
 }
 getCardCount();
 
 function addCard(id) {
-  let newProduct = products.find((product) => product.id == id);
-  korzinkaCard.push(newProduct);
-  console.log(korzinkaCard);
-  getCardCount(newProduct);
+  let newProduct = products.find((pr) => pr.id == id);
+  let checkCard = korzinkaCardData.find((el) => el.id == id);
+  if (checkCard) {
+    korzinkaCardData = korzinkaCardData.map((product) => {
+      if (product.id == id) {
+        product.quantity++;
+      }
+      return product;
+    });
+  } else {
+    newProduct.quantity = 1;
+
+    korzinkaCardData.push(newProduct);
+  }
+  getCardCount();
+  localStorage.setItem("korzinkaCardData", JSON.stringify(korzinkaCardData));
+  console.log(korzinkaCardData);
 }
 
-let likeCount = document.querySelector("#like-count");
-let likeCountData = [1, 2, 3, 4];
-likeCount.textContent = likeCountData.length;
+// Card Like
+let likeCount = document.querySelectorAll("#like-count");
+let JsonLike = localStorage.getItem("likeCard");
+let likeCountData = JSON.parse(JsonLike) || [];
+function getCardLike() {
+  likeCount.forEach((likeCounts) => {
+    likeCounts.textContent = likeCountData.length;
+  });
+}
+
+getCardLike();
 
 function addLike(id) {
-  product = products.find((el) => el.id == id);
-  console.log(product);
+  let product = products.find((pr) => pr.id == id);
+  let chekcLike = likeCountData.find((el) => el.id == id);
+  if (chekcLike) {
+    likeCountData = likeCountData.filter((el) => el.id != id);
+  } else {
+    likeCountData.push(product);
+  }
+
+  getCardLike();
+  localStorage.setItem("likeCard", JSON.stringify(likeCountData));
+
+  generalFunction();
 }
+
+const loading = document?.querySelector("#loading");
+loading.style.display = "none";
+// window.addEventListener("load", () => setTimeout(() => (loading.style.display = "none"), 1000));

@@ -170,9 +170,24 @@ header {
         }
       }
       &__Избранное {
+        position: relative;
         @extend %nav--menu-links;
         @media (max-width: 620px) {
           display: none;
+        }
+
+        #like-count {
+          top: -10px;
+          left: 40px;
+          position: absolute;
+          color: var(--color-FFFFFF);
+          font-size: 12px;
+          border-radius: 5px;
+          padding: 2px 5px;
+          background-color: var(--color-70c05b);
+          &:hover {
+            color: var(--color-FFFFFF);
+          }
         }
       }
       &__Заказы {
@@ -185,13 +200,13 @@ header {
         @extend %nav--menu-links;
         position: relative;
         #korzinka_card_count {
-          font-size: 18px;
-          position: absolute;
+          top: -10px;
           left: 40px;
-          top: -5px;
-          border-radius: 5px;
-          padding: 5px 10px;
+          position: absolute;
           color: var(--color-FFFFFF);
+          font-size: 12px;
+          border-radius: 5px;
+          padding: 2px 5px;
           background-color: var(--color-70c05b);
           &:hover {
             color: var(--color-FFFFFF);
@@ -335,13 +350,41 @@ header {
         }
       }
       &__Избранное {
+        position: relative;
         @extend %nav--menu-mobile-links;
+        #like-count {
+          top: -10px;
+          left: 40px;
+          position: absolute;
+          color: var(--color-FFFFFF);
+          font-size: 12px;
+          border-radius: 5px;
+          padding: 2px 5px;
+          background-color: var(--color-70c05b);
+          &:hover {
+            color: var(--color-FFFFFF);
+          }
+        }
       }
       &__Заказы {
         @extend %nav--menu-mobile-links;
       }
       &__Корзина {
+        position: relative;
         @extend %nav--menu-mobile-links;
+        #korzinka_card_count {
+          top: -10px;
+          left: 40px;
+          position: absolute;
+          color: var(--color-FFFFFF);
+          font-size: 12px;
+          border-radius: 5px;
+          padding: 2px 5px;
+          background-color: var(--color-70c05b);
+          &:hover {
+            color: var(--color-FFFFFF);
+          }
+        }
       }
     }
   }

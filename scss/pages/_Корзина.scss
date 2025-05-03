@@ -10,9 +10,7 @@
   margin-top: 80px;
   .korzinka-page__menu {
     padding-top: 60px;
-    display: flex;
-    align-items: center;
-    gap: 25px;
+    @include flx.flex(0, center, 25px);
     a {
       @include font.font(400, 20px, 120%, 0);
       color: var(--color-FFFFFF);
@@ -41,19 +39,14 @@
   .korzinka-page__content__empty {
     margin-top: 60px;
     max-width: 400px;
-    display: flex;
-    gap: 48px;
+    @include flx.flex(0, 0, 48px);
     padding: 10px;
     background-color: var(--color-faf7eb);
     border-radius: 10px;
     .korzinka-desc {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      @include flx.flex(0, center, 8px);
       span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flx.flex(center, center, 0px);
         width: 24px;
         height: 24px;
         border-radius: 4px;
@@ -74,35 +67,57 @@
   }
   .korzinka-page__content {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    @include flx.flex(space-between, 0, 0);
     .korzinka-page__content__cards {
-      max-width: 860px;
+      width: 860px;
       height: 500px;
       overflow-y: auto;
       margin-top: 24px;
       margin-bottom: 116px;
-      display: flex;
+      @include flx.flex(0, 0, 40px);
       flex-direction: column;
-      gap: 40px;
       .korzinka-page__content__card {
         max-width: 876px;
         border-radius: 4px;
         padding: 10px 10px 0 0;
-        display: flex;
-        justify-content: space-between;
+        @include flx.flex(space-between, 0, 0);
         background-color: var(--color-FFFFFF);
         .korzinka-img-name {
-          display: flex;
-          gap: 8px;
+          @include flx.flex(0, 0, 8px);
           .korzinka-img {
             position: relative;
             z-index: 1;
-            input {
-              background-color: var(--color-70c05b);
-              left: 10px;
-              position: absolute;
+            .custom-checkbox {
               z-index: 2;
+              display: inline-block;
+              @include mix.position(relative, -60px, no, no, 40px);
+              width: 24px;
+              height: 24px;
+              input {
+                width: 0;
+                height: 0;
+                &:checked + .checkmark {
+                  background-color: var(--color-70c05b);
+                  .icon {
+                    display: block;
+                  }
+                }
+              }
+              .checkmark {
+                @include mix.position(absolute, 0, no, no, 0);
+                height: 24px;
+                width: 24px;
+                background-color: #eee;
+                border-radius: 4px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                @include flx.flex(center, center, 0);
+                cursor: pointer;
+                .icon {
+                  width: 16px;
+                  height: 16px;
+                  display: none;
+                }
+              }
             }
           }
           .korzinka-name {
@@ -119,13 +134,9 @@
             }
           }
         }
-
         .korzinka-count {
           border-radius: 4px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
+          @include flx.flex(center, center, 8px);
           height: 40px;
           padding: 8px;
           background-color: var(--color-70c05b);
@@ -142,6 +153,126 @@
         }
         .korzinka-price {
           @include font.font(700, 18px, 150%, 10%);
+        }
+      }
+    }
+    .zakaz-oformilena {
+      width: 272px;
+      height: 430px;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: var(--color-FFFFFF);
+      margin-top: 60px;
+      .chekbox-menu {
+        @include flx.flex(0, center, 10px);
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 46px;
+          height: 24px;
+
+          input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+          }
+
+          .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            border-radius: 24px;
+            transition: 0.4s;
+
+            &::before {
+              position: absolute;
+              content: "";
+              height: 20px;
+              width: 20px;
+              left: 2px;
+              bottom: 2px;
+              background-color: white;
+              transition: 0.4s;
+              border-radius: 50%;
+            }
+          }
+          input:checked + .slider {
+            background-color: var(--color-70c05b); // Yashil fon
+
+            &::before {
+              transform: translateX(22px); // Suriladi
+            }
+          }
+        }
+        h4 {
+          @include font.font(400, 16px, 150%, 0);
+          color: var(--color-414141);
+        }
+      }
+      .zakaz-karta-p {
+        padding-top: 20px;
+        @include font.font(400, 16px, 150%, 0);
+        color: var(--color-8f8f8f);
+      }
+      .zakas-tovarlar {
+        padding-top: 50px;
+        @include flx.flex(space-between, center, 0);
+        p {
+          @include font.font(400, 16px, 150%, 0);
+          color: var(--color-8f8f8f);
+        }
+        h4 {
+          @include font.font(400, 16px, 150%, 0);
+          color: var(--color-414141);
+        }
+      }
+      .zakaz-skidka {
+        padding-top: 10px;
+        @include flx.flex(space-between, center, 0);
+        p {
+          @include font.font(400, 16px, 150%, 0);
+          color: var(--color-8f8f8f);
+        }
+        h3 {
+          @include font.font(700, 16px, 150%, 0);
+          color: var(--color-FF6633);
+        }
+      }
+      .zakaz-itog {
+        padding-top: 56px;
+        @include flx.flex(space-between, center, 0);
+        h3 {
+          @include font.font(700, 24px, 150%, 0);
+          color: var(--color-414141);
+        }
+        p {
+          @include font.font(400, 16px, 150%, 0);
+          color: var(--color-8f8f8f);
+        }
+      }
+      button {
+        margin: 0 auto;
+        display: block;
+        margin-top: 60px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        padding: 18px 16px;
+        background-color: var(--color-fcd5ba);
+        color: var(--color-FF6633);
+        @include font.font(400, 24px, 150%, 0);
+        transition: 200ms;
+        &:hover {
+          background-color: var(--color-FF6633);
+          color: var(--color-FFFFFF);
+        }
+        &:active {
+          background-color: var(--color-FF6633);
+          color: var(--color-FFFFFF);
         }
       }
     }
