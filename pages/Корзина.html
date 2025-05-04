@@ -137,75 +137,16 @@
           </div>
           <div class="korzinka-page__content__empty">
             <div class="korzinka-desc">
-              <span><img src="../images/korzinka/shape-minus.svg" alt="" /></span>
+              <button id="korzinka-delete-prodact">
+                <img src="../images/korzinka/shape-minus.svg" alt="" />
+              </button>
               <p>Выделить всё</p>
             </div>
-            <div class="korzinka-desc-udalit">
-              <p>Удалить выбранные</p>
-            </div>
+            <button class="korzinka-desc-udalit">Удалить выбранные</button>
           </div>
           <div class="korzinka-page__content">
-            <div class="korzinka-page__content__cards">
-              <div class="korzinka-page__content__card">
-                <div class="korzinka-img-name">
-                  <div class="korzinka-img">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" />
-                      <span class="checkmark">
-                        <svg viewBox="0 0 24 24" class="icon">
-                          <path
-                            d="M5 12l5 5l9-9"
-                            fill="none"
-                            stroke="#fff"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                      </span>
-                    </label>
-                    <img src="../images/korzinka/korzinka-img-1.png" alt="" />
-                  </div>
-                  <div class="korzinka-name">
-                    <h3>Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</h3>
-                    <p>
-                      44,50
-                      <span>за шт.</span>
-                    </p>
-                  </div>
-                </div>
-                <div class="korzinka-count">
-                  <button><img src="../images/korzinka/minus.svg" alt="" /></button>
-                  <span>2</span>
-                  <button><img src="../images/korzinka/plus.svg" alt="" /></button>
-                </div>
-                <div class="korzinka-price">
-                  <h3>89,00 ₽</h3>
-                </div>
-              </div>
-            </div>
-            <div class="zakaz-oformilena">
-              <div class="chekbox-menu">
-                <label class="switch">
-                  <input type="checkbox" />
-                  <span class="slider"></span>
-                </label>
-                <h4>Списать 200 ₽</h4>
-              </div>
-              <p class="zakaz-karta-p">На карте накоплено 200 ₽</p>
-              <div class="zakas-tovarlar">
-                <p>3 товара</p>
-                <h4>258,10 ₽</h4>
-              </div>
-              <div class="zakaz-skidka">
-                <p>Скидка</p>
-                <h3>-8,01 ₽</h3>
-              </div>
-              <div class="zakaz-itog">
-                <p>Итог</p>
-                <h3>250,09 ₽</h3>
-              </div>
-              <button>Оформить заказ</button>
-            </div>
+            <div class="korzinka-page__content__cards"></div>
+            <div class="zakaz-oformilena"></div>
           </div>
         </div>
       </section>
@@ -269,8 +210,9 @@
         </div>
       </div>
     </footer>
-
+    <script></script>
     <script src="../js/products-data.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/Корзина.js"></script>
   </body>
 </html>

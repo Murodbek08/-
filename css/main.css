@@ -54,7 +54,7 @@ a {
   text-decoration: none;
 }
 
-.Вси_продукты .main__product_cards .aksiya__card, main .aksiya__cards .aksiya__card {
+.Вси_продукты .main__product_cards .aksiya__card, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card, main .aksiya__cards .aksiya__card {
   width: 272px;
   box-shadow: 1px 2px 4px 0px var(--color-0000001A);
   border-radius: 4px;
@@ -62,7 +62,7 @@ a {
   transition: 0.5s ease-in-out;
   overflow: hidden;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1, main .aksiya__cards .aksiya__card__image-1 {
+.Вси_продукты .main__product_cards .aksiya__card__image-1, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1, main .aksiya__cards .aksiya__card__image-1 {
   height: 160px;
   overflow: hidden;
   position: relative;
@@ -73,7 +73,7 @@ a {
   transition: 0.3s ease;
   overflow: hidden;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like, main .aksiya__cards .aksiya__card__image-1 .like {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like, main .aksiya__cards .aksiya__card__image-1 .like {
   display: none;
   position: absolute;
   top: 10px;
@@ -82,7 +82,7 @@ a {
   border-radius: 4px;
   background-color: rgba(243, 242, 241, 0.5098039216);
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image input, main .aksiya__cards .aksiya__card__image-1 .like .like-image input {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image input, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like .like-image input, main .aksiya__cards .aksiya__card__image-1 .like .like-image input {
   display: none;
   position: absolute;
   opacity: 0;
@@ -90,7 +90,7 @@ a {
   height: 0;
   width: 0;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image, main .aksiya__cards .aksiya__card__image-1 .like .like-image {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like .like-image, main .aksiya__cards .aksiya__card__image-1 .like .like-image {
   position: relative;
   cursor: pointer;
   font-size: 15px;
@@ -99,7 +99,7 @@ a {
           user-select: none;
   transition: 100ms;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .checkmark, main .aksiya__cards .aksiya__card__image-1 .like .checkmark {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .checkmark, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like .checkmark, main .aksiya__cards .aksiya__card__image-1 .like .checkmark {
   top: 0;
   left: 0;
   height: 2em;
@@ -107,18 +107,18 @@ a {
   transition: 100ms;
   animation: dislike_effect 400ms ease;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark path, main .aksiya__cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark path {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark path, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark path, main .aksiya__cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark path {
   fill: #ff0000;
   stroke-width: 0;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .active-like, main .aksiya__cards .aksiya__card__image-1 .like .active-like {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .active-like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like .active-like, main .aksiya__cards .aksiya__card__image-1 .like .active-like {
   fill: red;
   stroke: red;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark, main .aksiya__cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark, main .aksiya__cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark {
   animation: like_effect 400ms ease;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image:hover, main .aksiya__cards .aksiya__card__image-1 .like .like-image:hover {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image:hover, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like .like-image:hover, main .aksiya__cards .aksiya__card__image-1 .like .like-image:hover {
   transform: scale(1.1);
 }
 @keyframes like_effect {
@@ -143,7 +143,7 @@ a {
     transform: scale(1);
   }
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like-image, main .aksiya__cards .aksiya__card__image-1 .like-image {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like-image, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like-image, main .aksiya__cards .aksiya__card__image-1 .like-image {
   position: relative;
   cursor: pointer;
   font-size: 15px;
@@ -152,35 +152,35 @@ a {
           user-select: none;
   transition: transform 100ms;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like-image input, main .aksiya__cards .aksiya__card__image-1 .like-image input {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like-image input, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like-image input, main .aksiya__cards .aksiya__card__image-1 .like-image input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .checkmark, main .aksiya__cards .aksiya__card__image-1 .checkmark {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .checkmark, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .checkmark, main .aksiya__cards .aksiya__card__image-1 .checkmark {
   top: 0;
   left: 0;
   height: 2em;
   width: 2em;
   transition: all 400ms ease;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .checkmark svg path, main .aksiya__cards .aksiya__card__image-1 .checkmark svg path {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .checkmark svg path, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .checkmark svg path, main .aksiya__cards .aksiya__card__image-1 .checkmark svg path {
   stroke: #ff0000;
   stroke-width: 20px;
   fill: none;
   transition: fill 300ms ease;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like-image input:checked ~ .checkmark path, main .aksiya__cards .aksiya__card__image-1 .like-image input:checked ~ .checkmark path {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like-image input:checked ~ .checkmark path, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like-image input:checked ~ .checkmark path, main .aksiya__cards .aksiya__card__image-1 .like-image input:checked ~ .checkmark path {
   fill: #ff0000;
   stroke-width: 0;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .active-like, main .aksiya__cards .aksiya__card__image-1 .active-like {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .active-like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .active-like, main .aksiya__cards .aksiya__card__image-1 .active-like {
   fill: red;
   stroke: red;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like-image:hover, main .aksiya__cards .aksiya__card__image-1 .like-image:hover {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like-image:hover, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like-image:hover, main .aksiya__cards .aksiya__card__image-1 .like-image:hover {
   transform: scale(1.1);
 }
 @keyframes like_effect {
@@ -205,7 +205,7 @@ a {
     transform: scale(1);
   }
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .foiz, main .aksiya__cards .aksiya__card__image-1 .foiz {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .foiz, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .foiz, main .aksiya__cards .aksiya__card__image-1 .foiz {
   display: none;
   position: absolute;
   bottom: 10px;
@@ -215,43 +215,43 @@ a {
   border-radius: 4px;
   background-color: var(--color-FF6633);
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1:hover, main .aksiya__cards .aksiya__card__image-1:hover {
+.Вси_продукты .main__product_cards .aksiya__card__image-1:hover, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1:hover, main .aksiya__cards .aksiya__card__image-1:hover {
   transform: scale(1.05);
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 img, main .aksiya__cards .aksiya__card__image-1 img {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 img, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 img, main .aksiya__cards .aksiya__card__image-1 img {
   width: 100%;
   height: 100%;
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts, main .aksiya__cards .aksiya__card .section-Акции-card-texts {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts, main .aksiya__cards .aksiya__card .section-Акции-card-texts {
   padding: 8px;
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .цена, main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .цена, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .цена, main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0px;
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .цена h3, main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена h3 {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .цена h3, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .цена h3, main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 150%;
   letter-spacing: 0%;
   color: var(--color-414141);
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .цена h4, main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена h4 {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .цена h4, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .цена h4, main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена h4 {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0%;
   color: var(--color-606060);
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .удобство, main .aksiya__cards .aksiya__card .section-Акции-card-texts .удобство {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .удобство, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .удобство, main .aksiya__cards .aksiya__card .section-Акции-card-texts .удобство {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0px;
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .удобство span, main .aksiya__cards .aksiya__card .section-Акции-card-texts .удобство span {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .удобство span, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .удобство span, main .aksiya__cards .aksiya__card .section-Акции-card-texts .удобство span {
   margin-top: 8px;
   font-weight: 400;
   font-size: 12px;
@@ -259,7 +259,7 @@ a {
   letter-spacing: 0%;
   color: var(--color-BFBFBF);
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts h5, main .aksiya__cards .aksiya__card .section-Акции-card-texts h5 {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts h5, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts h5, main .aksiya__cards .aksiya__card .section-Акции-card-texts h5 {
   padding-top: 8px;
   font-weight: 400;
   font-size: 16px;
@@ -267,7 +267,7 @@ a {
   letter-spacing: 0%;
   color: var(--color-414141);
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .text-description-p, main .aksiya__cards .aksiya__card .section-Акции-card-texts .text-description-p {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .text-description-p, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .text-description-p, main .aksiya__cards .aksiya__card .section-Акции-card-texts .text-description-p {
   padding-top: 8px;
   font-weight: 400;
   font-size: 16px;
@@ -279,15 +279,15 @@ a {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts img, main .aksiya__cards .aksiya__card .section-Акции-card-texts img {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts img, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts img, main .aksiya__cards .aksiya__card .section-Акции-card-texts img {
   padding: 8px 0 8px 0;
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts button, main .aksiya__cards .aksiya__card .section-Акции-card-texts button {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts button, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts button, main .aksiya__cards .aksiya__card .section-Акции-card-texts button {
   border-radius: 4px;
   padding: 8px 0 8px 0;
   width: 100%;
   border: 1px solid var(--color-70c05b);
-  background-color: var(--color-FFFFFF);
+  background-color: var(--color-F3F2F1);
   color: var(--color-70c05b);
   font-weight: 400;
   font-size: 16px;
@@ -295,15 +295,20 @@ a {
   letter-spacing: 0%;
   transition: 0.3s ease;
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts button:hover, main .aksiya__cards .aksiya__card .section-Акции-card-texts button:hover {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts button:hover, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts button:hover, main .aksiya__cards .aksiya__card .section-Акции-card-texts button:hover {
   background-color: var(--color-FF6633);
   border: 1px solid var(--color-FF6633);
   color: var(--color-FFFFFF);
 }
-.Вси_продукты .main__product_cards .aksiya__card:hover .foiz, main .aksiya__cards .aksiya__card:hover .foiz {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .active-card, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .active-card, main .aksiya__cards .aksiya__card .section-Акции-card-texts .active-card {
+  background-color: var(--color-FF6633);
+  border: 1px solid var(--color-70c05b);
+  color: var(--color-FFFFFF);
+}
+.Вси_продукты .main__product_cards .aksiya__card:hover .foiz, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card:hover .foiz, main .aksiya__cards .aksiya__card:hover .foiz {
   display: flex;
 }
-.Вси_продукты .main__product_cards .aksiya__card:hover .like, main .aksiya__cards .aksiya__card:hover .like {
+.Вси_продукты .main__product_cards .aksiya__card:hover .like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card:hover .like, main .aksiya__cards .aksiya__card:hover .like {
   display: flex;
 }
 
@@ -1355,8 +1360,207 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   }
 }
 
+.izbrannoe-page {
+  padding-top: 130px;
+}
+.izbrannoe-page .izbrannoe-menu {
+  display: flex;
+  justify-content: 0;
+  align-items: center;
+  gap: 25px;
+}
+.izbrannoe-page .izbrannoe-menu a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-faf7eb);
+  display: flex;
+  justify-content: 0;
+  align-items: center;
+  gap: 8px;
+  flex-direction: column;
+  transition: 0.3s all;
+}
+.izbrannoe-page .izbrannoe-menu a:hover {
+  color: var(--color-FF6633);
+}
+.izbrannoe-page h2 {
+  margin-top: 24px;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-faf7eb);
+}
+@media (max-width: 600px) {
+  .izbrannoe-page h2 {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 150%;
+    letter-spacing: 0%;
+  }
+}
+.izbrannoe-page .izbrannoe-content {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: 0;
+  align-items: 0;
+  gap: 40px;
+}
+@media (max-width: 600px) {
+  .izbrannoe-page .izbrannoe-content {
+    flex-direction: column;
+  }
+}
+.izbrannoe-page .izbrannoe-content .filter-container {
+  min-width: 300px;
+}
+@media (max-width: 350px) {
+  .izbrannoe-page .izbrannoe-content .filter-container {
+    min-width: 250px;
+  }
+}
+.izbrannoe-page .izbrannoe-content .filter-container h2 {
+  color: var(--color-414141);
+  background-color: var(--color-F3F2F1);
+  width: 100%;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+.izbrannoe-page .izbrannoe-content .filter-container .price-filter {
+  padding: 40px 10px 0 10px;
+  background-color: var(--color-faf7eb);
+}
+.izbrannoe-page .izbrannoe-content .filter-container .price-filter .price-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+.izbrannoe-page .izbrannoe-content .filter-container .price-filter .price-header span {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-232323);
+}
+.izbrannoe-page .izbrannoe-content .filter-container .price-filter .price-header button {
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 14px 19px;
+  background-color: var(--color-F3F2F1);
+}
+.izbrannoe-page .izbrannoe-content .filter-container .price-filter .price-header button:hover {
+  background-color: var(--color-FF6633);
+  color: var(--color-FFFFFF);
+}
+.izbrannoe-page .izbrannoe-content .filter-container .price-filter .inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+  margin-top: 20px;
+}
+.izbrannoe-page .izbrannoe-content .filter-container .price-filter .inputs span {
+  padding: 10px;
+}
+.izbrannoe-page .izbrannoe-content .filter-container .price-filter .inputs input {
+  outline: none;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  padding-left: 10px;
+  background-color: var(--color-FFFFFF);
+}
+.izbrannoe-page .izbrannoe-content .filter-container .price-filter .slider-container {
+  padding: 40px 0 40px 0;
+}
+.izbrannoe-page .izbrannoe-content .filter-container .price-filter .slider-container .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  width: 272px;
+  height: 6px;
+  background: #ddd;
+  border-radius: 3px;
+  outline: none;
+  transition: background 0.3s;
+}
+@media (max-width: 354px) {
+  .izbrannoe-page .izbrannoe-content .filter-container .price-filter .slider-container .slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 250px;
+  }
+}
+.izbrannoe-page .izbrannoe-content .filter-container .price-filter .slider-container .slider::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+          appearance: none;
+  height: 20px;
+  width: 20px;
+  background: #4caf50;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+}
+.izbrannoe-page .izbrannoe-content .filter-container .price-filter .slider-container .slider::-moz-range-thumb {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background: #4caf50;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.izbrannoe-page .izbrannoe-content .izbrannoe-cards {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: space-between;
+}
+.izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card {
+  max-width: 272px !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+@media (max-width: 1030px) {
+  .izbrannoe-page .izbrannoe-content .izbrannoe-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 850px) {
+  .izbrannoe-page .izbrannoe-content .izbrannoe-cards {
+    width: 280px !important;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .izbrannoe-page .izbrannoe-content .izbrannoe-cards {
+    width: 100% !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .izbrannoe-page .izbrannoe-content .izbrannoe-cards {
+    margin: 0 auto !important;
+    width: 280px !important;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .korzinka-page {
   margin-top: 80px;
+  margin-bottom: 40px;
 }
 .korzinka-page .korzinka-page__menu {
   padding-top: 60px;
@@ -1406,13 +1610,37 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   background-color: var(--color-faf7eb);
   border-radius: 10px;
 }
+@media (max-width: 445px) {
+  .korzinka-page .korzinka-page__content__empty {
+    text-align: center;
+    flex-direction: column;
+  }
+}
 .korzinka-page .korzinka-page__content__empty .korzinka-desc {
   display: flex;
   justify-content: 0;
   align-items: center;
   gap: 8px;
 }
-.korzinka-page .korzinka-page__content__empty .korzinka-desc span {
+@media (max-width: 445px) {
+  .korzinka-page .korzinka-page__content__empty .korzinka-desc {
+    justify-content: center;
+  }
+}
+.korzinka-page .korzinka-page__content__empty .korzinka-desc .korzinka-desc-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border-width: 1px;
+  background-color: var(--color-70c05b);
+}
+.korzinka-page .korzinka-page__content__empty .korzinka-desc button {
+  cursor: pointer;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1430,25 +1658,42 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   letter-spacing: 0;
   color: var(--color-606060);
 }
-.korzinka-page .korzinka-page__content__empty .korzinka-desc-udalit p {
+.korzinka-page .korzinka-page__content__empty .korzinka-desc-udalit {
+  border: none;
+  cursor: pointer;
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
   letter-spacing: 0;
   color: var(--color-FF6633);
+  background-color: transparent;
+  transition: 0.3s;
+}
+.korzinka-page .korzinka-page__content__empty .korzinka-desc-udalit:hover {
+  color: var(--color-FF0000);
 }
 .korzinka-page .korzinka-page__content {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: 0;
-  gap: 0;
+  gap: 40px;
+}
+@media (max-width: 716px) {
+  .korzinka-page .korzinka-page__content {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: 0;
+    gap: 0px;
+  }
 }
 .korzinka-page .korzinka-page__content .korzinka-page__content__cards {
-  width: 860px;
-  height: 500px;
+  width: 100%;
+  max-width: 100%;
+  height: 430px;
   overflow-y: auto;
-  margin-top: 24px;
+  margin-top: 60px;
   margin-bottom: 116px;
   display: flex;
   justify-content: 0;
@@ -1456,15 +1701,46 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   gap: 40px;
   flex-direction: column;
 }
+@media (max-width: 716px) {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__cards {
+    width: 100%;
+  }
+}
+@media (max-width: 417px) {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__cards {
+    display: flex;
+    justify-content: 0;
+    align-items: 0;
+    gap: 10px;
+  }
+}
 .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card {
-  max-width: 876px;
+  max-width: 100%;
+  height: 87px;
   border-radius: 4px;
   padding: 10px 10px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: 0;
-  gap: 0;
+  gap: 15px;
   background-color: var(--color-FFFFFF);
+}
+@media (max-width: 716px) {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card {
+    width: 100%;
+  }
+}
+@media (max-width: 560px) {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 350px) {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card {
+    width: 100%;
+  }
 }
 .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name {
   display: flex;
@@ -1472,16 +1748,24 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   align-items: 0;
   gap: 8px;
 }
+@media (max-width: 560px) {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name {
+    flex-direction: column;
+  }
+}
 .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-img {
+  padding-left: 10px;
   position: relative;
-  z-index: 1;
+}
+.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-img img {
+  width: 100px;
+  height: 70px;
+  border-radius: 5px;
 }
 .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-img .custom-checkbox {
-  z-index: 2;
-  display: inline-block;
-  position: relative;
-  top: -60px;
-  left: 40px;
+  top: -20px;
+  left: 20px;
+  position: absolute;
   width: 24px;
   height: 24px;
 }
@@ -1496,9 +1780,6 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   display: block;
 }
 .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-img .custom-checkbox .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 24px;
   width: 24px;
   background-color: #eee;
@@ -1516,12 +1797,30 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   display: none;
 }
 .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name h3 {
+  width: 536px;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 10%;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 560px) {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name h3 {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 1157px) {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name h3 {
+    width: 100%;
+    max-width: 536px;
+  }
 }
 .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name p {
+  padding-top: 10px;
   font-weight: 700;
   font-size: 12px;
   line-height: 150%;
@@ -1535,6 +1834,16 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   letter-spacing: 10%;
   color: var(--color-606060);
 }
+@media (max-width: 560px) {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name p {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 560px) {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name p {
+    margin: 0 20px;
+  }
+}
 .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-count {
   border-radius: 4px;
   display: flex;
@@ -1544,6 +1853,11 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   height: 40px;
   padding: 8px;
   background-color: var(--color-70c05b);
+}
+@media (max-width: 560px) {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-count {
+    margin: 0 20px;
+  }
 }
 .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-count button {
   cursor: pointer;
@@ -1558,19 +1872,32 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   letter-spacing: 10%;
   color: var(--color-FFFFFF);
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-price {
+.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-price h3 {
+  width: 50px;
+  white-space: nowrap;
   font-weight: 700;
   font-size: 18px;
   line-height: 150%;
   letter-spacing: 10%;
 }
+@media (max-width: 560px) {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-price h3 {
+    margin: 0 20px;
+  }
+}
 .korzinka-page .korzinka-page__content .zakaz-oformilena {
-  width: 272px;
+  width: 372px;
   height: 430px;
   border-radius: 10px;
   padding: 10px;
   background-color: var(--color-FFFFFF);
   margin-top: 60px;
+}
+@media (max-width: 716px) {
+  .korzinka-page .korzinka-page__content .zakaz-oformilena {
+    width: 100%;
+    margin-top: 0px;
+  }
 }
 .korzinka-page .korzinka-page__content .zakaz-oformilena .chekbox-menu {
   display: flex;
@@ -1696,6 +2023,7 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   color: var(--color-8f8f8f);
 }
 .korzinka-page .korzinka-page__content .zakaz-oformilena button {
+  white-space: nowrap;
   margin: 0 auto;
   display: block;
   margin-top: 60px;
@@ -1710,6 +2038,11 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   line-height: 150%;
   letter-spacing: 0;
   transition: 200ms;
+}
+@media (max-width: 716px) {
+  .korzinka-page .korzinka-page__content .zakaz-oformilena button {
+    width: 100%;
+  }
 }
 .korzinka-page .korzinka-page__content .zakaz-oformilena button:hover {
   background-color: var(--color-FF6633);

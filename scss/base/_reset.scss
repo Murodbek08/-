@@ -253,7 +253,7 @@ a {
         padding: 8px 0 8px 0;
         width: 100%;
         border: 1px solid var(--color-70c05b);
-        background-color: var(--color-FFFFFF);
+        background-color: var(--color-F3F2F1);
         color: var(--color-70c05b);
         @include font.font(400, 16px, 150%, 0%);
         transition: 0.3s ease;
@@ -262,6 +262,11 @@ a {
           border: 1px solid var(--color-FF6633);
           color: var(--color-FFFFFF);
         }
+      }
+      .active-card {
+        background-color: var(--color-FF6633);
+        border: 1px solid var(--color-70c05b);
+        color: var(--color-FFFFFF);
       }
     }
     &:hover .foiz {

@@ -1,15 +1,9 @@
-function tovarFunction() {
-  let aksiyaCardsTovar1 = document?.querySelector(".aksiya__cards__tovar-1");
-  aksiyaCardsTovar1.innerHTML = "";
-  let aksiyaProducts1 = products.filter((el) => el.discount > 0).slice(-4);
-  aksiyaProducts1.map((el) => aksiyaCardsTovar1.append(aksiyaCard(el, "tovar")));
-
-  let aksiyaCardsTovar2 = document?.querySelector(".aksiya__cards__tovar-2");
-  aksiyaCardsTovar2.innerHTML = "";
-  let aksiyaProducts2 = products.filter((el) => el.discount > 0).slice(-4);
-  aksiyaProducts2.map((el) => aksiyaCardsTovar2.append(aksiyaCard(el, "aksiya")));
+function izbrannoeCard() {
+  let izbrannoeCards = document?.querySelector(".izbrannoe-cards");
+  izbrannoeCards.innerHTML = "";
+  likeCountData.map((el) => izbrannoeCards.append(aksiyaCard(el)));
 }
-tovarFunction();
+izbrannoeCard();
 
 function addCard(id) {
   let newProduct = products.find((pr) => pr.id == id);
@@ -27,7 +21,7 @@ function addCard(id) {
   }
   getCardCount();
   localStorage.setItem("korzinkaCardData", JSON.stringify(korzinkaCardData));
-  tovarFunction();
+  izbrannoeCard();
 }
 function addLike(id) {
   let product = products.find((pr) => pr.id == id);
@@ -39,5 +33,5 @@ function addLike(id) {
   }
   getCardLike();
   localStorage.setItem("likeCard", JSON.stringify(likeCountData));
-  tovarFunction();
+  izbrannoeCard();
 }
