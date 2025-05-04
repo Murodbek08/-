@@ -54,6 +54,10 @@ a {
   text-decoration: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .Вси_продукты .main__product_cards .aksiya__card, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card, main .aksiya__cards .aksiya__card {
   width: 272px;
   box-shadow: 1px 2px 4px 0px var(--color-0000001A);
@@ -1480,26 +1484,18 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   background-color: var(--color-FFFFFF);
 }
 .izbrannoe-page .izbrannoe-content .filter-container .price-filter .slider-container {
+  position: relative;
   padding: 40px 0 40px 0;
 }
 .izbrannoe-page .izbrannoe-content .filter-container .price-filter .slider-container .slider {
   position: absolute;
   -webkit-appearance: none;
-  width: 272px;
+  width: 100%;
   height: 6px;
   background: #ddd;
   border-radius: 3px;
   outline: none;
   transition: background 0.3s;
-}
-@media (max-width: 354px) {
-  .izbrannoe-page .izbrannoe-content .filter-container .price-filter .slider-container .slider {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    width: 250px;
-  }
 }
 .izbrannoe-page .izbrannoe-content .filter-container .price-filter .slider-container .slider::-webkit-slider-thumb {
   position: relative;
@@ -1702,19 +1698,19 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   flex-direction: column;
 }
 @media (max-width: 716px) {
-  .korzinka-page .korzinka-page__content .korzinka-page__content__cards {
+  .korzinka-page .korzinka-page__content {
     width: 100%;
   }
 }
 @media (max-width: 417px) {
-  .korzinka-page .korzinka-page__content .korzinka-page__content__cards {
+  .korzinka-page .korzinka-page__content {
     display: flex;
     justify-content: 0;
     align-items: 0;
     gap: 10px;
   }
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card {
   max-width: 100%;
   height: 87px;
   border-radius: 4px;
@@ -1726,60 +1722,60 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   background-color: var(--color-FFFFFF);
 }
 @media (max-width: 716px) {
-  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__card {
     width: 100%;
   }
 }
 @media (max-width: 560px) {
-  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__card {
     flex-direction: column;
     width: 100%;
     height: 100%;
   }
 }
 @media (max-width: 350px) {
-  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__card {
     width: 100%;
   }
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name {
   display: flex;
   justify-content: 0;
   align-items: 0;
   gap: 8px;
 }
 @media (max-width: 560px) {
-  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name {
     flex-direction: column;
   }
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-img {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name .korzinka-img {
   padding-left: 10px;
   position: relative;
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-img img {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name .korzinka-img img {
   width: 100px;
   height: 70px;
   border-radius: 5px;
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-img .custom-checkbox {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name .korzinka-img .custom-checkbox {
   top: -20px;
   left: 20px;
   position: absolute;
   width: 24px;
   height: 24px;
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-img .custom-checkbox input {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name .korzinka-img .custom-checkbox input {
   width: 0;
   height: 0;
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-img .custom-checkbox input:checked + .checkmark {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name .korzinka-img .custom-checkbox input:checked + .checkmark {
   background-color: var(--color-70c05b);
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-img .custom-checkbox input:checked + .checkmark .icon {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name .korzinka-img .custom-checkbox input:checked + .checkmark .icon {
   display: block;
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-img .custom-checkbox .checkmark {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name .korzinka-img .custom-checkbox .checkmark {
   height: 24px;
   width: 24px;
   background-color: #eee;
@@ -1791,13 +1787,13 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   gap: 0;
   cursor: pointer;
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-img .custom-checkbox .checkmark .icon {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name .korzinka-img .custom-checkbox .checkmark .icon {
   width: 16px;
   height: 16px;
   display: none;
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name h3 {
-  width: 536px;
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name .korzinka-name h3 {
+  width: 500px;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -1809,17 +1805,17 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   text-overflow: ellipsis;
 }
 @media (max-width: 560px) {
-  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name h3 {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name .korzinka-name h3 {
     margin: 0 20px;
   }
 }
 @media (max-width: 1157px) {
-  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name h3 {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name .korzinka-name h3 {
     width: 100%;
     max-width: 536px;
   }
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name p {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name .korzinka-name p {
   padding-top: 10px;
   font-weight: 700;
   font-size: 12px;
@@ -1827,7 +1823,7 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   letter-spacing: 10%;
   color: var(--color-414141);
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name p span {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name .korzinka-name p span {
   font-weight: 400;
   font-size: 12px;
   line-height: 150%;
@@ -1835,16 +1831,16 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   color: var(--color-606060);
 }
 @media (max-width: 560px) {
-  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name p {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name .korzinka-name p {
     margin: 0 20px;
   }
 }
 @media (max-width: 560px) {
-  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-img-name .korzinka-name p {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-img-name .korzinka-name p {
     margin: 0 20px;
   }
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-count {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-count {
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -1855,24 +1851,27 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   background-color: var(--color-70c05b);
 }
 @media (max-width: 560px) {
-  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-count {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-count {
     margin: 0 20px;
   }
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-count button {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-count button {
   cursor: pointer;
   border-radius: 4px;
   border: none;
   background-color: var(--color-70c05b);
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-count span {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-count span {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 10%;
   color: var(--color-FFFFFF);
 }
-.korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-price h3 {
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-price {
+  padding-right: 30px;
+}
+.korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-price h3 {
   width: 50px;
   white-space: nowrap;
   font-weight: 700;
@@ -1881,11 +1880,11 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   letter-spacing: 10%;
 }
 @media (max-width: 560px) {
-  .korzinka-page .korzinka-page__content .korzinka-page__content__cards .korzinka-page__content__card .korzinka-price h3 {
+  .korzinka-page .korzinka-page__content .korzinka-page__content__card .korzinka-price h3 {
     margin: 0 20px;
   }
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena {
+.korzinka-page .zakaz-oformilena {
   width: 372px;
   height: 430px;
   border-radius: 10px;
@@ -1894,29 +1893,29 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   margin-top: 60px;
 }
 @media (max-width: 716px) {
-  .korzinka-page .korzinka-page__content .zakaz-oformilena {
+  .korzinka-page .zakaz-oformilena {
     width: 100%;
     margin-top: 0px;
   }
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .chekbox-menu {
+.korzinka-page .zakaz-oformilena .chekbox-menu {
   display: flex;
   justify-content: 0;
   align-items: center;
   gap: 10px;
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .chekbox-menu .switch {
+.korzinka-page .zakaz-oformilena .chekbox-menu .switch {
   position: relative;
   display: inline-block;
   width: 46px;
   height: 24px;
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .chekbox-menu .switch input {
+.korzinka-page .zakaz-oformilena .chekbox-menu .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .chekbox-menu .switch .slider {
+.korzinka-page .zakaz-oformilena .chekbox-menu .switch .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -1927,7 +1926,7 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   border-radius: 24px;
   transition: 0.4s;
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .chekbox-menu .switch .slider::before {
+.korzinka-page .zakaz-oformilena .chekbox-menu .switch .slider::before {
   position: absolute;
   content: "";
   height: 20px;
@@ -1938,20 +1937,20 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   transition: 0.4s;
   border-radius: 50%;
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .chekbox-menu .switch input:checked + .slider {
+.korzinka-page .zakaz-oformilena .chekbox-menu .switch input:checked + .slider {
   background-color: var(--color-70c05b);
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .chekbox-menu .switch input:checked + .slider::before {
+.korzinka-page .zakaz-oformilena .chekbox-menu .switch input:checked + .slider::before {
   transform: translateX(22px);
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .chekbox-menu h4 {
+.korzinka-page .zakaz-oformilena .chekbox-menu h4 {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0;
   color: var(--color-414141);
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .zakaz-karta-p {
+.korzinka-page .zakaz-oformilena .zakaz-karta-p {
   padding-top: 20px;
   font-weight: 400;
   font-size: 16px;
@@ -1959,70 +1958,70 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   letter-spacing: 0;
   color: var(--color-8f8f8f);
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .zakas-tovarlar {
+.korzinka-page .zakaz-oformilena .zakas-tovarlar {
   padding-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0;
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .zakas-tovarlar p {
+.korzinka-page .zakaz-oformilena .zakas-tovarlar p {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0;
   color: var(--color-8f8f8f);
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .zakas-tovarlar h4 {
+.korzinka-page .zakaz-oformilena .zakas-tovarlar h4 {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0;
   color: var(--color-414141);
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .zakaz-skidka {
+.korzinka-page .zakaz-oformilena .zakaz-skidka {
   padding-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0;
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .zakaz-skidka p {
+.korzinka-page .zakaz-oformilena .zakaz-skidka p {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0;
   color: var(--color-8f8f8f);
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .zakaz-skidka h3 {
+.korzinka-page .zakaz-oformilena .zakaz-skidka h3 {
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0;
   color: var(--color-FF6633);
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .zakaz-itog {
+.korzinka-page .zakaz-oformilena .zakaz-itog {
   padding-top: 56px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0;
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .zakaz-itog h3 {
+.korzinka-page .zakaz-oformilena .zakaz-itog h3 {
   font-weight: 700;
   font-size: 24px;
   line-height: 150%;
   letter-spacing: 0;
   color: var(--color-414141);
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena .zakaz-itog p {
+.korzinka-page .zakaz-oformilena .zakaz-itog p {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0;
   color: var(--color-8f8f8f);
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena button {
+.korzinka-page .zakaz-oformilena button {
   white-space: nowrap;
   margin: 0 auto;
   display: block;
@@ -2040,15 +2039,15 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   transition: 200ms;
 }
 @media (max-width: 716px) {
-  .korzinka-page .korzinka-page__content .zakaz-oformilena button {
+  .korzinka-page .zakaz-oformilena button {
     width: 100%;
   }
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena button:hover {
+.korzinka-page .zakaz-oformilena button:hover {
   background-color: var(--color-FF6633);
   color: var(--color-FFFFFF);
 }
-.korzinka-page .korzinka-page__content .zakaz-oformilena button:active {
+.korzinka-page .zakaz-oformilena button:active {
   background-color: var(--color-FF6633);
   color: var(--color-FFFFFF);
 }

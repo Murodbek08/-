@@ -8,7 +8,7 @@ function generalFunction() {
 
 // ############################## Umumiy card FUNksiyasi Hamma pagelar uchun ############################################
 
-function aksiyaCard({ discount, price, images, name, description, id }, type) {
+function aksiyaCard({ discount, price, images, name, description, id, rating }, type) {
   let chekcLikeRed = likeCountData.find((pr) => pr.id == id);
   let chekcCardeRed = korzinkaCardData.find((pr) => pr.id == id);
 
@@ -100,7 +100,20 @@ function aksiyaCard({ discount, price, images, name, description, id }, type) {
   textDesP.innerText = description;
 
   let imgRating = document.createElement("img");
-  imgRating.src = "../images/index/rating.svg";
+
+  for (let i = 1; i <= rating; i++) {
+    if (i == 1) {
+      imgRating.src = "../images/tovar/rating-1.svg";
+    } else if (i == 2) {
+      imgRating.src = "../images/tovar/rating-2.svg";
+    } else if (i == 3) {
+      imgRating.src = "../images/tovar/rating-3.svg";
+    } else if (i == 4) {
+      imgRating.src = "../images/tovar/rating-4.svg";
+    } else if (i == 5) {
+      imgRating.src = "../images/tovar/rating-5.svg";
+    }
+  }
   imgRating.alt = "Rating !";
 
   let cardButton = document.createElement("button");
@@ -173,26 +186,6 @@ function getCardCount() {
 }
 getCardCount();
 
-// function addCard(id) {
-//   let newProduct = products.find((pr) => pr.id == id);
-//   let checkCard = korzinkaCardData.find((el) => el.id == id);
-//   if (checkCard) {
-//     korzinkaCardData = korzinkaCardData.map((product) => {
-//       if (product.id == id) {
-//         product.quantity++;
-//       }
-//       return product;
-//     });
-//   } else {
-//     newProduct.quantity = 1;
-//     korzinkaCardData.push(newProduct);
-//   }
-//   getCardCount();
-//   localStorage.setItem("korzinkaCardData", JSON.stringify(korzinkaCardData));
-//   generalFunction();
-//   aksiyaCard();
-// }
-
 // Card Like
 
 let likeCount = document.querySelectorAll("#like-count");
@@ -204,16 +197,3 @@ function getCardLike() {
   });
 }
 getCardLike();
-
-// function addLike(id) {
-//   let product = products.find((pr) => pr.id == id);
-//   let chekcLike = likeCountData.find((el) => el.id == id);
-//   if (chekcLike) {
-//     likeCountData = likeCountData.filter((el) => el.id != id);
-//   } else {
-//     likeCountData.push(product);
-//   }
-//   getCardLike();
-//   localStorage.setItem("likeCard", JSON.stringify(likeCountData));
-//   generalFunction();
-// }

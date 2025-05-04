@@ -39,6 +39,9 @@ ul {
 a {
   text-decoration: none;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 %root-card {
   .aksiya__card {
     width: 272px;
