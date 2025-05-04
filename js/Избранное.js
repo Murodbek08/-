@@ -4,7 +4,6 @@ function izbrannoeCard() {
   likeCountData.map((el) => izbrannoeCards.append(aksiyaCard(el)));
 }
 izbrannoeCard();
-
 function addCard(id) {
   let newProduct = products.find((pr) => pr.id == id);
   let checkCard = korzinkaCardData.find((el) => el.id == id);

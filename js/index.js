@@ -24,35 +24,21 @@ for (let i = 0; i < tabs.length; i++) {
     getActiveTab(i);
   });
 }
-
-// Kardlar funksiyasi
-//Index
 function getHomeCards() {
-  // ########################### Акции cardlari uchun Java Akript codi  ######################################
   let aksiyaCards = document?.querySelector(".aksiya__cards");
   aksiyaCards.innerHTML = "";
   let aksiyaProducts = products.filter((el) => el.discount > 0).slice(-4);
   aksiyaProducts.map((el) => aksiyaCards.append(aksiyaCard(el, "aksiya")));
-
-  // ########################### Новинки cardlari uchun Java Akript codi  ######################################
-
   let novinkiCards = document?.querySelector(".novinki__cards");
   novinkiCards.innerHTML = "";
   let novinkiProducts = products.filter((el) => el).slice(-4);
   novinkiProducts.map((el) => novinkiCards.append(aksiyaCard(el, "novinki")));
-
-  // ########################### Покупали cardlari uchun Java Akript codi  ######################################
-
   let pokupaliCards = document?.querySelector(".pokupali__cards");
   pokupaliCards.innerHTML = "";
   let pokupaliProducts = products.toSorted((a, b) => b.price - b.price).slice(0, 4);
   pokupaliProducts.map((el) => pokupaliCards.append(aksiyaCard(el, "pokupali")));
-
-  // ######################################### Cardlar kodi Tugadi  ############################################
 }
 getHomeCards();
-
-// ###################### Специальные предложения Java Skript Funksiyasi  ####################################
 let sectionReklamaCards = document.querySelector(".section-reklama-cards");
 function reklamaCard(el, card) {
   let reklamaCardbg = document.createElement("div");
@@ -61,61 +47,38 @@ function reklamaCard(el, card) {
   } else if (card === "card-2") {
     reklamaCardbg.className = "section-reklama-card-2";
   }
-
   let reklamaCardTexts = document.createElement("div");
-
   let reklamaCardTextsH3 = document.createElement("h3");
   reklamaCardTextsH3.innerText = el.name;
-
   let reklamaCardTextsP = document.createElement("p");
   reklamaCardTextsP.innerText = el.paragrapx;
-
   let reklamaCardImg = document.createElement("img");
   reklamaCardImg.src = el.img;
   reklamaCardTexts.append(reklamaCardTextsH3, reklamaCardTextsP);
   reklamaCardbg.append(reklamaCardTexts, reklamaCardImg);
-
   return reklamaCardbg;
 }
-// ###################### Специальные предложения Java Skript card 1  ####################################
-
 sectionReklamaCards.append(reklamaCard(reklamaProducts[0], "card-1"));
-
-// ###################### Специальные предложения Java Skript card 2  ####################################
-
 sectionReklamaCards.append(reklamaCard(reklamaProducts[1], "card-2"));
-
-// ###################################### Tugadi ##########################################################
-
-// ################################ Stati card  Funksiyasi  ###############################################
-
 function statiProductsCard(el) {
   let statiCard = document.createElement("div");
   statiCard.className = "section-Статьи-card";
-
   let statiImg = document.createElement("img");
   statiImg.src = el.img;
   statiImg.alt = "No img !";
-
   let statiSpan = document.createElement("span");
   statiSpan.innerText = el.date;
-
   let statiH4 = document.createElement("h4");
   statiH4.innerText = el.name;
-
   let statiP = document.createElement("p");
   statiP.innerText = el.paragrapx;
-
   let statiBtn = document.createElement("button");
   statiBtn.innerText = "Подробнее";
-
   statiCard.append(statiImg, statiSpan, statiH4, statiP, statiBtn);
   return statiCard;
 }
 let sectionStatiCards = document.querySelector(".section-Статьи-cards");
-
 statiProducts.map((el) => sectionStatiCards.append(statiProductsCard(el)));
-
 function addCard(id) {
   let newProduct = products.find((pr) => pr.id == id);
   let checkCard = korzinkaCardData.find((el) => el.id == id);
@@ -146,19 +109,16 @@ function addLike(id) {
   localStorage.setItem("likeCard", JSON.stringify(likeCountData));
   getHomeCards();
 }
-
 let inputSearch = document.querySelector("#input-search");
 let searchCount = document.querySelector("#search-count");
 let searchProdactCards = document.querySelector(".search-prodact-cards");
 inputSearch.addEventListener("input", function () {
   let search = this.value.trim().toLowerCase();
-
   if (search === "") {
     searchProdactCards.style.display = "none";
   } else {
     searchProdactCards.style.display = "flex";
   }
-
   let productsSearch = products.filter((el) => el.name.toLowerCase().includes(search));
   function searchProdactsCardIndex({ images, name, description, price }) {
     return `

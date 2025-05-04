@@ -1,4 +1,4 @@
-//Korzinka Page Card ---> HTML
+
 function korzinkaCardPro({ images, description, price, quantity, id }) {
   return `
   <div class="korzinka-page__content__card">
@@ -39,27 +39,21 @@ function korzinkaCardPro({ images, description, price, quantity, id }) {
   </div>
   `;
 }
-
-//korzinka Page Content Cards
 let korzinkaPageContentCards = document.querySelector(".korzinka-page__content__cards");
 function korzinkaCardDAtaBig(data = korzinkaCardData) {
   korzinkaPageContentCards.innerHTML = "";
   data.map((el) => (korzinkaPageContentCards.innerHTML += korzinkaCardPro(el)));
 }
 korzinkaCardDAtaBig();
-
-//Zakaz Oformit
 function zakazBuyurtma() {
   let countCardPrice = 0;
   let countCardCommonPrice = 0;
   let countDiscount = 0;
-
   korzinkaCardData.forEach((el) => {
     countCardPrice = el.price * el.quantity;
     countCardCommonPrice += countCardPrice;
     countDiscount += parseFloat((((el.price * el.discount) / 100) * el.quantity).toFixed(2));
   });
-
   const orderData = {
     items: korzinkaCardData,
     total: parseFloat(countCardCommonPrice.toFixed(2)),
@@ -69,7 +63,6 @@ function zakazBuyurtma() {
   localStorage.setItem("localStorageZakaz", JSON.stringify(orderData));
   const savedData = localStorage.getItem("localStorageZakaz");
   const localStorageZakaz = JSON.parse(savedData) || [];
-
   let zakazOformilena = document?.querySelector(".zakaz-oformilena");
   return (zakazOformilena.innerHTML = `
     <div class="chekbox-menu">
@@ -96,8 +89,6 @@ function zakazBuyurtma() {
   `);
 }
 zakazBuyurtma();
-
-//+ 1 - card Push
 function cardQushildi(id) {
   korzinkaCardData.map((el) => {
     if (el.id === id) {
@@ -110,8 +101,6 @@ function cardQushildi(id) {
   zakazBuyurtma();
   korzinkaCardDAtaBig();
 }
-
-//+ 1 - card Delete
 function cardUchirildi(id) {
   let korzinkaCardDataDelete = korzinkaCardData.find((el) => el.id == id);
   if (korzinkaCardDataDelete.quantity === 1) {
@@ -132,8 +121,6 @@ function cardUchirildi(id) {
   zakazBuyurtma();
   korzinkaCardDAtaBig();
 }
-
-// Выделить всё Button
 let korzinkaDeleteProdact = document.querySelector("#korzinka-delete-prodact");
 korzinkaDeleteProdact.addEventListener("click", () => {
   korzinkaCardData.shift();
@@ -142,8 +129,6 @@ korzinkaDeleteProdact.addEventListener("click", () => {
   zakazBuyurtma();
   korzinkaCardDAtaBig();
 });
-
-//Удалить выбранные Button
 let korzinkaDescUdalit = document.querySelector(".korzinka-desc-udalit");
 function checkboxFunc(id) {
   korzinkaCardData = korzinkaCardData.filter((item) => item.id !== id);
@@ -154,7 +139,6 @@ document.querySelector(".korzinka-desc-udalit").onclick = function () {
   checkboxFunc();
   zakazBuyurtma();
 };
-
 function addCard(id) {
   let newProduct = products.find((pr) => pr.id == id);
   let checkCard = korzinkaCardData.find((el) => el.id == id);
