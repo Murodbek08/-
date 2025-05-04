@@ -21,7 +21,7 @@
 }
 header {
   width: 100%;
-  z-index: 100;
+  z-index: 9999999999999999999;
   padding: 16px 0;
   background-color: var(--color-FFFFFF);
   box-shadow: 2px 4px 8px 0px var(--color-0000001A);
@@ -148,8 +148,11 @@ header {
           &::-webkit-search-cancel-button {
             display: none;
           }
+          // &:focus {
+          // }
         }
         img {
+          position: relative;
           cursor: pointer;
           &:hover {
             filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(1000%)
@@ -167,6 +170,67 @@ header {
           display: flex;
           justify-content: center;
           align-items: center;
+        }
+      }
+      .search-prodact-cards {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        height: calc(100vh - 200px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: absolute;
+        width: 500px;
+        padding: 10px 10px 10px 10px;
+        background-color: var(--color-FFFFFF);
+        width: 100%;
+        border-radius: 10px 10px 10px 10px;
+        max-width: 100vh;
+        width: 500px;
+        top: 60px;
+        left: -100px;
+        right: 0;
+        margin: 0 auto;
+        @media (max-width: 620px) {
+          width: 100%;
+          left: 0;
+          right: 0;
+        }
+        .search-prodact-card {
+          padding: 10px;
+          border-radius: 10px;
+          width: 100%;
+          background-color: var(--color-e5ffde);
+          display: flex;
+          gap: 20px;
+          img {
+            padding-left: 10px;
+            border-radius: 5px;
+            width: 100px;
+            height: 50;
+            background-size: cover;
+          }
+          h3 {
+            @include font.font(400, 16px, 150%, 0%);
+            color: var(--color-414141);
+            transition: 0.3s all;
+            &:hover {
+              color: var(--color-FF6633);
+            }
+          }
+          p {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            @include font.font(400, 12px, 150%, 0%);
+            color: var(--color-8f8f8f);
+          }
+          span {
+            @include font.font(400, 16px, 150%, 0%);
+            color: var(--color-FF6633);
+            margin-left: auto;
+          }
         }
       }
       &__Избранное {

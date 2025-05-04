@@ -1,9 +1,9 @@
 const products = [
   {
     id: 1,
-    name: "Apple",
-    category: "Fruit",
-    description: "A round fruit with a red, green, or yellow ",
+    name: "Olma",
+    category: "Meva",
+    description: "Qizil, yashil yoki sariq rangdagi dumaloq meva",
     price: 89,
     rating: 5,
     discount: 0,
@@ -16,9 +16,9 @@ const products = [
   },
   {
     id: 2,
-    name: "Banana",
-    category: "Fruit",
-    description: "A long, curved fruit with a yellow skin and sweet, creamy white flesh.",
+    name: "Banan",
+    category: "Meva",
+    description: "Sariq po'stli, uzun, egri shakldagi shirin meva",
     price: 71,
     rating: 5,
     discount: 20,
@@ -31,9 +31,9 @@ const products = [
   },
   {
     id: 3,
-    name: "Bread",
-    category: "Bakery",
-    description: "A staple food made from flour, water, and yeast, baked into a loaf.",
+    name: "Non",
+    category: "Nonvoyxona",
+    description: "Un, suv va xamirturushdan tayyorlangan asosiy oziq-ovqat",
     price: 88,
     rating: 5,
     discount: 20,
@@ -46,10 +46,9 @@ const products = [
   },
   {
     id: 4,
-    name: "Broccoli",
-    category: "Vegetable",
-    description:
-      "A green vegetable with a tree-like appearance, known for its high nutrient content.",
+    name: "Brokoli",
+    category: "Sabzavot",
+    description: "Yuqori ozuqa moddalariga ega bo'lgan yashil daraxtsimon sabzavot",
     price: 94,
     rating: 4.5,
     discount: 20,
@@ -62,9 +61,9 @@ const products = [
   },
   {
     id: 5,
-    name: "Carrot",
-    category: "Vegetable",
-    description: "A root vegetable with a crunchy texture and a sweet, earthy flavor.",
+    name: "Sabzi",
+    category: "Sabzavot",
+    description: "Qirrali tuzilishga va shirin, yeryong'oq hushbo'ylikka ega ildiz sabzavoti",
     price: 82,
     rating: 5,
     discount: 20,
@@ -77,9 +76,9 @@ const products = [
   },
   {
     id: 6,
-    name: "Cheese",
-    category: "Dairy",
-    description: "A dairy product made from milk, with a variety of textures and flavors.",
+    name: "Pishloq",
+    category: "Sut mahsulotlari",
+    description: "Sutdan tayyorlanadigan turli tuzilish va lazzatdagi mahsulot",
     price: 91,
     rating: 3.5,
     discount: 50,
@@ -92,9 +91,9 @@ const products = [
   },
   {
     id: 7,
-    name: "Chicken",
-    category: "Meat",
-    description: "A type of poultry, often used as a source of protein in meals.",
+    name: "Tovuq go'shti",
+    category: "Go'sht",
+    description: "Ovqatlarda oqsil manbai sifatida ishlatiladigan parranda go'shti",
     price: 68,
     rating: 3.5,
     discount: 20,
@@ -107,10 +106,9 @@ const products = [
   },
   {
     id: 8,
-    name: "Chocolate",
-    category: "Dessert",
-    description:
-      "A sweet food made from cacao beans, used in a variety of desserts and confections.",
+    name: "Shokolad",
+    category: "Shirinlik",
+    description: "Kakao loviyalaridan tayyorlanadigan turli shirinliklar va desertlar",
     price: 61,
     rating: 4.5,
     discount: 20,
@@ -123,10 +121,9 @@ const products = [
   },
   {
     id: 9,
-    name: "Coffee",
-    category: "Dessert",
-    description:
-      "A dark, bitter beverage made from roasted coffee beans, typically used as a pick-me-up.",
+    name: "Kofe",
+    category: "Ichimlik",
+    description: "Qovurilgan kofe loviyalaridan tayyorlanadigan achchiq ichimlik",
     price: 98,
     rating: 5,
     discount: 20,
@@ -139,10 +136,9 @@ const products = [
   },
   {
     id: 10,
-    name: "Egg",
-    category: "Dairy",
-    description:
-      "A oval-shaped reproductive body produced by birds, often used as a source of protein in meals.",
+    name: "Tuxum",
+    category: "Sut mahsulotlari",
+    description: "Qushlar tomonidan ishlab chiqariladigan oval shakldagi oqsil manbai",
     price: 79,
     rating: 4.5,
     discount: 0,
@@ -155,9 +151,9 @@ const products = [
   },
   {
     id: 11,
-    name: "Fish",
-    category: "Meat",
-    description: "A type of seafood, known for its omega-3 fatty acids and high protein content.",
+    name: "Baliq",
+    category: "Go'sht",
+    description: "Omega-3 yog' kislotalari va yuqori oqsil miqdori bilan mashhur dengiz mahsuloti",
     price: 89,
     rating: 3.5,
     discount: 50,
@@ -170,9 +166,9 @@ const products = [
   },
   {
     id: 12,
-    name: "Grapes",
-    category: "Fruit",
-    description: "A small, sweet fruit that grows in clusters, often used in wine-making.",
+    name: "Uzum",
+    category: "Meva",
+    description: "Mayda, shirin mevalar to'plami, ko'pincha vino tayyorlashda ishlatiladi",
     price: 61,
     rating: 4,
     discount: 20,
@@ -185,10 +181,10 @@ const products = [
   },
   {
     id: 13,
-    name: "Hamburger",
+    name: "Gamburger",
     category: "Fast food",
     description:
-      "A sandwich made with a patty of ground beef, served on a bun with various toppings.",
+      "Maydalangan mol go'shti kotleti, bulka va turli xil ustunalardan tayyorlangan sendvich",
     price: 87,
     rating: 5,
     discount: 0,
@@ -201,10 +197,9 @@ const products = [
   },
   {
     id: 14,
-    name: "Hot dog",
+    name: "Xot-dog",
     category: "Fast food",
-    description:
-      "A type of sausage served in a long roll, often used as a quick and convenient food.",
+    description: "Uzun bulka ichida beriladigan kolbasa turi, tez va qulay ovqat",
     price: 84,
     rating: 4.5,
     discount: 50,
@@ -217,10 +212,10 @@ const products = [
   },
   {
     id: 15,
-    name: "Ice cream",
-    category: "Dessert",
+    name: "Muzqaymoq",
+    category: "Shirinlik",
     description:
-      "A frozen dessert made from cream, sugar, and flavorings, available in a variety of flavors.",
+      "Qaymoq, shakar va lazzat beruvchi moddalardan tayyorlanadigan muzlatilgan shirinlik",
     price: 68,
     rating: 4.5,
     discount: 0,
@@ -233,10 +228,9 @@ const products = [
   },
   {
     id: 16,
-    name: "Lemon",
-    category: "Fruit",
-    description:
-      "A yellow citrus fruit with a tart, acidic flavor, often used in cooking and baking.",
+    name: "Limon",
+    category: "Meva",
+    description: "Sariq sitrus mevasi, nordon ta'mi bilan oshpazlikda keng qo'llaniladi",
     price: 74,
     rating: 3.5,
     discount: 0,
@@ -249,10 +243,10 @@ const products = [
   },
   {
     id: 17,
-    name: "Eggs",
-    category: "Dairy",
+    name: "Tuxumlar",
+    category: "Sut mahsulotlari",
     description:
-      "Eggs are oval-shaped reproductive structures produced by female birds and some reptiles.",
+      "Qushlar va ba'zi sudralib yuruvchilar tomonidan ishlab chiqariladigan oval shakldagi reproduktiv tuzilmalar",
     price: 70,
     rating: 4.5,
     discount: 50,
@@ -265,9 +259,9 @@ const products = [
   },
   {
     id: 18,
-    name: "Honey",
-    category: "Dairy",
-    description: "Honey is a sweet, sticky liquid made by bees from the nectar of flowers.",
+    name: "Asal",
+    category: "Sut mahsulotlari",
+    description: "Ariyalar gul nektaridan tayyorlaydigan shirin, yopishqoq suyuqlik",
     price: 87,
     rating: 4,
     discount: 0,
@@ -280,9 +274,10 @@ const products = [
   },
   {
     id: 19,
-    name: "Ice Cream",
-    category: "Dessert",
-    description: "Ice cream is a frozen dessert made from cream, sugar, and flavorings.",
+    name: "Muzqaymoq",
+    category: "Shirinlik",
+    description:
+      "Qaymoq, shakar va lazzat beruvchi moddalardan tayyorlanadigan muzlatilgan shirinlik",
     price: 83,
     rating: 4.5,
     discount: 0,
@@ -295,10 +290,10 @@ const products = [
   },
   {
     id: 20,
-    name: "Jelly",
-    category: "Fruit",
+    name: "Murabbo",
+    category: "Meva",
     description:
-      "Jelly is a sweet spread made from fruit juice and sugar, often used as a topping for toast or pastries.",
+      "Meva sharbati va shakardan tayyorlanadigan shirinlik, non yoki pechenelarga ustiga surtiladi",
     price: 76,
     rating: 5,
     discount: 0,
@@ -312,8 +307,8 @@ const products = [
   {
     id: 21,
     name: "Ketchup",
-    category: "Dairy",
-    description: "Ketchup is a tangy sauce made from tomatoes, vinegar, sugar, and spices.",
+    category: "Sous",
+    description: "Pomidor, sirka, shakar va ziravorlardan tayyorlanadigan nordon sous",
     price: 77,
     rating: 5,
     discount: 0,
@@ -327,9 +322,8 @@ const products = [
   {
     id: 22,
     name: "Mango",
-    category: "Fruit",
-    description:
-      "Mangoes are juicy, sweet tropical fruits with a fleshy interior and a large, oblong seed in the center.",
+    category: "Meva",
+    description: "Shirin, sharbatli tropik meva, go'shti qalin va markazida yirik urug'i bor",
     price: 80,
     rating: 5,
     discount: 20,
@@ -342,10 +336,9 @@ const products = [
   },
   {
     id: 23,
-    name: "Noodles",
-    category: "Meat",
-    description:
-      "Noodles are a type of pasta made from wheat flour and water, often used in Asian cuisine.",
+    name: "Lapsha",
+    category: "Makaron",
+    description: "Bug'doy unidan tayyorlanadigan makaron turi, Osiyo oshxonasida keng qo'llaniladi",
     price: 93,
     rating: 3.5,
     discount: 20,
@@ -358,9 +351,9 @@ const products = [
   },
   {
     id: 24,
-    name: "Oatmeal",
-    category: "Breakfast",
-    description: "Oatmeal is a type of porridge made from oats that is often served for breakfast.",
+    name: "Javdar yormasi",
+    category: "Nonushta",
+    description: "Javdar donlaridan tayyorlanadigan kasha, ko'pincha nonushtada iste'mol qilinadi",
     price: 94,
     rating: 4.5,
     discount: 0,
@@ -373,10 +366,9 @@ const products = [
   },
   {
     id: 25,
-    name: "Bacon",
-    category: "Breakfast",
-    description:
-      "Bacon is a popular breakfast food made from cured pork belly, it is newly delivered.",
+    name: "Bekon",
+    category: "Nonushta",
+    description: "Tuzlangan cho'chqa go'shtidan tayyorlanadigan mashhur nonushta mahsuloti",
     price: 71,
     rating: 3.5,
     discount: 20,
@@ -389,9 +381,9 @@ const products = [
   },
   {
     id: 26,
-    name: "Pancakes",
-    category: "Breakfast",
-    description: "Pancakes are a popular breakfast food made from flour, eggs, and milk.",
+    name: "Qaymoqda pishirilgan non",
+    category: "Nonushta",
+    description: "Un, tuxum va sutdan tayyorlanadigan mashhur nonushta taomi",
     price: 63,
     rating: 4,
     discount: 0,
@@ -404,9 +396,9 @@ const products = [
   },
   {
     id: 27,
-    name: "Waffles",
-    category: "Breakfast",
-    description: "Waffles are a type of breakfast food made from batter cooked in a waffle iron.",
+    name: "Vafel",
+    category: "Nonushta",
+    description: "Xamirni vafel pechida pishirib tayyorlanadigan nonushta taomi",
     price: 97,
     rating: 4.5,
     discount: 20,
@@ -419,10 +411,9 @@ const products = [
   },
   {
     id: 28,
-    name: "Fried Rice",
-    category: "Lunch",
-    description:
-      "Fried Rice is a type of rice dish that is stir-fried in a pan with oil and other ingredients.",
+    name: "Qovurilgan guruch",
+    category: "Tushlik",
+    description: "Yog'da qovurilgan guruch va boshqa ingredientlardan tayyorlanadigan taom",
     price: 81,
     rating: 4,
     discount: 20,
@@ -435,10 +426,9 @@ const products = [
   },
   {
     id: 29,
-    name: "Spaghetti",
-    category: "Lunch",
-    description:
-      "Spaghetti is a type of pasta made from wheat flour and water, usually served with sauce.",
+    name: "Spagetti",
+    category: "Tushlik",
+    description: "Bug'doy unidan tayyorlanadigan uzun makaron, odatda sous bilan birga beriladi",
     price: 96,
     rating: 3,
     discount: 50,
@@ -451,9 +441,9 @@ const products = [
   },
   {
     id: 30,
-    name: "Pizza",
-    category: "Lunch",
-    description: "Pizza is a popular dish made from dough, sauce, cheese, and toppings.",
+    name: "Pitsa",
+    category: "Tushlik",
+    description: "Xamir, sous, pishloq va ustunalardan tayyorlanadigan mashhur taom",
     price: 95,
     rating: 4,
     discount: 0,
@@ -466,9 +456,9 @@ const products = [
   },
   {
     id: 31,
-    name: "Grilled Cheese",
-    category: "Lunch",
-    description: "A grilled cheese sandwich is a hot sandwich made from cheese and bread.",
+    name: "Grill pishloqli sendvich",
+    category: "Tushlik",
+    description: "Issiq pishloq va nondan tayyorlanadigan sendvich",
     price: 100,
     rating: 5,
     discount: 50,
@@ -481,10 +471,9 @@ const products = [
   },
   {
     id: 32,
-    name: "Steak",
-    category: "Dinner",
-    description:
-      "Steak is a popular dinner dish made from a cut of beef that is usually grilled or pan-fried.",
+    name: "Biftek",
+    category: "Kechki ovqat",
+    description: "Mol go'shtining kesimi, odatda grillda yoki tovada pishiriladi",
     price: 63,
     rating: 4.5,
     discount: 20,
@@ -497,10 +486,10 @@ const products = [
   },
   {
     id: 33,
-    name: "Salmon",
-    category: "Dinner",
+    name: "Losos balig'i",
+    category: "Kechki ovqat",
     description:
-      "Salmon is a type of fish that is often grilled or baked and served as a main course.",
+      "Grillda yoki pechda pishiriladigan va asosiy taom sifatida beriladigan baliq turi",
     price: 82,
     rating: 4.5,
     discount: 20,
@@ -513,9 +502,9 @@ const products = [
   },
   {
     id: 34,
-    name: "Chicken Alfredo",
-    category: "Dinner",
-    description: "Chicken Alfredo is a pasta dish made with chicken, alsjfkdlkasdfhlkjh.",
+    name: "Tovuqli Alfredo",
+    category: "Kechki ovqat",
+    description: "Tovuq, qaymoqli sous va makarondan tayyorlanadigan taom",
     price: 94,
     rating: 4,
     discount: 20,
@@ -528,10 +517,10 @@ const products = [
   },
   {
     id: 35,
-    name: "Lasagna",
-    category: "Dinner",
+    name: "Lazanya",
+    category: "Kechki ovqat",
     description:
-      "Lasagna is a type of pasta dish made with layers of pasta, sauce, cheese, and meat or vegetables.",
+      "Qatlamli makaron, sous, pishloq va go'sht yoki sabzavotlardan tayyorlanadigan taom",
     price: 70,
     rating: 1,
     discount: 0,
@@ -544,10 +533,9 @@ const products = [
   },
   {
     id: 36,
-    name: "Chocolate Chip Cookies",
-    category: "Dessert",
-    description:
-      "Chocolate Chip Cookies are a type of cookie made from flour, sugar, butter, and chocolate chips.",
+    name: "Shokoladli pechene",
+    category: "Shirinlik",
+    description: "Un, shakar, yog' va shokolad bo'laklaridan tayyorlanadigan pechene",
     price: 98,
     rating: 3.5,
     discount: 0,
@@ -559,7 +547,6 @@ const products = [
     ],
   },
 ];
-
 const reklamaProducts = [
   {
     name: "Оформите карту «Северяночка»",
@@ -572,7 +559,6 @@ const reklamaProducts = [
     img: "../images/index/savat.png",
   },
 ];
-
 const statiProducts = [
   {
     img: "../images/index/image-6.png",
@@ -637,7 +623,6 @@ const katalogData = [
     text: "Мясо, птица, колбаса",
   },
 ];
-
 const productDataKatalog = [
   {
     id: 1,

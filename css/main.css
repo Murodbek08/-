@@ -63,71 +63,50 @@ a {
   box-shadow: 1px 2px 4px 0px var(--color-0000001A);
   border-radius: 4px;
   background-color: var(--color-FFFFFF);
-  transition: 0.5s ease-in-out;
-  overflow: hidden;
 }
 .Вси_продукты .main__product_cards .aksiya__card__image-1, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1, main .aksiya__cards .aksiya__card__image-1 {
-  height: 160px;
-  overflow: hidden;
   position: relative;
-  background-size: cover;
-  width: 100%;
-  transform-origin: center;
-  display: inline-block;
-  transition: 0.3s ease;
   overflow: hidden;
+  width: 100%;
+  height: 180px;
 }
 .Вси_продукты .main__product_cards .aksiya__card__image-1 .like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like, main .aksiya__cards .aksiya__card__image-1 .like {
-  display: none;
+  display: none !important;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
   position: absolute;
   top: 10px;
   right: 10px;
-  padding: 7px 10px 7px 10px;
-  border-radius: 4px;
-  background-color: rgba(243, 242, 241, 0.5098039216);
+  z-index: 111;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-fcd5ba);
+  border-radius: 5px;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image input, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like .like-image input, main .aksiya__cards .aksiya__card__image-1 .like .like-image input {
-  display: none;
-  position: absolute;
-  opacity: 0;
+@media (max-width: 760px) {
+  .Вси_продукты .main__product_cards .aksiya__card__image-1 .like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like, main .aksiya__cards .aksiya__card__image-1 .like {
+    display: flex;
+  }
+}
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like svg, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like svg, main .aksiya__cards .aksiya__card__image-1 .like svg {
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  height: 0;
-  width: 0;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like .like-image, main .aksiya__cards .aksiya__card__image-1 .like .like-image {
-  position: relative;
-  cursor: pointer;
-  font-size: 15px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  transition: 100ms;
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like svg path, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like svg path, main .aksiya__cards .aksiya__card__image-1 .like svg path {
+  fill: var(--color-FFFFFF);
+  stroke: var(--color-FFFFFF);
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .checkmark, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like .checkmark, main .aksiya__cards .aksiya__card__image-1 .like .checkmark {
-  top: 0;
-  left: 0;
-  height: 2em;
-  width: 2em;
-  transition: 100ms;
-  animation: dislike_effect 400ms ease;
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like svg:hover, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like svg:hover, main .aksiya__cards .aksiya__card__image-1 .like svg:hover {
+  animation: heart 0.3s ease-in-out;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark path, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark path, main .aksiya__cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark path {
-  fill: #ff0000;
-  stroke-width: 0;
-}
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .active-like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like .active-like, main .aksiya__cards .aksiya__card__image-1 .like .active-like {
-  fill: red;
-  stroke: red;
-}
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark, main .aksiya__cards .aksiya__card__image-1 .like .like-image input:checked ~ .checkmark {
-  animation: like_effect 400ms ease;
-}
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like .like-image:hover, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like .like-image:hover, main .aksiya__cards .aksiya__card__image-1 .like .like-image:hover {
-  transform: scale(1.1);
-}
-@keyframes like_effect {
+@keyframes heart {
   0% {
-    transform: scale(0);
+    transform: scale(1);
   }
   50% {
     transform: scale(1.2);
@@ -135,82 +114,17 @@ a {
   100% {
     transform: scale(1);
   }
-}
-@keyframes dislike_effect {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like-image, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like-image, main .aksiya__cards .aksiya__card__image-1 .like-image {
-  position: relative;
-  cursor: pointer;
-  font-size: 15px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  transition: transform 100ms;
-}
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like-image input, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like-image input, main .aksiya__cards .aksiya__card__image-1 .like-image input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .checkmark, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .checkmark, main .aksiya__cards .aksiya__card__image-1 .checkmark {
-  top: 0;
-  left: 0;
-  height: 2em;
-  width: 2em;
-  transition: all 400ms ease;
-}
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .checkmark svg path, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .checkmark svg path, main .aksiya__cards .aksiya__card__image-1 .checkmark svg path {
-  stroke: #ff0000;
-  stroke-width: 20px;
-  fill: none;
-  transition: fill 300ms ease;
-}
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like-image input:checked ~ .checkmark path, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like-image input:checked ~ .checkmark path, main .aksiya__cards .aksiya__card__image-1 .like-image input:checked ~ .checkmark path {
-  fill: #ff0000;
-  stroke-width: 0;
 }
 .Вси_продукты .main__product_cards .aksiya__card__image-1 .active-like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .active-like, main .aksiya__cards .aksiya__card__image-1 .active-like {
-  fill: red;
-  stroke: red;
-}
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like-image:hover, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like-image:hover, main .aksiya__cards .aksiya__card__image-1 .like-image:hover {
-  transform: scale(1.1);
-}
-@keyframes like_effect {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes dislike_effect {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
+  fill: red !important;
+  stroke: red !important;
 }
 .Вси_продукты .main__product_cards .aksiya__card__image-1 .foiz, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .foiz, main .aksiya__cards .aksiya__card__image-1 .foiz {
-  display: none;
+  display: none !important;
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 111;
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -219,12 +133,26 @@ a {
   border-radius: 4px;
   background-color: var(--color-FF6633);
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1:hover, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1:hover, main .aksiya__cards .aksiya__card__image-1:hover {
-  transform: scale(1.05);
+@media (max-width: 760px) {
+  .Вси_продукты .main__product_cards .aksiya__card__image-1 .foiz, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .foiz, main .aksiya__cards .aksiya__card__image-1 .foiz {
+    display: flex;
+  }
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 img, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 img, main .aksiya__cards .aksiya__card__image-1 img {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .img-mahsulot, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .img-mahsulot, main .aksiya__cards .aksiya__card__image-1 .img-mahsulot {
+  height: 150px;
+  width: 272px;
+  position: relative;
+  overflow: hidden;
+}
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .img-mahsulot img, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .img-mahsulot img, main .aksiya__cards .aksiya__card__image-1 .img-mahsulot img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .img-mahsulot:hover img, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .img-mahsulot:hover img, main .aksiya__cards .aksiya__card__image-1 .img-mahsulot:hover img {
+  transform: scale(1.1);
 }
 .Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts, main .aksiya__cards .aksiya__card .section-Акции-card-texts {
   padding: 8px;
@@ -310,10 +238,10 @@ a {
   color: var(--color-FFFFFF);
 }
 .Вси_продукты .main__product_cards .aksiya__card:hover .foiz, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card:hover .foiz, main .aksiya__cards .aksiya__card:hover .foiz {
-  display: flex;
+  display: flex !important;
 }
 .Вси_продукты .main__product_cards .aksiya__card:hover .like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card:hover .like, main .aksiya__cards .aksiya__card:hover .like {
-  display: flex;
+  display: flex !important;
 }
 
 .loading {
@@ -358,7 +286,7 @@ header .nav__desctop .nav__menu__Корзина a:hover img, header .nav__descto
 
 header {
   width: 100%;
-  z-index: 100;
+  z-index: 10000000000000000000;
   padding: 16px 0;
   background-color: var(--color-FFFFFF);
   box-shadow: 2px 4px 8px 0px var(--color-0000001A);
@@ -523,6 +451,7 @@ header .nav__desctop .nav__menu__Search input::-webkit-search-cancel-button {
   display: none;
 }
 header .nav__desctop .nav__menu__Search img {
+  position: relative;
   cursor: pointer;
 }
 header .nav__desctop .nav__menu__Search img:hover {
@@ -542,6 +471,78 @@ header .nav__desctop .nav__menu__Search span {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+header .nav__desctop .nav__menu .search-prodact-cards {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  height: calc(100vh - 200px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  width: 500px;
+  padding: 10px 10px 10px 10px;
+  background-color: var(--color-FFFFFF);
+  width: 100%;
+  border-radius: 10px 10px 10px 10px;
+  max-width: 100vh;
+  width: 500px;
+  top: 60px;
+  left: -100px;
+  right: 0;
+  margin: 0 auto;
+}
+@media (max-width: 620px) {
+  header .nav__desctop .nav__menu .search-prodact-cards {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+header .nav__desctop .nav__menu .search-prodact-cards .search-prodact-card {
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: var(--color-e5ffde);
+  display: flex;
+  gap: 20px;
+}
+header .nav__desctop .nav__menu .search-prodact-cards .search-prodact-card img {
+  padding-left: 10px;
+  border-radius: 5px;
+  width: 100px;
+  height: 50;
+  background-size: cover;
+}
+header .nav__desctop .nav__menu .search-prodact-cards .search-prodact-card h3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-414141);
+  transition: 0.3s all;
+}
+header .nav__desctop .nav__menu .search-prodact-cards .search-prodact-card h3:hover {
+  color: var(--color-FF6633);
+}
+header .nav__desctop .nav__menu .search-prodact-cards .search-prodact-card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-8f8f8f);
+}
+header .nav__desctop .nav__menu .search-prodact-cards .search-prodact-card span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-FF6633);
+  margin-left: auto;
 }
 header .nav__desctop .nav__menu__Избранное {
   position: relative;

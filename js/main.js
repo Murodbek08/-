@@ -15,54 +15,40 @@ function aksiyaCard({ discount, price, images, name, description, id, rating }, 
   let aksiyaCard = document.createElement("div");
   aksiyaCard.className = "aksiya__card";
 
-  let aksiyaCardImage = document.createElement("a");
+  let aksiyaCardImage = document.createElement("div");
   aksiyaCardImage.className = "aksiya__card__image-1";
-  aksiyaCardImage.href = "../pages/Товар.html";
 
   let spanLike = document.createElement("span");
   spanLike.className = "like";
-
-  let labelLikeImage = document.createElement("label");
-  labelLikeImage.className = "like-image";
-
-  let inputChecked = document.createElement("input");
-  inputChecked.type = "checkbox";
-  inputChecked.addEventListener("click", () => addLike(`${id}`));
-  let checkmark = document.createElement("div");
-  checkmark.className = "checkmark";
+  spanLike.addEventListener("click", () => addLike(`${id}`));
 
   let svgHeart = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svgHeart.setAttribute("viewBox", "0 0 256 256");
-
-  let rectHeart = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-  rectHeart.setAttribute("fill", "none");
-  rectHeart.setAttribute("height", "256");
-  rectHeart.setAttribute("width", "256");
+  svgHeart.setAttribute("viewBox", "0 0 512 512");
 
   let pathHeart = document.createElementNS("http://www.w3.org/2000/svg", "path");
   pathHeart.setAttribute(
     "d",
-    "M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+    "M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"
   );
-  pathHeart.setAttribute("stroke-width", "20px");
-  pathHeart.setAttribute("stroke", "#ff0000");
-  pathHeart.setAttribute("fill", "none");
   pathHeart.classList = `${chekcLikeRed ? "active-like" : ""}`;
 
-  svgHeart.append(rectHeart, pathHeart);
-  checkmark.append(svgHeart);
-  labelLikeImage.append(inputChecked, checkmark);
-  spanLike.append(labelLikeImage);
+  svgHeart.append(pathHeart);
+  spanLike.append(svgHeart);
 
   let spanFoiz = document.createElement("span");
   spanFoiz.className = "foiz";
   spanFoiz.innerText = discount + " %";
 
+  let imgMahsulot = document.createElement("a");
+  imgMahsulot.className = "img-mahsulot";
+  imgMahsulot.href = "../pages/Товар.html";
+
   let imgBig = document.createElement("img");
   imgBig.src = images[0];
   imgBig.alt = "No img !";
 
-  aksiyaCardImage.append(spanLike, spanFoiz, imgBig);
+  imgMahsulot.append(imgBig);
+  aksiyaCardImage.append(spanLike, spanFoiz, imgMahsulot);
 
   let sectionАкцииCardTexts = document.createElement("div");
   sectionАкцииCardTexts.className = "section-Акции-card-texts";

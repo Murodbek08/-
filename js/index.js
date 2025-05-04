@@ -1,8 +1,6 @@
 // ######################### Api Tab Java Skript dode iframe map uchin ishlatildi ##################################
-
 const tabs = document.querySelectorAll(".ap-tab-link");
 const tabs_content = document.querySelectorAll(".ap-tab-content");
-
 function getActiveTab(i) {
   tabs.forEach((tab) => {
     tab.classList.remove("active-tab");
@@ -19,9 +17,7 @@ function getActiveTab(i) {
   selectedTabContent.classList.add("active-tab");
   selectedTabContent.style.display = "block";
 }
-
 getActiveTab(0);
-
 for (let i = 0; i < tabs.length; i++) {
   tabs[i].addEventListener("click", function (e) {
     e.preventDefault();
@@ -150,3 +146,43 @@ function addLike(id) {
   localStorage.setItem("likeCard", JSON.stringify(likeCountData));
   getHomeCards();
 }
+
+let inputSearch = document.querySelector("#input-search");
+let searchCount = document.querySelector("#search-count");
+let searchProdactCards = document.querySelector(".search-prodact-cards");
+inputSearch.addEventListener("input", function () {
+  let search = this.value.trim().toLowerCase();
+
+  if (search === "") {
+    searchProdactCards.style.display = "none";
+  } else {
+    searchProdactCards.style.display = "flex";
+  }
+
+  let productsSearch = products.filter((el) => el.name.toLowerCase().includes(search));
+  function searchProdactsCardIndex({ images, name, description, price }) {
+    return `
+    <a href="../pages/Вси_продукты.html">
+      <div class="search-prodact-card">
+        <img src="${images[0]}" alt="Products image !" />
+      <div class="search-prodact-card__text">
+        <h3>${name}</h3>
+        <p>${description}</p>
+        <span>Цена: ${price} ₽</span>
+      </div>
+      </div>
+    </a>
+    `;
+  }
+  function searchIputCards(data = productsSearch) {
+    searchProdactCards.innerHTML = "";
+    data.map((el) => (searchProdactCards.innerHTML += searchProdactsCardIndex(el)));
+    searchCount.textContent = productsSearch.length;
+  }
+  if (productsSearch.length == 0) {
+    searchProdactCards.style.display = "none";
+  }
+  searchIputCards(productsSearch);
+  localStorage.setItem("productsSearch", JSON.stringify(search));
+  searchProdactsCardIndex();
+});

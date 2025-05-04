@@ -46,3 +46,9 @@ function addLike(id) {
   localStorage.setItem("likeCard", JSON.stringify(likeCountData));
   mainProductCard();
 }
+
+let localStorageProductsSearch = localStorage.getItem("productsSearch");
+let localStorageProductsSearchCount = JSON.parse(localStorageProductsSearch) || [];
+let searchInput = localStorageProductsSearchCount.toLowerCase().trim();
+let mainProductCardSearch = products.filter((el) => el.name.toLowerCase().includes(searchInput));
+mainProductCard(mainProductCardSearch);

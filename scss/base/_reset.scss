@@ -48,63 +48,40 @@ a {
     box-shadow: 1px 2px 4px 0px var(--color-0000001A);
     border-radius: 4px;
     background-color: var(--color-FFFFFF);
-    transition: 0.5s ease-in-out;
-    overflow: hidden;
     &__image-1 {
-      height: 160px;
-      overflow: hidden;
       position: relative;
-      background-size: cover;
+      overflow: hidden;
       width: 100%;
+      height: 180px;
       .like {
-        display: none;
+        display: none !important;
+        cursor: pointer;
         position: absolute;
-        top: 10px;
-        right: 10px;
-        padding: 7px 10px 7px 10px;
-        border-radius: 4px;
-        background-color: #f3f2f182;
-        .like-image input {
-          display: none;
-          position: absolute;
-          opacity: 0;
+        @include flx.flex(center, center, 0px);
+        @include mix.position(absolute, 10px, 10px, no, no);
+        z-index: 111;
+        width: 50px;
+        height: 50px;
+        background-color: var(--color-fcd5ba);
+        border-radius: 5px;
+        @media (max-width: 760px) {
+          display: flex;
+        }
+        svg {
+          width: 40px;
+          height: 40px;
           cursor: pointer;
-          height: 0;
-          width: 0;
-          // color: #ff0000;
+          path {
+            fill: var(--color-FFFFFF);
+            stroke: var(--color-FFFFFF);
+          }
+          &:hover {
+            animation: heart 0.3s ease-in-out;
+          }
         }
-        .like-image {
-          position: relative;
-          cursor: pointer;
-          font-size: 15px;
-          user-select: none;
-          transition: 100ms;
-        }
-        .checkmark {
-          top: 0;
-          left: 0;
-          height: 2em;
-          width: 2em;
-          transition: 100ms;
-          animation: dislike_effect 400ms ease;
-        }
-        .like-image input:checked ~ .checkmark path {
-          fill: #ff0000;
-          stroke-width: 0;
-        }
-        .active-like {
-          fill: red;
-          stroke: red;
-        }
-        .like-image input:checked ~ .checkmark {
-          animation: like_effect 400ms ease;
-        }
-        .like-image:hover {
-          transform: scale(1.1);
-        }
-        @keyframes like_effect {
+        @keyframes heart {
           0% {
-            transform: scale(0);
+            transform: scale(1);
           }
           50% {
             transform: scale(1.2);
@@ -113,104 +90,40 @@ a {
             transform: scale(1);
           }
         }
-        @keyframes dislike_effect {
-          0% {
-            transform: scale(0);
-          }
-          50% {
-            transform: scale(1.2);
-          }
-          100% {
-            transform: scale(1);
-          }
-        }
-      }
-      .like-image {
-        position: relative;
-        cursor: pointer;
-        font-size: 15px;
-        user-select: none;
-        transition: transform 100ms;
-      }
-      .like-image input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-      }
-      .checkmark {
-        top: 0;
-        left: 0;
-        height: 2em;
-        width: 2em;
-        transition: all 400ms ease;
-      }
-
-      .checkmark svg path {
-        stroke: #ff0000;
-        stroke-width: 20px;
-        fill: none;
-        transition: fill 300ms ease;
-      }
-
-      .like-image input:checked ~ .checkmark path {
-        fill: #ff0000;
-        stroke-width: 0;
       }
       .active-like {
-        fill: red;
-        stroke: red;
-      }
-
-      .like-image:hover {
-        transform: scale(1.1);
-      }
-
-      @keyframes like_effect {
-        0% {
-          transform: scale(0);
-        }
-        50% {
-          transform: scale(1.2);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
-
-      @keyframes dislike_effect {
-        0% {
-          transform: scale(0);
-        }
-        50% {
-          transform: scale(1.2);
-        }
-        100% {
-          transform: scale(1);
-        }
+        fill: red !important;
+        stroke: red !important;
       }
       .foiz {
-        display: none;
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
+        display: none !important;
+        width: 50px;
+        height: 25px;
+        cursor: pointer;
+        z-index: 111;
+        @include mix.position(absolute, no, no, 10px, 10px);
         color: var(--color-FFFFFF);
         padding: 4px 8px;
         border-radius: 4px;
         background-color: var(--color-FF6633);
+        @media (max-width: 760px) {
+          display: flex;
+        }
       }
-      transform-origin: center;
-      display: inline-block;
-      transition: 0.3s ease;
-      overflow: hidden;
-      &:hover {
-        transform: scale(1.05);
+      .img-mahsulot {
+        height: 150px;
+        width: 272px;
+        position: relative;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
       }
-
-      img {
-        width: 100%;
-        height: 100%;
+      .img-mahsulot:hover img {
+        transform: scale(1.1);
       }
     }
     .section-Акции-card-texts {
@@ -273,10 +186,10 @@ a {
       }
     }
     &:hover .foiz {
-      display: flex;
+      display: flex !important;
     }
     &:hover .like {
-      display: flex;
+      display: flex !important;
     }
   }
 }

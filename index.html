@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="icon" href="./images/main/logo-site.svg" />
   </head>
-
   <body>
     <!-- Header -->
     <header>
@@ -46,9 +45,11 @@
               </a>
             </li>
             <form class="nav__menu__Search">
-              <input type="search" placeholder="Найти товар" />
-              <img src="./images/header/search.svg" alt="Search !" />
+              <input id="input-search" type="search" placeholder="Найти товар" />
+              <img src="../images/header/search.svg" alt="Search !" />
+              <span id="search-count">0</span>
             </form>
+            <div class="search-prodact-cards"></div>
             <li class="nav__menu__Избранное">
               <a href="./pages/Избранное.html">
                 <span id="like-count">0</span>
@@ -79,6 +80,7 @@
           </ul>
         </nav>
       </div>
+
       <div class="container">
         <div class="nav__menu__Каталог__menu__pages nav-menu">
           <ul class="nav-menu-ul"></ul>
