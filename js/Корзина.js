@@ -1,4 +1,3 @@
-
 function korzinkaCardPro({ images, description, price, quantity, id }) {
   return `
   <div class="korzinka-page__content__card">
@@ -134,10 +133,11 @@ function checkboxFunc(id) {
   korzinkaCardData = korzinkaCardData.filter((item) => item.id !== id);
 }
 document.querySelector(".korzinka-desc-udalit").onclick = function () {
-  localStorage.setItem("korzinkaCardData", JSON.stringify(korzinkaCardData));
-  korzinkaCardDAtaBig();
+  getCardCount();
   checkboxFunc();
+  korzinkaCardDAtaBig();
   zakazBuyurtma();
+  localStorage.setItem("korzinkaCardData", JSON.stringify(korzinkaCardData));
 };
 function addCard(id) {
   let newProduct = products.find((pr) => pr.id == id);

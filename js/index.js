@@ -1,4 +1,4 @@
-// ######################### Api Tab Java Skript dode iframe map uchin ishlatildi ##################################
+
 const tabs = document.querySelectorAll(".ap-tab-link");
 const tabs_content = document.querySelectorAll(".ap-tab-content");
 function getActiveTab(i) {

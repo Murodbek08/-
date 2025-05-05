@@ -11,7 +11,7 @@
     @include flx.flex(0, center, 25px);
     a {
       @include font.font(400, 16px, 150%, 0%);
-      color: var(--color-faf7eb);
+      color: var(--color-414141);
       @include flx.flex(0, center, 8px);
       flex-direction: column;
       transition: 0.3s all;
@@ -23,7 +23,7 @@
   h2 {
     margin-top: 24px;
     @include font.font(700, 64px, 150%, 0%);
-    color: var(--color-faf7eb);
+    color: var(--color-414141);
     @media (max-width: 600px) {
       @include font.font(700, 44px, 150%, 0%);
     }

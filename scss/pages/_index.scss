@@ -39,12 +39,12 @@ main {
       @include flx.flex(space-between, center, 0px);
       h2 {
         @include font.font(700, 36px, 150%, 0%);
-        color: var(--color-faf7eb);
+        color: var(--color-414141);
       }
       a {
         @include flx.flex(space-between, center, 15px);
         display: flex;
-        color: var(--color-faf7eb);
+        color: var(--color-414141);
         &:hover {
           color: var(--color-FF6633);
         }
@@ -70,7 +70,7 @@ main {
   .section-reklama {
     h2 {
       @include font.font(700, 36px, 150%, 0%);
-      color: var(--color-faf7eb);
+      color: var(--color-414141);
       margin-bottom: 20px;
     }
     .section-reklama-cards {
@@ -153,7 +153,7 @@ main {
     margin-top: 120px;
     h2 {
       @include font.font(700, 36px, 150%, 0%);
-      color: var(--color-faf7eb);
+      color: var(--color-414141);
     }
     .ap-tab {
       margin-top: 40px;
@@ -205,12 +205,12 @@ main {
       @include flx.flex(space-between, center, 0px);
       h2 {
         @include font.font(700, 36px, 150%, 0%);
-        color: var(--color-faf7eb);
+        color: var(--color-414141);
       }
       a {
         @include flx.flex(space-between, center, 15px);
         display: flex;
-        color: var(--color-faf7eb);
+        color: var(--color-414141);
         &:hover {
           color: var(--color-FF6633);
         }
