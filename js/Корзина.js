@@ -84,7 +84,7 @@ function zakazBuyurtma() {
       <p>Итог</p>
       <h3>${localStorageZakaz.final || 0} ₽</h3>
     </div>
-    <button>Оформить заказ</button>
+    <button onclick="MahsulotQabulQilindi()">Оформить заказ</button>
   `);
 }
 zakazBuyurtma();
@@ -168,4 +168,7 @@ function addLike(id) {
   getCardLike();
   localStorage.setItem("likeCard", JSON.stringify(likeCountData));
   korzinkaCardDAtaBig();
+}
+function MahsulotQabulQilindi() {
+  confirm("Sizning mahsulotingiz qabul qilindi !");
 }
