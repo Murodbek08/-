@@ -54,7 +54,7 @@ function tovarCard() {
       <div class="product-button">
         <button>
           <img src="../images/tovar/shopping-cart.svg" alt="Savat logo !" />
-          <span>В корзину</span>
+          <span onClick="addCard(${cardTovarCode.id})" >В корзину</span>
         </button>
       </div>
       <div class="product-specs-1">
