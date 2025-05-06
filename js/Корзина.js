@@ -63,6 +63,12 @@ function zakazBuyurtma() {
   const savedData = localStorage.getItem("localStorageZakaz");
   const localStorageZakaz = JSON.parse(savedData) || [];
   let zakazOformilena = document?.querySelector(".zakaz-oformilena");
+  if (localStorageZakaz.discount == 0) {
+    discountText = "" + localStorageZakaz.discount;
+  } else {
+    discountText = "-" + localStorageZakaz.discount;
+  }
+  console.log(discountText);
   return (zakazOformilena.innerHTML = `
     <div class="chekbox-menu">
       <label class="switch">
@@ -78,7 +84,7 @@ function zakazBuyurtma() {
     </div>
     <div class="zakaz-skidka">
       <p>Скидка</p>
-      <h3>-${localStorageZakaz.discount || 0} ₽</h3>
+      <h3>${discountText} ₽</h3>
     </div>
     <div class="zakaz-itog">
       <p>Итог</p>

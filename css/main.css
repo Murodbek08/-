@@ -2079,7 +2079,7 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   font-size: 12px;
   line-height: 150%;
   letter-spacing: 0%;
-  color: var(--color-faf7eb);
+  color: var(--color-414141);
 }
 .section__product__detail .breadcrumb__home a img, .section__product__detail .breadcrumb__catalog a img, .section__product__detail .breadcrumb__category a img, .section__product__detail .breadcrumb__product a img {
   width: 24px;
@@ -2097,7 +2097,7 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   font-size: 24px;
   line-height: 150%;
   letter-spacing: 0%;
-  color: var(--color-faf7eb);
+  color: var(--color-414141);
 }
 .section__product__detail .product-meta {
   border-radius: 15px 15px 0 0;
@@ -2194,9 +2194,11 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   flex-direction: column;
 }
 .section__product__detail .product-detail .product-image__small img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 64px;
   height: 90px;
-  background-size: cover;
+  filter: contrast(120%) brightness(110%) saturate(120%) sharpness(150%);
 }
 @media (max-width: 460px) {
   .section__product__detail .product-detail .product-image__small img {
@@ -2208,6 +2210,9 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   display: inline-block;
 }
 .section__product__detail .product-detail .product-image__big img {
+  filter: contrast(1.2);
+  -o-object-fit: cover;
+     object-fit: cover;
   height: clamp(300px, 100vh, 496px);
   width: clamp(300px, 100vw, 504px);
   background-size: cover;

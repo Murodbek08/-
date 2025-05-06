@@ -33,6 +33,7 @@ function aksiyaCard({ discount, price, images, name, description, id, rating }, 
   let imgBig = document.createElement("img");
   imgBig.src = images[0];
   imgBig.alt = "No img !";
+  imgBig.setAttribute("onClick", `imgCardMain(${id})`);
   imgMahsulot.append(imgBig);
   aksiyaCardImage.append(spanLike, spanFoiz, imgMahsulot);
   let sectionАкцииCardTexts = document.createElement("div");
@@ -136,3 +137,8 @@ function getCardLike() {
   });
 }
 getCardLike();
+
+function imgCardMain(id) {
+  let imgCardMainData = products.find((el) => el.id == id);
+  localStorage.setItem("imgCardMainData", JSON.stringify(imgCardMainData));
+}

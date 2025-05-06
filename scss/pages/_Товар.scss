@@ -17,7 +17,7 @@
       a {
         @include flx.flex(0, center, 0);
         @include font.font(400, 12px, 150%, 0%);
-        color: var(--color-faf7eb);
+        color: var(--color-414141);
         img {
           width: 24px;
         }
@@ -35,7 +35,7 @@
     margin-top: 24px;
     margin-bottom: 30px;
     @include font.font(700, 24px, 150%, 0%);
-    color: var(--color-faf7eb);
+    color: var(--color-414141);
   }
   .product-meta {
     border-radius: 15px 15px 0 0;
@@ -96,9 +96,10 @@
         @include flx.flex(0, center, 8px);
         flex-direction: column;
         img {
+          object-fit: cover;
           width: 64px;
           height: 90px;
-          background-size: cover;
+          filter: contrast(120%) brightness(110%) saturate(120%) sharpness(150%);
           @media (max-width: 460px) {
             height: 60px;
           }
@@ -108,6 +109,8 @@
         @include mix.position(relative, no, no, no, no);
         display: inline-block;
         img {
+          filter: contrast(1.2);
+          object-fit: cover;
           height: clamp(300px, 100vh, 496px);
           width: clamp(300px, 100vw, 504px);
           background-size: cover;
