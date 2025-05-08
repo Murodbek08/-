@@ -1,4 +1,3 @@
-
 const tabs = document.querySelectorAll(".ap-tab-link");
 const tabs_content = document.querySelectorAll(".ap-tab-content");
 function getActiveTab(i) {

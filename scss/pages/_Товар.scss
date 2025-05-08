@@ -92,16 +92,29 @@
     .product-image {
       padding-top: 16px;
       @include flx.flex(center, center, 16px);
+      @media (max-width: 450px) {
+        flex-direction: column-reverse;
+      }
       &__small {
         @include flx.flex(0, center, 8px);
         flex-direction: column;
+        @media (max-width: 450px) {
+          flex-direction: row;
+        }
         img {
+          border-radius: 10px;
           object-fit: cover;
-          width: 64px;
+          max-width: 64px;
           height: 90px;
           filter: contrast(120%) brightness(110%) saturate(120%) sharpness(150%);
           @media (max-width: 460px) {
             height: 60px;
+          }
+          @media (max-width: 400px) {
+            width: 50px;
+          }
+          @media (max-width: 360px) {
+            width: 42px;
           }
         }
       }
@@ -109,6 +122,7 @@
         @include mix.position(relative, no, no, no, no);
         display: inline-block;
         img {
+          border-radius: 10px;
           filter: contrast(1.2);
           object-fit: cover;
           height: clamp(300px, 100vh, 496px);
@@ -194,7 +208,7 @@
       }
       .product-specs-1 {
         margin-top: 24px;
-        padding: 4px;
+        padding: 20px;
         background-color: var(--color-F3F2F1);
         @include flx.flex(space-between, center, 8px);
         p {
@@ -209,7 +223,7 @@
       .product-specs-2 {
         @include flx.flex(space-between, center, 8px);
         background-color: var(--color-fcd5ba);
-        padding: 4px;
+        padding: 20px;
         p {
           @include font.font(400, 12px, 150%, 0%);
           color: var(--color-414141);
@@ -222,7 +236,8 @@
       .product-specs-3 {
         @include flx.flex(space-between, center, 8px);
         background-color: var(--color-F3F2F1);
-        padding: 4px;
+        padding: 20px;
+        border-radius: 10px;
         p {
           @include font.font(400, 12px, 150%, 0%);
           color: var(--color-414141);

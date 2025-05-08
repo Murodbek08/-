@@ -1,6 +1,8 @@
 let localStoragedataTovarCard = localStorage.getItem("imgCardMainData");
 cardTovarCode = JSON.parse(localStoragedataTovarCard);
 
+// console.log(URLSearchParams(isx));
+
 function tovarCard() {
   return `
   <h3>Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г</h3>
@@ -73,25 +75,27 @@ function tovarCard() {
   </div>
   `;
 }
-// let ratingImg = document.querySelector("#rating-img");
-// let rating = cardTovarCode.rating;
-// for (let i = 1; i <= rating; i++) {
-//   if (i == 1) {
-//     ratingImg.src = "../images/tovar/rating-1.svg";
-//   } else if (i == 2) {
-//     ratingImg.src = "../images/tovar/rating-2.svg";
-//   } else if (i == 3) {
-//     ratingImg.src = "../images/tovar/rating-3.svg";
-//   } else if (i == 4) {
-//     ratingImg.src = "../images/tovar/rating-4.svg";
-//   } else if (i == 5) {
-//     ratingImg.src = "../images/tovar/rating-5.svg";
-//   }
-// }
-// console.log(ratingImg);
+function dsvsagdgsfdgs() {
+  let tovarCardHtml = document.querySelector(".tovar-card");
+  tovarCardHtml.innerHTML += tovarCard();
 
-let tovarCardHtml = document.querySelector(".tovar-card");
-tovarCardHtml.innerHTML += tovarCard();
+  let ratingImg = document.querySelector("#rating-img");
+  let rating = cardTovarCode.rating;
+  for (let i = 1; i <= rating; i++) {
+    if (i == 1) {
+      ratingImg.src = "../images/tovar/rating-1.svg";
+    } else if (i == 2) {
+      ratingImg.src = "../images/tovar/rating-2.svg";
+    } else if (i == 3) {
+      ratingImg.src = "../images/tovar/rating-3.svg";
+    } else if (i == 4) {
+      ratingImg.src = "../images/tovar/rating-4.svg";
+    } else if (i == 5) {
+      ratingImg.src = "../images/tovar/rating-5.svg";
+    }
+  }
+}
+dsvsagdgsfdgs();
 
 let productImageSmall = document.querySelector(".product-image__small");
 let productImageBig = document.querySelector(".product-image-biggest");

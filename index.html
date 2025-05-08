@@ -3,14 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Severyanochka - Oziq-ovqat do'koni</title>
+    <title>Severyanochka</title>
     <!-- Main Css -->
     <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="icon" href="./images/main/logo-site.svg" />
   </head>
   <body>
+    <!-- Modal Login -->
+    <div class="login-modal">
+      <div class="login__modal__container">
+        <div class="close-btn"><img src="./images/main/x.svg" alt="Close img " /></div>
+        <h2>Вход</h2>
+        <form>
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" placeholder="+7 912" />
+        </form>
+        <button class="login-btn">Вход</button>
+        <div class="bottom-links">
+          <button class="register-btn">Регистрация</button>
+          <a href="#" class="forgot-password">Забыли пароль?</a>
+        </div>
+      </div>
+    </div>
     <!-- Header -->
-    <header>
+    <header id="bactop">
       <div class="container">
         <nav class="nav__desctop">
           <div class="nav__desctop__logo">
@@ -82,7 +98,7 @@
       </div>
 
       <div class="container">
-        <div class="nav__menu__Каталог__menu__pages nav-menu">
+        <div class="nav__menu__Каталог__menu__pages nav-menu ">
           <ul class="nav-menu-ul"></ul>
         </div>
       </div>
@@ -118,7 +134,7 @@
               <span>Корзина</span>
             </a>
           </li>
-          <li class="nav-menu-avatar">
+          <li class="nav__menu__avatar">
             <img src="./images/header/avatar.svg" alt="Avatar !" />
           </li>
         </ul>
@@ -307,6 +323,13 @@
         </div>
       </div>
     </footer>
+    <a href="#bactop" class="Btn">
+      <svg height="1.2em" class="arrow" viewBox="0 0 512 512">
+        <path
+          d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path>
+      </svg>
+      <p class="text">Back to Top</p>
+    </a>
     <script src="./js/products-data.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/index.js"></script>

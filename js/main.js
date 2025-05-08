@@ -1,3 +1,13 @@
+let navMenuUl = document.querySelector(".nav-menu-ul");
+let toggles = document.querySelectorAll(".nav-toggle");
+let menu = document.querySelector(".nav-menu");
+let korzinkaCardCount = document.querySelectorAll("#korzinka_card_count");
+let likeCount = document.querySelectorAll("#like-count");
+let closeModalBtn = document.querySelector(".close-btn");
+let loginModal = document.querySelector(".login-modal");
+let navMenuAvatar = document.querySelectorAll(".nav__menu__avatar");
+let bacTop = document.querySelector(".Btn");
+
 function generalFunction() {
   getHomeCards();
   izbrannoeCard();
@@ -29,7 +39,7 @@ function aksiyaCard({ discount, price, images, name, description, id, rating }, 
   spanFoiz.innerText = discount + " %";
   let imgMahsulot = document.createElement("a");
   imgMahsulot.className = "img-mahsulot";
-  imgMahsulot.href = "../pages/Товар.html";
+  imgMahsulot.href = "../pages/Товар.html?==id";
   let imgBig = document.createElement("img");
   imgBig.src = images[0];
   imgBig.alt = "No img !";
@@ -91,7 +101,6 @@ function aksiyaCard({ discount, price, images, name, description, id, rating }, 
   aksiyaCard.append(sectionАкцииCardTexts);
   return aksiyaCard;
 }
-let navMenuUl = document.querySelector(".nav-menu-ul");
 function navMenuKatalog(el) {
   let katalogDiv = document.createElement("div");
   let katalogA = document.createElement("a");
@@ -102,8 +111,6 @@ function navMenuKatalog(el) {
 }
 katalogData.map((el) => navMenuUl.append(navMenuKatalog(el)));
 document.addEventListener("DOMContentLoaded", () => {
-  const toggles = document.querySelectorAll(".nav-toggle");
-  const menu = document.querySelector(".nav-menu");
   const toggleStorage = localStorage.getItem("katalog-menu");
   if (toggleStorage === "active") {
     menu.classList.add("active");
@@ -119,7 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-let korzinkaCardCount = document.querySelectorAll("#korzinka_card_count");
 let JsonCardCount = localStorage.getItem("korzinkaCardData");
 let korzinkaCardData = JSON.parse(JsonCardCount) || [];
 function getCardCount() {
@@ -128,7 +134,6 @@ function getCardCount() {
   });
 }
 getCardCount();
-let likeCount = document.querySelectorAll("#like-count");
 let JsonLike = localStorage.getItem("likeCard");
 let likeCountData = JSON.parse(JsonLike) || [];
 function getCardLike() {
@@ -137,8 +142,35 @@ function getCardLike() {
   });
 }
 getCardLike();
-
 function imgCardMain(id) {
   let imgCardMainData = products.find((el) => el.id == id);
   localStorage.setItem("imgCardMainData", JSON.stringify(imgCardMainData));
 }
+// Modal Avatar Login
+navMenuAvatar.forEach((navAvatar) => {
+  navAvatar.addEventListener("click", () => {
+    loginModal.classList.add("active-modal");
+  });
+});
+closeModalBtn.addEventListener("click", () => {
+  loginModal.classList.remove("active-modal");
+});
+window.addEventListener("click", (e) => {
+  if (e.target == loginModal) {
+    loginModal.classList.remove("active-modal");
+  }
+});
+
+// Bac Top Scroll
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    bacTop.style.display = "flex";
+  } else {
+    bacTop.style.display = "none";
+  }
+});
+bacTop.addEventListener("click", function (e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});

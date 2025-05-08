@@ -1,5 +1,58 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.Btn {
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-FF6633);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 100;
+  border: none;
+  transition: 5s ease;
+}
+
+.arrow path {
+  fill: white;
+}
+
+.text {
+  font-size: 0.7em;
+  width: 100px;
+  position: absolute;
+  color: var(--color-FF6633);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -18px;
+  opacity: 0;
+  transition-duration: 0.7s;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  transition-duration: 0.7s;
+}
+
+.Btn:hover .arrow {
+  animation: slide-in-bottom 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 :root {
   --color-FFFFFF: #ffffff;
   --color-70c05b: #70c05b;
@@ -44,6 +97,7 @@ body {
   background: url("../../images/main/display_LE_upscale_balanced_x4.jpg") no-repeat fixed;
   background-size: cover;
   background-position: center;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -244,6 +298,159 @@ a {
   display: flex !important;
 }
 
+.login-modal {
+  padding: 0 15px;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 101;
+  background-color: rgba(252, 213, 186, 0.8);
+  top: 0;
+  opacity: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  transition: 0.5s ease;
+}
+.login-modal .login__modal__container {
+  display: flex;
+  justify-content: 0;
+  align-items: 0;
+  gap: 0px;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--color-FFFFFF);
+  border-radius: 4px;
+  transition: 0.5s ease;
+  top: -200px;
+}
+.login-modal .login__modal__container .close-btn {
+  padding: 13.5px;
+  background-color: var(--color-F3F2F1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.login-modal .login__modal__container h2 {
+  padding-top: 72px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+.login-modal .login__modal__container form {
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  max-width: 260px;
+  width: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+.login-modal .login__modal__container form label {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-8f8f8f);
+}
+.login-modal .login__modal__container form input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  border-radius: 4px;
+  padding: 12px 16px 12px 16px;
+  height: 60px;
+  margin: 0 auto;
+  max-width: 260px;
+  width: 100%;
+  border: 1px solid var(--color-70c05b);
+  box-shadow: 4px 8px 16px 0px var(--color-70c05b);
+  color: var(--color-414141);
+  outline: none;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+.login-modal .login__modal__container button {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  cursor: pointer;
+  border: none;
+  color: var(--color-FF6633);
+  background-color: var(--color-fcd5ba);
+  border-radius: 4px;
+  padding: 16px;
+  margin: 0 auto;
+  max-width: 260px;
+  width: 100%;
+  transition: 0.3s ease;
+}
+.login-modal .login__modal__container button:hover {
+  background-color: var(--color-FF6633);
+  color: var(--color-FFFFFF);
+}
+.login-modal .login__modal__container .bottom-links {
+  max-width: 260px;
+  margin: 0 auto;
+  margin-top: 32px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.login-modal .login__modal__container .bottom-links button {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  padding: 6px;
+  width: 121px;
+  cursor: pointer;
+  border: 1px solid #70c05b;
+  color: #70c05b;
+  transition: 0.3s ease;
+  background-color: var(--color-fcd5ba);
+}
+.login-modal .login__modal__container .bottom-links button:hover {
+  background-color: var(--color-70c05b);
+  color: var(--color-FFFFFF);
+}
+.login-modal .login__modal__container .bottom-links a {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-606060);
+  width: 150px;
+  transition: 0.3s ease;
+}
+.login-modal .login__modal__container .bottom-links a:hover {
+  color: var(--color-FF6633);
+}
+
+.active-modal {
+  opacity: 1;
+  z-index: 101;
+}
+.active-modal .login__modal__container {
+  top: 0;
+}
+
 .loading {
   width: 100%;
   height: 100vh;
@@ -286,7 +493,7 @@ header .nav__desctop .nav__menu__Корзина a:hover img, header .nav__descto
 
 header {
   width: 100%;
-  z-index: 10000000000000000000;
+  z-index: 100;
   padding: 16px 0;
   background-color: var(--color-FFFFFF);
   box-shadow: 2px 4px 8px 0px var(--color-0000001A);
@@ -2186,6 +2393,11 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   align-items: center;
   gap: 16px;
 }
+@media (max-width: 450px) {
+  .section__product__detail .product-detail .product-image {
+    flex-direction: column-reverse;
+  }
+}
 .section__product__detail .product-detail .product-image__small {
   display: flex;
   justify-content: 0;
@@ -2193,10 +2405,16 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   gap: 8px;
   flex-direction: column;
 }
+@media (max-width: 450px) {
+  .section__product__detail .product-detail .product-image__small {
+    flex-direction: row;
+  }
+}
 .section__product__detail .product-detail .product-image__small img {
+  border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 64px;
+  max-width: 64px;
   height: 90px;
   filter: contrast(120%) brightness(110%) saturate(120%) sharpness(150%);
 }
@@ -2205,11 +2423,22 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
     height: 60px;
   }
 }
+@media (max-width: 400px) {
+  .section__product__detail .product-detail .product-image__small img {
+    width: 50px;
+  }
+}
+@media (max-width: 360px) {
+  .section__product__detail .product-detail .product-image__small img {
+    width: 42px;
+  }
+}
 .section__product__detail .product-detail .product-image__big {
   position: relative;
   display: inline-block;
 }
 .section__product__detail .product-detail .product-image__big img {
+  border-radius: 10px;
   filter: contrast(1.2);
   -o-object-fit: cover;
      object-fit: cover;
@@ -2332,7 +2561,7 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
 }
 .section__product__detail .product-detail .product-korzinka .product-specs-1 {
   margin-top: 24px;
-  padding: 4px;
+  padding: 20px;
   background-color: var(--color-F3F2F1);
   display: flex;
   justify-content: space-between;
@@ -2359,7 +2588,7 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   align-items: center;
   gap: 8px;
   background-color: var(--color-fcd5ba);
-  padding: 4px;
+  padding: 20px;
 }
 .section__product__detail .product-detail .product-korzinka .product-specs-2 p {
   font-weight: 400;
@@ -2381,7 +2610,8 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   align-items: center;
   gap: 8px;
   background-color: var(--color-F3F2F1);
-  padding: 4px;
+  padding: 20px;
+  border-radius: 10px;
 }
 .section__product__detail .product-detail .product-korzinka .product-specs-3 p {
   font-weight: 400;

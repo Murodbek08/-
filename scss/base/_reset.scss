@@ -16,12 +16,12 @@
   box-sizing: border-box;
 }
 .container {
- 
   $mb-padding: 20;
   max-width: func.container(1440, 116, $mb-padding);
   margin: 0 auto;
   padding: 0 $mb-padding + px;
 }
+
 html,
 body {
   font-family: "Roboto", sans-serif;
@@ -32,6 +32,7 @@ body {
   background: url("../../images/main/display_LE_upscale_balanced_x4.jpg") no-repeat fixed;
   background-size: cover;
   background-position: center;
+  scroll-behavior: smooth;
 }
 ul {
   list-style-type: none;
@@ -191,5 +192,127 @@ a {
     &:hover .like {
       display: flex !important;
     }
+  }
+}
+
+.login-modal {
+  padding: 0 15px;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 101;
+  background-color: #fcd5bacc;
+  top: 0;
+  opacity: 0;
+  z-index: -1;
+  @include flx.flex(center, center, 0px);
+  transition: 0.5s ease;
+  .login__modal__container {
+    @include flx.flex(0, 0, 0px);
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    background-color: var(--color-FFFFFF);
+    border-radius: 4px;
+    transition: 0.5s ease;
+    top: -200px;
+    .close-btn {
+      padding: 13.5px;
+      background-color: var(--color-F3F2F1);
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    h2 {
+      padding-top: 72px;
+      text-align: center;
+      @include font.font(700, 24px, 150%, 0%);
+    }
+    form {
+      padding-top: 32px;
+      @include flx.flex(center, center, 0px);
+      max-width: 260px;
+      width: 100%;
+      flex-direction: column;
+      margin: 0 auto;
+      margin-bottom: 32px;
+      label {
+        @include font.font(400, 18px, 150%, 0%);
+        color: var(--color-8f8f8f);
+      }
+      input {
+        @include flx.flex(center, center, 0px);
+        border-radius: 4px;
+        padding: 12px 16px 12px 16px;
+        height: 60px;
+        margin: 0 auto;
+        max-width: 260px;
+        width: 100%;
+        border: 1px solid var(--color-70c05b);
+        box-shadow: 4px 8px 16px 0px var(--color-70c05b);
+        color: var(--color-414141);
+        outline: none;
+        @include font.font(400, 24px, 150%, 0%);
+      }
+    }
+    button {
+      @include font.font(400, 24px, 150%, 0%);
+      cursor: pointer;
+      border: none;
+      color: var(--color-FF6633);
+      background-color: var(--color-fcd5ba);
+      border-radius: 4px;
+      padding: 16px;
+      margin: 0 auto;
+      max-width: 260px;
+      width: 100%;
+      transition: 0.3s ease;
+      &:hover {
+        background-color: var(--color-FF6633);
+        color: var(--color-FFFFFF);
+      }
+    }
+    .bottom-links {
+      max-width: 260px;
+      margin: 0 auto;
+      margin-top: 32px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      button {
+        @include font.font(400, 12px, 150%, 0%);
+        padding: 6px;
+        width: 121px;
+        cursor: pointer;
+        border: 1px solid #70c05b;
+        color: #70c05b;
+        transition: 0.3s ease;
+        background-color: var(--color-fcd5ba);
+        &:hover {
+          background-color: var(--color-70c05b);
+          color: var(--color-FFFFFF);
+        }
+      }
+      a {
+        @include font.font(400, 12px, 150%, 0%);
+        color: var(--color-606060);
+        width: 150px;
+        transition: 0.3s ease;
+        &:hover {
+          color: var(--color-FF6633);
+        }
+      }
+    }
+  }
+}
+.active-modal {
+  opacity: 1;
+  z-index: 101;
+  .login__modal__container {
+    top: 0;
   }
 }
