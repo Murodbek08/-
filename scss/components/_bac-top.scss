@@ -13,6 +13,10 @@
   z-index: 100;
   border: none;
   transition: 5s ease;
+  @media (max-width: 760px) {
+    bottom: 85px;
+    right: 10px;
+  }
 }
 
 .arrow path {

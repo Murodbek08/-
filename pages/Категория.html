@@ -5,6 +5,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="icon" href="../images/main/logo-site.svg" />
+    <link rel="stylesheet" href="../css/main.min.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- Modal Login -->
+    <div class="login-modal">
+      <div class="login__modal__container">
+        <div class="close-btn"><img src="../images/main/x.svg" alt="Close img " /></div>
+        <h2>Вход</h2>
+        <form>
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" placeholder="+7 912" />
+        </form>
+        <button class="login-btn">Вход</button>
+        <div class="bottom-links">
+          <button class="register-btn">Регистрация</button>
+          <a href="#" class="forgot-password">Забыли пароль?</a>
+        </div>
+      </div>
+    </div>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav class="nav__desctop">
+          <div class="nav__desctop__logo">
+            <a class="nav__desctop__logo__link" href="../index.html">
+              <img
+                class="nav__desctop__logo__link__1"
+                src="../images/header/nav-logo-1.svg"
+                alt="Nav Logo !" />
+              <img
+                class="nav__desctop__logo__link__2"
+                src="../images/header/nav-logo-2.svg"
+                alt="Nav Logo !" />
+            </a>
+          </div>
+          <ul class="nav__menu">
+            <li class="nav__menu__Каталог">
+              <a>
+                <div class="hamburger">
+                  <input
+                    hidden=""
+                    class="check-icon"
+                    id="check-icon "
+                    name="check-icon"
+                    type="checkbox" />
+                  <label class="icon-menu nav-toggle" for="check-icon ">
+                    <div class="bar bar--1"></div>
+                    <div class="bar bar--2"></div>
+                    <div class="bar bar--3"></div>
+                  </label>
+                </div>
+                <a href="./Каталог.html">Каталог</a>
+              </a>
+            </li>
+            <form class="nav__menu__Search">
+              <input id="input-search" type="search" placeholder="Найти товар" />
+              <img src="../images/header/search.svg" alt="Search !" />
+              <span id="search-count">0</span>
+            </form>
+            <li class="nav__menu__Избранное">
+              <a href="./Избранное.html">
+                <span id="like-count">0</span>
+                <img src="../images/header/heart.svg" alt="Heart !" />
+                <span>Избранное</span>
+              </a>
+            </li>
+            <li class="nav__menu__Заказы">
+              <a href="./Заказы.html">
+                <img src="../images/header/box.svg" alt="Box !" />
+                <span>Заказы</span>
+              </a>
+            </li>
+            <li class="nav__menu__Корзина">
+              <a href="./Корзина.html">
+                <span id="korzinka_card_count">0</span>
+                <img src="../images/header/korzinka.svg" alt="Korzinka !" />
+                <span>Корзина</span>
+              </a>
+            </li>
+            <li class="nav__menu__avatar">
+              <img src="../images/header/avatar.svg" alt="Avatar !" />
+              <span>Алексей</span>
+            </li>
+            <li class="nav__menu__chevron__down">
+              <img src="../images/header/chevron-down.svg" alt="Chevron !" />
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="container">
+        <div class="nav__menu__Каталог__menu__pages nav-menu">
+          <ul class="nav-menu-ul"></ul>
+        </div>
+      </div>
+
+      <nav class="nav__mobile">
+        <ul class="nav__mobile__menu">
+          <li class="nav__mobile__menu__Каталог  nav-toggle">
+            <a>
+              <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <span>Каталог</span>
+            </a>
+          </li>
+          <li class="nav__mobile__menu__Избранное">
+            <a href="./Избранное.html">
+              <img src="../images/header/heart.svg" alt="Heart !" />
+              <span>Избранное</span>
+            </a>
+          </li>
+          <li class="nav__mobile__menu__Заказы">
+            <a href="./Заказы.html">
+              <img src="../images/header/box.svg" alt="Box !" />
+              <span>Заказы</span>
+            </a>
+          </li>
+          <li class="nav__mobile__menu__Корзина">
+            <a href="./Корзина.html">
+              <span id="korzinka_card_count">0</span>
+              <img src="../images/header/korzinka.svg" alt="Korzinka !" />
+              <span>Корзина</span>
+            </a>
+          </li>
+          <li class="nav-menu-avatar">
+            <img src="../images/header/avatar.svg" alt="Avatar !" />
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main -->
+    <main>
+      <section class="category">
+        <div class="container">
+          <div class="category-page">
+            <div class="category-page__header">
+              <div class="category-page__header__links">
+                <a href="../index.html">Главная</a>
+                <img src="../images/index/chevron-right.svg" alt="Chevron right" />
+                <a href="#">Каталог</a>
+                <img src="../images/index/chevron-right.svg" alt="Chevron right" />
+                <span class="current-category">Молоко, сыр, яйцо</span>
+              </div>
+              <div class="current-category-name">
+                <h2>Молоко, сыр, яйцо</h2>
+              </div>
+              <div class="current-category-buttons">
+                <button>Товары нашего производства</button>
+                <button>Полезное питание</button>
+                <button>Без ГМО</button>
+              </div>
+            </div>
+            <div class="category-page__content">
+              <div class="filter-container">
+                <h2>Фильтр</h2>
+                <div class="price-filter">
+                  <div class="price-header">
+                    <span>Цена</span>
+                    <button class="clear-button">Очистить</button>
+                  </div>
+                  <div class="inputs">
+                    <input type="number" value="1" min="0" />
+                    <span>—</span>
+                    <input type="number" value="100" min="0" />
+                  </div>
+                  <div class="slider-container">
+                    <input type="range" min="0" max="100" value="1" class="slider" />
+                    <input type="range" min="0" max="100" value="100" class="slider" />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="category-page__content-sort">
+                  <button>
+                    Фильтр 4
+                    <img src="../images/kategoria/x.svg" alt="X icon ?" />
+                  </button>
+                  <button>
+                    Цена от 99 до 2599
+                    <img src="../images/kategoria/x.svg" alt="X icon ?" />
+                  </button>
+                  <button>
+                    Очистить фильтры
+                    <img src="../images/kategoria/x.svg" alt="X icon ?" />
+                  </button>
+                </div>
+                <div class="category-page__content__cards"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- |  Bac to top  | -->
+    <button class="Btn">
+      <svg height="1.2em" class="arrow" viewBox="0 0 512 512">
+        <path
+          d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path>
+      </svg>
+      <p class="text">Back to Top</p>
+    </button>
+    <script src="../js/products-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/Категория.js"></script>
+  </body>
 </html>

@@ -1,5 +1,14 @@
 const tabs = document.querySelectorAll(".ap-tab-link");
 const tabs_content = document.querySelectorAll(".ap-tab-content");
+let aksiyaCards = document?.querySelector(".aksiya__cards");
+let novinkiCards = document?.querySelector(".novinki__cards");
+let pokupaliCards = document?.querySelector(".pokupali__cards");
+let sectionReklamaCards = document.querySelector(".section-reklama-cards");
+let sectionStatiCards = document.querySelector(".section-Статьи-cards");
+let inputSearch = document.querySelector("#input-search");
+let searchCount = document.querySelector("#search-count");
+let searchProdactCards = document.querySelector(".search-prodact-cards");
+
 function getActiveTab(i) {
   tabs.forEach((tab) => {
     tab.classList.remove("active-tab");
@@ -23,22 +32,20 @@ for (let i = 0; i < tabs.length; i++) {
     getActiveTab(i);
   });
 }
+
 function getHomeCards() {
-  let aksiyaCards = document?.querySelector(".aksiya__cards");
   aksiyaCards.innerHTML = "";
   let aksiyaProducts = products.filter((el) => el.discount > 0).slice(-4);
   aksiyaProducts.map((el) => aksiyaCards.append(aksiyaCard(el, "aksiya")));
-  let novinkiCards = document?.querySelector(".novinki__cards");
   novinkiCards.innerHTML = "";
   let novinkiProducts = products.filter((el) => el).slice(-4);
   novinkiProducts.map((el) => novinkiCards.append(aksiyaCard(el, "novinki")));
-  let pokupaliCards = document?.querySelector(".pokupali__cards");
   pokupaliCards.innerHTML = "";
   let pokupaliProducts = products.toSorted((a, b) => b.price - b.price).slice(0, 4);
   pokupaliProducts.map((el) => pokupaliCards.append(aksiyaCard(el, "pokupali")));
 }
 getHomeCards();
-let sectionReklamaCards = document.querySelector(".section-reklama-cards");
+
 function reklamaCard(el, card) {
   let reklamaCardbg = document.createElement("div");
   if (card === "card-1") {
@@ -59,6 +66,7 @@ function reklamaCard(el, card) {
 }
 sectionReklamaCards.append(reklamaCard(reklamaProducts[0], "card-1"));
 sectionReklamaCards.append(reklamaCard(reklamaProducts[1], "card-2"));
+
 function statiProductsCard(el) {
   let statiCard = document.createElement("div");
   statiCard.className = "section-Статьи-card";
@@ -76,7 +84,7 @@ function statiProductsCard(el) {
   statiCard.append(statiImg, statiSpan, statiH4, statiP, statiBtn);
   return statiCard;
 }
-let sectionStatiCards = document.querySelector(".section-Статьи-cards");
+
 statiProducts.map((el) => sectionStatiCards.append(statiProductsCard(el)));
 function addCard(id) {
   let newProduct = products.find((pr) => pr.id == id);
@@ -108,9 +116,7 @@ function addLike(id) {
   localStorage.setItem("likeCard", JSON.stringify(likeCountData));
   getHomeCards();
 }
-let inputSearch = document.querySelector("#input-search");
-let searchCount = document.querySelector("#search-count");
-let searchProdactCards = document.querySelector(".search-prodact-cards");
+
 inputSearch.addEventListener("input", function () {
   let search = this.value.trim().toLowerCase();
   if (search === "") {
@@ -121,7 +127,7 @@ inputSearch.addEventListener("input", function () {
   let productsSearch = products.filter((el) => el.name.toLowerCase().includes(search));
   function searchProdactsCardIndex({ images, name, description, price }) {
     return `
-    <a href="../pages/Вси_продукты.html">
+    <a href="../pages/Вси_продукты.html?MahsulotlarniQidirish=${search}">
       <div class="search-prodact-card">
         <img src="${images[0]}" alt="Products image !" />
       <div class="search-prodact-card__text">
@@ -142,6 +148,5 @@ inputSearch.addEventListener("input", function () {
     searchProdactCards.style.display = "none";
   }
   searchIputCards(productsSearch);
-  localStorage.setItem("productsSearch", JSON.stringify(search));
   searchProdactsCardIndex();
 });

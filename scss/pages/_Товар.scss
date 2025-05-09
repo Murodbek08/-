@@ -41,8 +41,8 @@
     border-radius: 15px 15px 0 0;
     background-color: var(--color-faf7eb);
     padding: 23px 20px 0 20px;
-    @include flx.flex(0, center, 24px);
-    @media (max-width: 565px) {
+    @include flx.flex(0, center, 40px);
+    @media (max-width: 690px) {
       flex-wrap: wrap;
     }
     &__code {
@@ -68,7 +68,45 @@
       cursor: pointer;
     }
     &__favorite {
+      position: relative;
       @include flx.flex(0, center, 8px);
+      .like {
+        display: none;
+        cursor: pointer;
+        @include flx.flex(center, center, 0px);
+        @include mix.position(absolute, -2px, 75px, no, no);
+        z-index: 111;
+        @media (max-width: 760px) {
+          display: flex;
+        }
+        svg {
+          width: 25px;
+          height: 25px;
+          cursor: pointer;
+          path {
+            fill: var(--color-FFFFFF);
+            stroke: var(--color-FFFFFF);
+          }
+          &:hover {
+            animation: heart 0.3s ease-in-out;
+          }
+        }
+        @keyframes heart {
+          0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.2);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+      }
+      .active-like {
+        fill: red !important;
+        stroke: red !important;
+      }
       p {
         @include font.font(400, 12px, 150%, 0%);
         color: var(--color-606060);
@@ -204,6 +242,11 @@
               color: var(--color-FFFFFF);
             }
           }
+        }
+        .active-card {
+          background-color: var(--color-FF6633);
+          border: 1px solid var(--color-70c05b);
+          color: var(--color-FFFFFF);
         }
       }
       .product-specs-1 {

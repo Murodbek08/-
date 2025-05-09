@@ -24,16 +24,14 @@
 
 html,
 body {
+  background: url("../../images/main/display.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+  scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
   background-color: var(--color-faf7eb);
 }
 
-body {
-  background: url("../../images/main/display_LE_upscale_balanced_x4.jpg") no-repeat fixed;
-  background-size: cover;
-  background-position: center;
-  scroll-behavior: smooth;
-}
 ul {
   list-style-type: none;
 }

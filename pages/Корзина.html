@@ -9,6 +9,22 @@
     <link rel="icon" href="../images/main/logo-site.svg" />
   </head>
   <body>
+    <!-- Modal Login -->
+    <div class="login-modal">
+      <div class="login__modal__container">
+        <div class="close-btn"><img src="../images/main/x.svg" alt="Close img " /></div>
+        <h2>Вход</h2>
+        <form>
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" placeholder="+7 912" />
+        </form>
+        <button class="login-btn">Вход</button>
+        <div class="bottom-links">
+          <button class="register-btn">Регистрация</button>
+          <a href="#" class="forgot-password">Забыли пароль?</a>
+        </div>
+      </div>
+    </div>
     <!-- Header -->
     <header>
       <div class="container">
@@ -210,7 +226,14 @@
         </div>
       </div>
     </footer>
-    <script></script>
+    <!-- |  Bac to top  | -->
+    <button class="Btn">
+      <svg height="1.2em" class="arrow" viewBox="0 0 512 512">
+        <path
+          d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path>
+      </svg>
+      <p class="text">Back to Top</p>
+    </button>
     <script src="../js/products-data.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/Корзина.js"></script>

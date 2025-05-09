@@ -16,6 +16,12 @@
   border: none;
   transition: 5s ease;
 }
+@media (max-width: 760px) {
+  .Btn {
+    bottom: 85px;
+    right: 10px;
+  }
+}
 
 .arrow path {
   fill: white;
@@ -89,15 +95,12 @@
 
 html,
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: var(--color-faf7eb);
-}
-
-body {
-  background: url("../../images/main/display_LE_upscale_balanced_x4.jpg") no-repeat fixed;
+  background: url("../../images/main/display.jpg") no-repeat fixed;
   background-size: cover;
   background-position: center;
   scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-faf7eb);
 }
 
 ul {
@@ -112,19 +115,19 @@ a {
   display: none;
 }
 
-.Вси_продукты .main__product_cards .aksiya__card, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card, main .aksiya__cards .aksiya__card {
+.Вси_продукты .main__product_cards .aksiya__card, .category .category-page .category-page__content__cards .aksiya__card, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card, main .aksiya__cards .aksiya__card {
   width: 272px;
   box-shadow: 1px 2px 4px 0px var(--color-0000001A);
   border-radius: 4px;
   background-color: var(--color-FFFFFF);
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1, main .aksiya__cards .aksiya__card__image-1 {
+.Вси_продукты .main__product_cards .aksiya__card__image-1, .category .category-page .category-page__content__cards .aksiya__card__image-1, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1, main .aksiya__cards .aksiya__card__image-1 {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 180px;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like, main .aksiya__cards .aksiya__card__image-1 .like {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like, .category .category-page .category-page__content__cards .aksiya__card__image-1 .like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like, main .aksiya__cards .aksiya__card__image-1 .like {
   display: none !important;
   cursor: pointer;
   position: absolute;
@@ -142,20 +145,20 @@ a {
   border-radius: 5px;
 }
 @media (max-width: 760px) {
-  .Вси_продукты .main__product_cards .aksiya__card__image-1 .like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like, main .aksiya__cards .aksiya__card__image-1 .like {
+  .Вси_продукты .main__product_cards .aksiya__card__image-1 .like, .category .category-page .category-page__content__cards .aksiya__card__image-1 .like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like, main .aksiya__cards .aksiya__card__image-1 .like {
     display: flex;
   }
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like svg, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like svg, main .aksiya__cards .aksiya__card__image-1 .like svg {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like svg, .category .category-page .category-page__content__cards .aksiya__card__image-1 .like svg, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like svg, main .aksiya__cards .aksiya__card__image-1 .like svg {
   width: 40px;
   height: 40px;
   cursor: pointer;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like svg path, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like svg path, main .aksiya__cards .aksiya__card__image-1 .like svg path {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like svg path, .category .category-page .category-page__content__cards .aksiya__card__image-1 .like svg path, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like svg path, main .aksiya__cards .aksiya__card__image-1 .like svg path {
   fill: var(--color-FFFFFF);
   stroke: var(--color-FFFFFF);
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .like svg:hover, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like svg:hover, main .aksiya__cards .aksiya__card__image-1 .like svg:hover {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .like svg:hover, .category .category-page .category-page__content__cards .aksiya__card__image-1 .like svg:hover, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .like svg:hover, main .aksiya__cards .aksiya__card__image-1 .like svg:hover {
   animation: heart 0.3s ease-in-out;
 }
 @keyframes heart {
@@ -169,11 +172,11 @@ a {
     transform: scale(1);
   }
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .active-like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .active-like, main .aksiya__cards .aksiya__card__image-1 .active-like {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .active-like, .category .category-page .category-page__content__cards .aksiya__card__image-1 .active-like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .active-like, main .aksiya__cards .aksiya__card__image-1 .active-like {
   fill: red !important;
   stroke: red !important;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .foiz, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .foiz, main .aksiya__cards .aksiya__card__image-1 .foiz {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .foiz, .category .category-page .category-page__content__cards .aksiya__card__image-1 .foiz, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .foiz, main .aksiya__cards .aksiya__card__image-1 .foiz {
   display: none !important;
   width: 50px;
   height: 25px;
@@ -188,56 +191,56 @@ a {
   background-color: var(--color-FF6633);
 }
 @media (max-width: 760px) {
-  .Вси_продукты .main__product_cards .aksiya__card__image-1 .foiz, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .foiz, main .aksiya__cards .aksiya__card__image-1 .foiz {
+  .Вси_продукты .main__product_cards .aksiya__card__image-1 .foiz, .category .category-page .category-page__content__cards .aksiya__card__image-1 .foiz, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .foiz, main .aksiya__cards .aksiya__card__image-1 .foiz {
     display: flex;
   }
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .img-mahsulot, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .img-mahsulot, main .aksiya__cards .aksiya__card__image-1 .img-mahsulot {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .img-mahsulot, .category .category-page .category-page__content__cards .aksiya__card__image-1 .img-mahsulot, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .img-mahsulot, main .aksiya__cards .aksiya__card__image-1 .img-mahsulot {
   height: 150px;
   width: 272px;
   position: relative;
   overflow: hidden;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .img-mahsulot img, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .img-mahsulot img, main .aksiya__cards .aksiya__card__image-1 .img-mahsulot img {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .img-mahsulot img, .category .category-page .category-page__content__cards .aksiya__card__image-1 .img-mahsulot img, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .img-mahsulot img, main .aksiya__cards .aksiya__card__image-1 .img-mahsulot img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.3s ease;
 }
-.Вси_продукты .main__product_cards .aksiya__card__image-1 .img-mahsulot:hover img, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .img-mahsulot:hover img, main .aksiya__cards .aksiya__card__image-1 .img-mahsulot:hover img {
+.Вси_продукты .main__product_cards .aksiya__card__image-1 .img-mahsulot:hover img, .category .category-page .category-page__content__cards .aksiya__card__image-1 .img-mahsulot:hover img, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card__image-1 .img-mahsulot:hover img, main .aksiya__cards .aksiya__card__image-1 .img-mahsulot:hover img {
   transform: scale(1.1);
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts, main .aksiya__cards .aksiya__card .section-Акции-card-texts {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts, .category .category-page .category-page__content__cards .aksiya__card .section-Акции-card-texts, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts, main .aksiya__cards .aksiya__card .section-Акции-card-texts {
   padding: 8px;
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .цена, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .цена, main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .цена, .category .category-page .category-page__content__cards .aksiya__card .section-Акции-card-texts .цена, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .цена, main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0px;
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .цена h3, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .цена h3, main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена h3 {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .цена h3, .category .category-page .category-page__content__cards .aksiya__card .section-Акции-card-texts .цена h3, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .цена h3, main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 150%;
   letter-spacing: 0%;
   color: var(--color-414141);
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .цена h4, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .цена h4, main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена h4 {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .цена h4, .category .category-page .category-page__content__cards .aksiya__card .section-Акции-card-texts .цена h4, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .цена h4, main .aksiya__cards .aksiya__card .section-Акции-card-texts .цена h4 {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0%;
   color: var(--color-606060);
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .удобство, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .удобство, main .aksiya__cards .aksiya__card .section-Акции-card-texts .удобство {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .удобство, .category .category-page .category-page__content__cards .aksiya__card .section-Акции-card-texts .удобство, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .удобство, main .aksiya__cards .aksiya__card .section-Акции-card-texts .удобство {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0px;
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .удобство span, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .удобство span, main .aksiya__cards .aksiya__card .section-Акции-card-texts .удобство span {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .удобство span, .category .category-page .category-page__content__cards .aksiya__card .section-Акции-card-texts .удобство span, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .удобство span, main .aksiya__cards .aksiya__card .section-Акции-card-texts .удобство span {
   margin-top: 8px;
   font-weight: 400;
   font-size: 12px;
@@ -245,7 +248,7 @@ a {
   letter-spacing: 0%;
   color: var(--color-BFBFBF);
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts h5, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts h5, main .aksiya__cards .aksiya__card .section-Акции-card-texts h5 {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts h5, .category .category-page .category-page__content__cards .aksiya__card .section-Акции-card-texts h5, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts h5, main .aksiya__cards .aksiya__card .section-Акции-card-texts h5 {
   padding-top: 8px;
   font-weight: 400;
   font-size: 16px;
@@ -253,7 +256,7 @@ a {
   letter-spacing: 0%;
   color: var(--color-414141);
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .text-description-p, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .text-description-p, main .aksiya__cards .aksiya__card .section-Акции-card-texts .text-description-p {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .text-description-p, .category .category-page .category-page__content__cards .aksiya__card .section-Акции-card-texts .text-description-p, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .text-description-p, main .aksiya__cards .aksiya__card .section-Акции-card-texts .text-description-p {
   padding-top: 8px;
   font-weight: 400;
   font-size: 16px;
@@ -265,10 +268,10 @@ a {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts img, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts img, main .aksiya__cards .aksiya__card .section-Акции-card-texts img {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts img, .category .category-page .category-page__content__cards .aksiya__card .section-Акции-card-texts img, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts img, main .aksiya__cards .aksiya__card .section-Акции-card-texts img {
   padding: 8px 0 8px 0;
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts button, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts button, main .aksiya__cards .aksiya__card .section-Акции-card-texts button {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts button, .category .category-page .category-page__content__cards .aksiya__card .section-Акции-card-texts button, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts button, main .aksiya__cards .aksiya__card .section-Акции-card-texts button {
   border-radius: 4px;
   padding: 8px 0 8px 0;
   width: 100%;
@@ -281,20 +284,20 @@ a {
   letter-spacing: 0%;
   transition: 0.3s ease;
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts button:hover, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts button:hover, main .aksiya__cards .aksiya__card .section-Акции-card-texts button:hover {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts button:hover, .category .category-page .category-page__content__cards .aksiya__card .section-Акции-card-texts button:hover, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts button:hover, main .aksiya__cards .aksiya__card .section-Акции-card-texts button:hover {
   background-color: var(--color-FF6633);
   border: 1px solid var(--color-FF6633);
   color: var(--color-FFFFFF);
 }
-.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .active-card, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .active-card, main .aksiya__cards .aksiya__card .section-Акции-card-texts .active-card {
+.Вси_продукты .main__product_cards .aksiya__card .section-Акции-card-texts .active-card, .category .category-page .category-page__content__cards .aksiya__card .section-Акции-card-texts .active-card, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card .section-Акции-card-texts .active-card, main .aksiya__cards .aksiya__card .section-Акции-card-texts .active-card {
   background-color: var(--color-FF6633);
   border: 1px solid var(--color-70c05b);
   color: var(--color-FFFFFF);
 }
-.Вси_продукты .main__product_cards .aksiya__card:hover .foiz, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card:hover .foiz, main .aksiya__cards .aksiya__card:hover .foiz {
+.Вси_продукты .main__product_cards .aksiya__card:hover .foiz, .category .category-page .category-page__content__cards .aksiya__card:hover .foiz, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card:hover .foiz, main .aksiya__cards .aksiya__card:hover .foiz {
   display: flex !important;
 }
-.Вси_продукты .main__product_cards .aksiya__card:hover .like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card:hover .like, main .aksiya__cards .aksiya__card:hover .like {
+.Вси_продукты .main__product_cards .aksiya__card:hover .like, .category .category-page .category-page__content__cards .aksiya__card:hover .like, .izbrannoe-page .izbrannoe-content .izbrannoe-cards .aksiya__card:hover .like, main .aksiya__cards .aksiya__card:hover .like {
   display: flex !important;
 }
 
@@ -1762,6 +1765,271 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   }
 }
 
+.category {
+  margin-top: 80px;
+  padding-bottom: 120px;
+}
+.category .category-page .category-page__header {
+  padding-top: 25px;
+}
+.category .category-page .category-page__header .category-page__header__links {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 25px;
+}
+@media (max-width: 522px) {
+  .category .category-page .category-page__header .category-page__header__links {
+    flex-wrap: wrap;
+  }
+}
+.category .category-page .category-page__header .category-page__header__links a {
+  color: var(--color-414141);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 10%;
+  transition: 0.3s ease;
+}
+.category .category-page .category-page__header .category-page__header__links a:hover {
+  color: var(--color-FF6633);
+}
+.category .category-page .category-page__header .category-page__header__links span {
+  color: var(--color-414141);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 10%;
+  transition: 0.3s ease;
+}
+.category .category-page .category-page__header .category-page__header__links span:hover {
+  color: var(--color-FF6633);
+}
+.category .category-page .current-category-name h2 {
+  margin-top: 24px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  letter-spacing: 10%;
+  color: var(--color-414141);
+}
+.category .category-page .current-category-buttons {
+  margin-top: 64px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 24px;
+}
+@media (max-width: 458px) {
+  .category .category-page .current-category-buttons {
+    flex-wrap: wrap;
+  }
+}
+.category .category-page .current-category-buttons button {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 4px 8px;
+  background-color: var(--color-F3F2F1);
+  color: var(--color-606060);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 10%;
+  border: none;
+  transition: 0.3s;
+}
+.category .category-page .current-category-buttons button:hover {
+  background-color: var(--color-FF6633);
+  color: var(--color-FFFFFF);
+}
+.category .category-page .category-page__content {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 25px;
+}
+@media (max-width: 636px) {
+  .category .category-page .category-page__content {
+    flex-direction: column;
+  }
+}
+.category .category-page .category-page__content .filter-container {
+  min-width: 300px;
+}
+@media (max-width: 636px) {
+  .category .category-page .category-page__content .filter-container {
+    width: 100%;
+  }
+}
+@media (max-width: 350px) {
+  .category .category-page .category-page__content .filter-container {
+    min-width: 250px;
+  }
+}
+.category .category-page .category-page__content .filter-container h2 {
+  color: var(--color-414141);
+  background-color: var(--color-F3F2F1);
+  width: 100%;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+.category .category-page .category-page__content .filter-container .price-filter {
+  padding: 40px 10px 0 10px;
+  background-color: var(--color-faf7eb);
+}
+.category .category-page .category-page__content .filter-container .price-filter .price-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+.category .category-page .category-page__content .filter-container .price-filter .price-header span {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--color-232323);
+}
+.category .category-page .category-page__content .filter-container .price-filter .price-header button {
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 14px 19px;
+  background-color: var(--color-F3F2F1);
+}
+.category .category-page .category-page__content .filter-container .price-filter .price-header button:hover {
+  background-color: var(--color-FF6633);
+  color: var(--color-FFFFFF);
+}
+.category .category-page .category-page__content .filter-container .price-filter .inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+  margin-top: 20px;
+}
+.category .category-page .category-page__content .filter-container .price-filter .inputs span {
+  padding: 10px;
+}
+.category .category-page .category-page__content .filter-container .price-filter .inputs input {
+  outline: none;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  padding-left: 10px;
+  background-color: var(--color-FFFFFF);
+}
+.category .category-page .category-page__content .filter-container .price-filter .slider-container {
+  position: relative;
+  padding: 40px 0 40px 0;
+}
+.category .category-page .category-page__content .filter-container .price-filter .slider-container .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #ddd;
+  border-radius: 3px;
+  outline: none;
+  transition: background 0.3s;
+}
+.category .category-page .category-page__content .filter-container .price-filter .slider-container .slider::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+          appearance: none;
+  height: 20px;
+  width: 20px;
+  background: #4caf50;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+}
+.category .category-page .category-page__content .filter-container .price-filter .slider-container .slider::-moz-range-thumb {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background: #4caf50;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.category .category-page .category-page__content-sort {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 25px;
+}
+@media (max-width: 880px) {
+  .category .category-page .category-page__content-sort {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 506px) {
+  .category .category-page .category-page__content-sort {
+    margin-bottom: 40px;
+  }
+}
+.category .category-page .category-page__content-sort button {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 10%;
+  color: var(--color-FFFFFF);
+  padding: 8px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 25px;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--color-70c05b);
+  transition: 0.3s;
+}
+.category .category-page .category-page__content-sort button:hover {
+  background-color: var(--color-FF6633);
+}
+.category .category-page .category-page__content__cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: space-between;
+}
+.category .category-page .category-page__content__cards .aksiya__card {
+  max-width: 272px !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+@media (max-width: 1030px) {
+  .category .category-page .category-page__content__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 850px) {
+  .category .category-page .category-page__content__cards {
+    width: 280px !important;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .category .category-page .category-page__content__cards {
+    width: 100% !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .category .category-page .category-page__content__cards {
+    margin: 0 auto !important;
+    width: 280px !important;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .korzinka-page {
   margin-top: 80px;
   margin-bottom: 40px;
@@ -2313,9 +2581,9 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   display: flex;
   justify-content: 0;
   align-items: center;
-  gap: 24px;
+  gap: 40px;
 }
-@media (max-width: 565px) {
+@media (max-width: 690px) {
   .section__product__detail .product-meta {
     flex-wrap: wrap;
   }
@@ -2358,11 +2626,56 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   color: var(--color-606060);
 }
 .section__product__detail .product-meta__favorite {
+  position: relative;
   display: flex;
   justify-content: 0;
   align-items: center;
   gap: 8px;
   cursor: pointer;
+}
+.section__product__detail .product-meta__favorite .like {
+  display: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  position: absolute;
+  top: -2px;
+  right: 75px;
+  z-index: 111;
+}
+@media (max-width: 760px) {
+  .section__product__detail .product-meta__favorite .like {
+    display: flex;
+  }
+}
+.section__product__detail .product-meta__favorite .like svg {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.section__product__detail .product-meta__favorite .like svg path {
+  fill: var(--color-FFFFFF);
+  stroke: var(--color-FFFFFF);
+}
+.section__product__detail .product-meta__favorite .like svg:hover {
+  animation: heart 0.3s ease-in-out;
+}
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.section__product__detail .product-meta__favorite .active-like {
+  fill: red !important;
+  stroke: red !important;
 }
 .section__product__detail .product-meta__favorite p {
   font-weight: 400;
@@ -2557,6 +2870,11 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   background-color: var(--color-FF6633);
 }
 .section__product__detail .product-detail .product-korzinka .product-button button:hover span {
+  color: var(--color-FFFFFF);
+}
+.section__product__detail .product-detail .product-korzinka .product-button .active-card {
+  background-color: var(--color-FF6633);
+  border: 1px solid var(--color-70c05b);
   color: var(--color-FFFFFF);
 }
 .section__product__detail .product-detail .product-korzinka .product-specs-1 {

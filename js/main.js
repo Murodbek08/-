@@ -14,6 +14,7 @@ function generalFunction() {
   mainProductCard();
   tovarFunction();
 }
+
 function aksiyaCard({ discount, price, images, name, description, id, rating }, type) {
   let chekcLikeRed = likeCountData.find((pr) => pr.id == id);
   let chekcCardeRed = korzinkaCardData.find((pr) => pr.id == id);
@@ -39,11 +40,10 @@ function aksiyaCard({ discount, price, images, name, description, id, rating }, 
   spanFoiz.innerText = discount + " %";
   let imgMahsulot = document.createElement("a");
   imgMahsulot.className = "img-mahsulot";
-  imgMahsulot.href = "../pages/Товар.html?==id";
+  imgMahsulot.href = `../pages/Товар.html?Mahsulot=${id}`;
   let imgBig = document.createElement("img");
   imgBig.src = images[0];
   imgBig.alt = "No img !";
-  imgBig.setAttribute("onClick", `imgCardMain(${id})`);
   imgMahsulot.append(imgBig);
   aksiyaCardImage.append(spanLike, spanFoiz, imgMahsulot);
   let sectionАкцииCardTexts = document.createElement("div");
@@ -101,31 +101,23 @@ function aksiyaCard({ discount, price, images, name, description, id, rating }, 
   aksiyaCard.append(sectionАкцииCardTexts);
   return aksiyaCard;
 }
+
 function navMenuKatalog(el) {
   let katalogDiv = document.createElement("div");
   let katalogA = document.createElement("a");
-  katalogA.href = "#";
-  katalogA.innerText = el.text;
+  katalogA.href = `../pages/Категория.html?MahsulotTuri=${el.name}`;
+  katalogA.innerText = el.name;
   katalogDiv.append(katalogA);
   return katalogDiv;
 }
 katalogData.map((el) => navMenuUl.append(navMenuKatalog(el)));
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleStorage = localStorage.getItem("katalog-menu");
-  if (toggleStorage === "active") {
-    menu.classList.add("active");
-  }
-  toggles.forEach((toggle) => {
-    toggle.addEventListener("click", () => {
-      menu.classList.toggle("active");
-      if (menu.classList.contains("active")) {
-        localStorage.setItem("katalog-menu", "active");
-      } else {
-        localStorage.setItem("katalog-menu", "no-active");
-      }
-    });
+
+toggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
   });
 });
+
 let JsonCardCount = localStorage.getItem("korzinkaCardData");
 let korzinkaCardData = JSON.parse(JsonCardCount) || [];
 function getCardCount() {
@@ -134,6 +126,7 @@ function getCardCount() {
   });
 }
 getCardCount();
+
 let JsonLike = localStorage.getItem("likeCard");
 let likeCountData = JSON.parse(JsonLike) || [];
 function getCardLike() {
@@ -142,10 +135,7 @@ function getCardLike() {
   });
 }
 getCardLike();
-function imgCardMain(id) {
-  let imgCardMainData = products.find((el) => el.id == id);
-  localStorage.setItem("imgCardMainData", JSON.stringify(imgCardMainData));
-}
+
 // Modal Avatar Login
 navMenuAvatar.forEach((navAvatar) => {
   navAvatar.addEventListener("click", () => {
@@ -162,7 +152,6 @@ window.addEventListener("click", (e) => {
 });
 
 // Bac Top Scroll
-
 window.addEventListener("scroll", () => {
   if (window.scrollY > 200) {
     bacTop.style.display = "flex";

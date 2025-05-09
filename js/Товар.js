@@ -1,9 +1,11 @@
-let localStoragedataTovarCard = localStorage.getItem("imgCardMainData");
-cardTovarCode = JSON.parse(localStoragedataTovarCard);
+let tovarCardHtml = document.querySelector(".tovar-card");
 
-// console.log(URLSearchParams(isx));
+let mahsulotUrl = new URLSearchParams(window.location.search).get("Mahsulot");
+let tovarProduct = products.filter((el) => el.id == mahsulotUrl);
 
-function tovarCard() {
+function tovarCard({ images, discount, price, id }) {
+  let chekcLikeRed = likeCountData.find((pr) => pr.id == id);
+  let chekcCardeRed = korzinkaCardData.find((pr) => pr.id == id);
   return `
   <h3>Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г</h3>
   <div class="product-meta">
@@ -19,34 +21,38 @@ function tovarCard() {
       <p>Поделиться</p>
     </div>
     <div class="product-meta__favorite ">
-      <img src="../images/tovar/love.svg" alt="Heart Logo !" />
+      <span onClick=addLike(${id}) class="like">
+        <svg viewBox="0 0 512 512">
+          <path class="${chekcLikeRed ? "active-like" : ""}" 
+            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" class="active-like">
+          </path>
+        </svg>
+      </span>
       <p>В избранное</p>
     </div>
   </div>
   <div class="product-detail">
     <div class="product-image">
       <div class="product-image__small">
-        <img src=${cardTovarCode.images[0]} alt="Item image !"/>
-        <img src=${cardTovarCode.images[1]} alt="Item image !" />
-        <img src=${cardTovarCode.images[2]} alt="Item image !" />
-        <img src=${cardTovarCode.images[3]} alt="Item image !" />
-        <img src=${cardTovarCode.images[1]} alt="Item image !" />
+        <img src=${images[0]} alt="Item image !"/>
+        <img src=${images[1]} alt="Item image !" />
+        <img src=${images[2]} alt="Item image !" />
+        <img src=${images[3]} alt="Item image !" />
+        <img src=${images[1]} alt="Item image !" />
       </div>
       <div class="product-image__big">
-        <img class="product-image-biggest" src="${
-          cardTovarCode.images[0]
-        }" alt="Item big image !" />
-        <div class="foiz"><h4>${cardTovarCode.discount + "%"}</h4></div>
+        <img class="product-image-biggest" src="${images[0]}" alt="Item big image !" />
+        <div class="foiz"><h4>${discount + "%"}</h4></div>
       </div>
     </div>
     <div class="product-korzinka">
       <div class="product-korzinka__narh">
         <div class="product-korzinka__narh__price">
-          <h5>${cardTovarCode.price} ₽</h5>
+          <h5>${price} ₽</h5>
           <p>Обычная цена</p>
         </div>
         <div class="product-korzinka__narh__discount">
-          <h5>${cardTovarCode.price} ₽</h5>
+          <h5>${price} ₽</h5>
           <div>
             <p>С картой Северяночки</p>
             <img src="../images/tovar/info.svg" alt="Info logo !" />
@@ -54,9 +60,9 @@ function tovarCard() {
         </div>
       </div>
       <div class="product-button">
-        <button>
+        <button onClick="addCard(${id})" class= ${chekcCardeRed ? "active-card" : ""} > 
           <img src="../images/tovar/shopping-cart.svg" alt="Savat logo !" />
-          <span onClick="addCard(${cardTovarCode.id})" >В корзину</span>
+          <span>В корзину</span>
         </button>
       </div>
       <div class="product-specs-1">
@@ -75,12 +81,11 @@ function tovarCard() {
   </div>
   `;
 }
-function dsvsagdgsfdgs() {
-  let tovarCardHtml = document.querySelector(".tovar-card");
-  tovarCardHtml.innerHTML += tovarCard();
-
+function tovarFunction() {
+  tovarCardHtml.innerHTML = "";
+  tovarProduct.map((el) => (tovarCardHtml.innerHTML += tovarCard(el)));
   let ratingImg = document.querySelector("#rating-img");
-  let rating = cardTovarCode.rating;
+  let rating = tovarProduct.map((el) => el.rating);
   for (let i = 1; i <= rating; i++) {
     if (i == 1) {
       ratingImg.src = "../images/tovar/rating-1.svg";
@@ -94,16 +99,11 @@ function dsvsagdgsfdgs() {
       ratingImg.src = "../images/tovar/rating-5.svg";
     }
   }
-}
-dsvsagdgsfdgs();
-
-let productImageSmall = document.querySelector(".product-image__small");
-let productImageBig = document.querySelector(".product-image-biggest");
-productImageSmall.addEventListener("click", function (e) {
-  e.target.src && (productImageBig.src = e.target.src);
-});
-
-function tovarFunction() {
+  let productImageSmall = document.querySelector(".product-image__small");
+  let productImageBig = document.querySelector(".product-image-biggest");
+  productImageSmall.addEventListener("click", function (e) {
+    e.target.src && (productImageBig.src = e.target.src);
+  });
   let aksiyaCardsTovar1 = document?.querySelector(".aksiya__cards__tovar-1");
   aksiyaCardsTovar1.innerHTML = "";
   let aksiyaProducts1 = products.filter((el) => el.discount > 0).slice(-4);
@@ -114,6 +114,7 @@ function tovarFunction() {
   aksiyaProducts2.map((el) => aksiyaCardsTovar2.append(aksiyaCard(el, "aksiya")));
 }
 tovarFunction();
+
 function addCard(id) {
   let newProduct = products.find((pr) => pr.id == id);
   let checkCard = korzinkaCardData.find((el) => el.id == id);

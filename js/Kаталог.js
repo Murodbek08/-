@@ -10,11 +10,13 @@ catalogCard = ({ image, text }) => {
   </div>
   `;
 };
+
 getProducts = (data = productDataKatalog) => {
   heroKatalogCards.innerHTML = "";
   data.map((el) => (heroKatalogCards.innerHTML += catalogCard(el)));
   searchCount.textContent = data.length;
 };
+
 getProducts();
 inputSearch.addEventListener("input", function () {
   let search = this.value.trim().toLowerCase();

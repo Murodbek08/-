@@ -1,3 +1,7 @@
+let korzinkaPageContentCards = document.querySelector(".korzinka-page__content__cards");
+let zakazOformilena = document?.querySelector(".zakaz-oformilena");
+let korzinkaDeleteProdact = document.querySelector("#korzinka-delete-prodact");
+
 function korzinkaCardPro({ images, description, price, quantity, id }) {
   return `
   <div class="korzinka-page__content__card">
@@ -38,7 +42,7 @@ function korzinkaCardPro({ images, description, price, quantity, id }) {
   </div>
   `;
 }
-let korzinkaPageContentCards = document.querySelector(".korzinka-page__content__cards");
+
 function korzinkaCardDAtaBig(data = korzinkaCardData) {
   korzinkaPageContentCards.innerHTML = "";
   data.map((el) => (korzinkaPageContentCards.innerHTML += korzinkaCardPro(el)));
@@ -62,7 +66,6 @@ function zakazBuyurtma() {
   localStorage.setItem("localStorageZakaz", JSON.stringify(orderData));
   const savedData = localStorage.getItem("localStorageZakaz");
   const localStorageZakaz = JSON.parse(savedData) || [];
-  let zakazOformilena = document?.querySelector(".zakaz-oformilena");
   if (localStorageZakaz.discount == 0) {
     discountText = "" + localStorageZakaz.discount;
   } else {
@@ -126,7 +129,6 @@ function cardUchirildi(id) {
   zakazBuyurtma();
   korzinkaCardDAtaBig();
 }
-let korzinkaDeleteProdact = document.querySelector("#korzinka-delete-prodact");
 korzinkaDeleteProdact.addEventListener("click", () => {
   korzinkaCardData.shift();
   getCardCount();
@@ -176,5 +178,5 @@ function addLike(id) {
   korzinkaCardDAtaBig();
 }
 function MahsulotQabulQilindi() {
-  confirm("Sizning mahsulotingiz qabul qilindi !");
+  alert("Sizning mahsulotingiz qabul qilindi !");
 }

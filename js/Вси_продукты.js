@@ -1,10 +1,17 @@
 let mainProductCards = document.querySelector(".main__product_cards");
 let inputSearch = document.querySelector("#input-search");
 let searchCount = document.querySelector("#search-count");
+let pagination = document.querySelector(".pagination");
+
+let pagenationItem;
 function mainProductCard(data = products) {
   mainProductCards.innerHTML = "";
   data.map((el) => mainProductCards.append(aksiyaCard(el, "aksiya")));
   searchCount.textContent = data.length;
+  pagenationItem = Math.ceil(data.length / 10);
+  for (let i = 1; i <= pagenationItem; i++) {
+    pagination.innerHTML += `<button class="pagination-item">${i}</button>`;
+  }
 }
 mainProductCard();
 inputSearch.addEventListener("input", function () {
@@ -42,8 +49,11 @@ function addLike(id) {
   localStorage.setItem("likeCard", JSON.stringify(likeCountData));
   mainProductCard();
 }
-let localStorageProductsSearch = localStorage.getItem("productsSearch");
-let localStorageProductsSearchCount = JSON.parse(localStorageProductsSearch) || [];
-let searchInput = localStorageProductsSearchCount.toLowerCase().trim();
-let mainProductCardSearch = products.filter((el) => el.name.toLowerCase().includes(searchInput));
+
+let MahsulotlarniQidirishUrl = new URLSearchParams(window.location.search).get(
+  "MahsulotlarniQidirish"
+);
+let mainProductCardSearchsss = products.filter((el) =>
+  el.name.toLowerCase().includes(MahsulotlarniQidirishUrl)
+);
 mainProductCard(mainProductCardSearch);
