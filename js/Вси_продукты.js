@@ -3,18 +3,29 @@ let inputSearch = document.querySelector("#input-search");
 let searchCount = document.querySelector("#search-count");
 let pagination = document.querySelector(".pagination");
 
-let pagenationItem;
+let pages;
+let activePages = 1;
 function mainProductCard(data = products) {
-  mainProductCards.innerHTML = "";
-  data.map((el) => mainProductCards.append(aksiyaCard(el, "aksiya")));
-  searchCount.textContent = data.length;
-  pagenationItem = Math.ceil(data.length / 10);
-  for (let i = 1; i <= pagenationItem; i++) {
-    pagination.innerHTML += `<button class="pagination-item">${i}</button>`;
+  let pages = Math.ceil(data.length / 10);
+  let firstPaginationCard = (activePages - 1) * 10;
+  let lastPaginationCard = activePages * 10;
+  let paginationData = data.slice(firstPaginationCard, lastPaginationCard);
+  pagination.innerHTML = "";
+  pagination.innerHTML += `<button onclick="goToFirstPage()" class="pagination-item">  <img src="../images/vse-product/chevrons-left.svg" alt="" /></button>`;
+  pagination.innerHTML += `<button onclick="goToPrevPage()" class="pagination-item">  <img src="../images/vse-product/chevron-left.svg" alt="" /></button>`;
+  for (let i = 1; i <= pages; i++) {
+    pagination.innerHTML += ` <button onclick="pageActiveCards(${i})" class="pagination-item">${i}</button>`;
   }
+  pagination.innerHTML += `<button onclick="goToNextPage()" class="pagination-item">  <img src="../images/vse-product/chevron-right.svg" alt="" /></button>`;
+  pagination.innerHTML += `<button onclick="goToLastPage()" class="pagination-item">  <img src="../images/vse-product/chevrons-right.svg" alt="" /></button>`;
+  mainProductCards.innerHTML = "";
+  paginationData.map((el) => mainProductCards.append(aksiyaCard(el, "aksiya")));
+  searchCount.textContent = data.length;
 }
+
 mainProductCard();
 inputSearch.addEventListener("input", function () {
+  activePages = 1;
   let search = this.value.trim().toLowerCase();
   let mainProductCardSearch = products.filter((el) => el.name.toLowerCase().includes(search));
   mainProductCard(mainProductCardSearch);
@@ -49,11 +60,31 @@ function addLike(id) {
   localStorage.setItem("likeCard", JSON.stringify(likeCountData));
   mainProductCard();
 }
+// let MahsulotlarniQidirishUrl = new URLSearchParams(window.location.search).get(
+//   "MahsulotlarniQidirish"
+// );
+// let mainProductCardSearch = products.filter((el) =>
+//   el.name.toLowerCase().includes(MahsulotlarniQidirishUrl)
+// );
+// mainProductCard(mainProductCardSearch);
 
-let MahsulotlarniQidirishUrl = new URLSearchParams(window.location.search).get(
-  "MahsulotlarniQidirish"
-);
-let mainProductCardSearchsss = products.filter((el) =>
-  el.name.toLowerCase().includes(MahsulotlarniQidirishUrl)
-);
-mainProductCard(mainProductCardSearch);
+function pageActiveCards(page) {
+  activePages = page;
+  mainProductCard();
+}
+function goToPrevPage() {
+  activePages--;
+  mainProductCard();
+}
+function goToNextPage() {
+  activePages++;
+  mainProductCard();
+}
+function goToFirstPage() {
+  activePages -= Math.ceil(products.length / 10) - 1;
+  mainProductCard();
+}
+function goToLastPage() {
+  activePages += Math.ceil(products.length / 10) - 1;
+  mainProductCard();
+}
