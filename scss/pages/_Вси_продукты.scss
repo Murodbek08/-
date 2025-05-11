@@ -82,6 +82,9 @@
   .pagination {
     margin-bottom: 50px;
     @include flx.flex(center, center, 24px);
+    @media (max-width: 444px) {
+      @include flx.flex(center, center, 5px);
+    }
     .pagination-item {
       border-radius: 5px;
       cursor: pointer;
@@ -100,9 +103,11 @@
       &:nth-child(8) {
         padding: 5px;
       }
-
     }
-    
+    .active-pegenation {
+      color: var(--color-FFFFFF);
+      background-color: var(--color-FF6633);
+    }
   }
   .nocards {
     padding-bottom: 100px;

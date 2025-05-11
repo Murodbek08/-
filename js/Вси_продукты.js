@@ -14,7 +14,9 @@ function mainProductCard(data = products) {
   pagination.innerHTML += `<button onclick="goToFirstPage()" class="pagination-item">  <img src="../images/vse-product/chevrons-left.svg" alt="" /></button>`;
   pagination.innerHTML += `<button onclick="goToPrevPage()" class="pagination-item">  <img src="../images/vse-product/chevron-left.svg" alt="" /></button>`;
   for (let i = 1; i <= pages; i++) {
-    pagination.innerHTML += ` <button onclick="pageActiveCards(${i})" class="pagination-item">${i}</button>`;
+    pagination.innerHTML += ` <button onclick="pageActiveCards(${i})" class="pagination-item ${
+      i == activePages ? "active-pegenation" : ""
+    }">${i}</button>`;
   }
   pagination.innerHTML += `<button onclick="goToNextPage()" class="pagination-item">  <img src="../images/vse-product/chevron-right.svg" alt="" /></button>`;
   pagination.innerHTML += `<button onclick="goToLastPage()" class="pagination-item">  <img src="../images/vse-product/chevrons-right.svg" alt="" /></button>`;
@@ -73,18 +75,48 @@ function pageActiveCards(page) {
   mainProductCard();
 }
 function goToPrevPage() {
-  activePages--;
+  if (1 < activePages) {
+    activePages--;
+  }
   mainProductCard();
 }
 function goToNextPage() {
-  activePages++;
+  if (4 > activePages) {
+    activePages++;
+  }
   mainProductCard();
 }
 function goToFirstPage() {
-  activePages -= Math.ceil(products.length / 10) - 1;
+  switch (activePages) {
+    case 1:
+      activePages -= 0;
+      break;
+    case 2:
+      activePages -= 1;
+      break;
+    case 3:
+      activePages -= 2;
+      break;
+    case 4:
+      activePages -= 3;
+      break;
+  }
   mainProductCard();
 }
 function goToLastPage() {
-  activePages += Math.ceil(products.length / 10) - 1;
+  switch (activePages) {
+    case 1:
+      activePages += 3;
+      break;
+    case 2:
+      activePages += 2;
+      break;
+    case 3:
+      activePages += 1;
+      break;
+    case 4:
+      activePages += 0;
+      break;
+  }
   mainProductCard();
 }

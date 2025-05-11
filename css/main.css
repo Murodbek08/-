@@ -3078,6 +3078,14 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
   align-items: center;
   gap: 24px;
 }
+@media (max-width: 444px) {
+  .Вси_продукты .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+}
 .Вси_продукты .pagination .pagination-item {
   border-radius: 5px;
   cursor: pointer;
@@ -3096,6 +3104,10 @@ main .section-Статьи .section-Статьи-cards .section-Статьи-car
 }
 .Вси_продукты .pagination .pagination-item:nth-child(8) {
   padding: 5px;
+}
+.Вси_продукты .pagination .active-pegenation {
+  color: var(--color-FFFFFF);
+  background-color: var(--color-FF6633);
 }
 .Вси_продукты .nocards {
   padding-bottom: 100px;
