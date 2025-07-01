@@ -95,9 +95,6 @@
 
 html,
 body {
-  background: url("../../images/main/display.jpg") no-repeat fixed;
-  background-size: cover;
-  background-position: center;
   scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
   background-color: var(--color-faf7eb);
